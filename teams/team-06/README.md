@@ -1,59 +1,193 @@
-# Team 06 | Project title
-
-PENDING SUBMISSION. Replace this placeholder with your completed README and project files.
-
-Replace the prompts below with your actual information. Keep the idea and approach concise. Do not invent results, review evidence or permissions.
+# Team 06 | Luganda Intent Classification
 
 ## Team and task
 
-- Team number and name:
-- Three members and their contributions (names/GitHub usernames only):
-- Working language/variety:
-- Track: A intent / B sentiment / C limited semantic parsing
-- Original team repository URL:
-- Full source commit SHA for the version submitted:
+- **Team number and name:** Team 6 — Data Buddies
+- **Team Members and their contributions:**
+  - **Poni Yokwe** — Created and curated the 250 Luganda utterances.
+  - **Sydney Aisha** — Trained and evaluated the model and developed the web demo.
+  - **Tiffany Wanjiru** — Prepared the data, resolved ID issues, documented the project and packaged the submission.
+- **Working language/variety:** Luganda
+- **Track:** A — Intent classification
+- **Original team repository URL:** https://github.com/syd-xo/DataBuddies.git
+- **Full source commit SHA for the version submitted:** `52b0deb52806f8b681d7dd2aaa99744d7c815b13`
 
 ## Idea and approach
 
-Explain the problem, who would use the solution and why the language matters in 2–4 sentences. Then explain how you obtained/reviewed the data, trained the model and built the demo in 3–5 concise steps. State what is new and what you reused.
+The project is a Luganda intent-classification prototype designed to identify what a user wants when they submit a request. It demonstrates how a language-specific system could route requests to appropriate functions, making digital assistants more accessible to Luganda speakers.
+
+The team:
+1. Created 250 original Luganda utterances across 10 intent labels, with 25 utterances per label.
+2. Organised the data into training, development and test splits, and arranged independent review by a fluent Luganda speaker.
+3. Prepared and validated the contribution dataset, including resolving duplicate record IDs without changing the utterances or their labels.
+4. Trained a character-level TF-IDF and Logistic Regression classifier.
+5. Built a custom web demo to display predicted intents and illustrative responses.
+
+The original contribution is the Luganda dataset, its review and the project-specific implementation. The project reuses the starter kit structure and MASSIVE-aligned intent labels.
 
 ## Data and review
 
-Give accepted contribution counts, per-label/slot coverage, train/dev/test counts, source/version/licence links, your changes, reviewer method and quality checks. Link the contribution data, annotation guide, source log, data card and review/quality report. Follow the handbook's track targets and independent test-review rules.
+- **Accepted contribution records:** 250
+- **Intent coverage:** 10 intents, with 25 records per intent.
+- **Training split:** 150 records.
+- **Development split:** 50 records.
+- **Test split:** 50 records.
+- **Data source:** Original team-authored Luganda utterances.
+- **Source version:** v1.
+- **Permission:** `documented_contributor_permission`; written permission evidence is retained privately.
+- **Independent review:** All 250 records, including all 50 test records, were reviewed by an independent fluent Luganda speaker identified as `REV-LG-2026`. The reviewer did not author the reviewed records.
+- **Quality checks:** 0 duplicate text values were found. Duplicate record IDs were resolved by adding `_2` to the second occurrence. No utterance text or intent labels were changed during this correction.
 
-If data cannot be redistributed or is too large for Git, give a stable accessible location, the version/checksum where possible, retrieval steps and the reason. Keep private permission evidence outside this public repository and use the agreed organiser channel for access.
+The structural validation command is:
+
+```bash
+python validate.py --track intent --data data/contribution.csv
+```
+
+The validator checks structural requirements. It does not independently establish language quality, semantic correctness or permission.
+
+Related materials:
+
+- Contribution dataset and splits: `data/contribution.csv`
+- Annotation guide: `docs/ANNOTATION_GUIDE.md`
+- Source log and source terms: `docs/SOURCE_LOG.md`
+- Dataset card: `docs/DATA_CARD.md`
+- Quality and review report: `docs/QUALITY.md`
+- Data plan: `docs/DATA_PLAN.md`
 
 ## Code and how to run
 
-List the relevant files, environment/dependency versions and exact installation, validation, training, evaluation and demo commands. Explain how to retrieve any model/data artefacts and where outputs are written. Do not include secrets.
+The project uses Python 3.10 or later, scikit-learn, and pandas.
+
+Relevant files:
+
+- `validate.py` — validates the contribution dataset.
+- `train.py` — trains the intent classifier.
+- `evaluate.py` — evaluates the trained model.
+- `mobile_app.py` — runs the custom web demo (uses Python's standard HTTP server).
+- `core.py` — contains shared project functionality.
+- `requirements.txt` — lists Python dependencies.
+
+Clone the repository:
+
+```bash
+git clone https://github.com/syd-xo/DataBuddies.git
+cd DataBuddies
+```
+
+Create and activate a virtual environment.
+
+**Windows PowerShell:**
+
+```powershell
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+```
+
+**macOS/Linux:**
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Validate the dataset:
+
+```bash
+python validate.py --track intent --data data/contribution.csv
+```
+
+Train the model:
+
+```bash
+python train.py --track intent --data data/contribution.csv
+```
+
+Evaluate the model:
+
+```bash
+python evaluate.py --track intent --data data/contribution.csv
+```
+
+Launch the demo:
+
+```bash
+python mobile_app.py
+```
+
+Once running, open `http://127.0.0.1:8501` in your web browser.
+
+Evaluation outputs are written under `artifacts/intent/`:
+
+- `test_metrics.json`
+- `per_label_report.csv`
+- `test_predictions.csv`
+
+Run the training and evaluation commands to reproduce the model and its evaluation outputs.
 
 ## Results and limitations
 
-Link actual metric files, per-label results, baseline comparison and test predictions. Include the additional semantic metrics where relevant. Explain up to five actual errors (all if fewer), limitations, and any optional improvements with evidence. Label illustrative outputs separately from observed results.
+The model achieved the following results on the 50-record test set:
+
+| Metric | Result |
+|---|---:|
+| Accuracy | 0.90 |
+| Macro-F1 | 0.8992 |
+| Majority baseline accuracy | 0.10 |
+| Majority baseline Macro-F1 | 0.0182 |
+
+The model correctly classified 45 of the 50 test records. The majority baseline predicted `alarm_set` for every record and correctly classified 5 of 50.
+
+The five observed test errors were:
+
+| Record ID | Expected intent | Predicted intent |
+|---|---|---|
+| `LG-WEA-021` | `weather_query` | `news_query` |
+| `LG-DAT-024` | `datetime_query` | `news_query` |
+| `LG-CAL-022_2` | `calendar_query` | `calendar_set` |
+| `LG-LIS-023_2` | `lists_query` | `lists_createoradd` |
+| `LG-LIS-024_2` | `lists_query` | `lists_createoradd` |
+
+The two list-related errors involve distinguishing requests to view a list from requests to create or add to one. The calendar error involves distinguishing a calendar lookup from a calendar event-creation request. These are possible interpretations of the observed errors, not confirmed explanations of the model's internal decisions.
+
+Evaluation files:
+
+- Overall test metrics: `artifacts/intent/test_metrics.json`
+- Per-label results: `artifacts/intent/per_label_report.csv`
+- Test predictions: `artifacts/intent/test_predictions.csv`
+- Quality report and error analysis: `docs/QUALITY.md`
+
+The dataset is relatively small, with only 25 examples per intent. The results therefore should not be treated as proof of performance across all Luganda speakers, dialects or real-world settings. The character-level model may also confuse intents with similar wording. The demo is a prototype: its responses are illustrative and it does not execute real-world actions. Its displayed probabilities are not calibrated, and it always predicts one of the 10 available intents.
 
 ## Presentation and demo video
 
-- Presentation/demo video URL (REQUIRED):
-- Optional second presentation/demo video:
-- Optional hosted app URL:
+- **Presentation/demo video URL (REQUIRED):** `https://youtu.be/PAHOlETQBy0`
 
-Check that judges can view the video. Present your idea and approach briefly, show the trained model handling new input, discuss results/limitations and explain each member's contribution. A hosted app link alone does not replace the video.
+The presentation should introduce the idea and approach, demonstrate the trained model with new input, discuss the evaluation results and limitations, and explain each member's contribution. The video must be accessible to the judges.
 
 ## Required materials
 
-Link each item using a relative path or an accessible external URL:
-
-- Contribution dataset and splits:
-- Annotation guide:
-- Source log and source terms:
-- Dataset card:
-- Quality/review report:
-- Contribution and AI-use statement:
-- Evaluation outputs and baseline comparison:
-- Runnable code and dependency file:
-- Trained artefacts or reproduction instructions:
-- Video link:
+- **Contribution dataset and splits:** `data/contribution.csv`
+- **Annotation guide:** `docs/ANNOTATION_GUIDE.md`
+- **Source log and source terms:** `docs/SOURCE_LOG.md`
+- **Dataset card:** `docs/DATA_CARD.md`
+- **Quality/review report:** `docs/QUALITY.md`
+- **Contribution and AI-use statement:** `docs/CONTRIBUTIONS.md`
+- **Evaluation outputs and baseline comparison:** `artifacts/intent/test_metrics.json`, `artifacts/intent/per_label_report.csv`, `artifacts/intent/test_predictions.csv`, and `docs/QUALITY.md`
+- **Runnable code and dependency file:** `validate.py`, `train.py`, `evaluate.py`, `mobile_app.py`, `core.py`, and `requirements.txt`
+- **Trained artefacts or reproduction instructions:** Run `train.py` and `evaluate.py` as described above.
+- **Video link:** `https://youtu.be/PAHOlETQBy0`
 
 ## Attribution and permissions
 
-Credit the starter kit, upstream datasets/models/code and other assistance. State the terms of your original code/data and respect upstream terms. Specify any unresolved access/rights issue; do not publish uncleared material. Do not copy fictional claims from the kit's completed examples.
+The project uses the provided starter kit structure and the MASSIVE-aligned intent label schema. The team's original code is released under the MIT License.
+
+The contribution dataset contains original team-authored Luganda utterances. The data permission status is recorded as `documented_contributor_permission`, with written permission evidence retained privately rather than published in the repository.
+
+ChatGPT was used to assist with drafting and structuring project documentation. The 250 Luganda utterances were authored by the team and were not generated by AI. The starter kit's example data and other upstream materials are not counted as original team contributions.
