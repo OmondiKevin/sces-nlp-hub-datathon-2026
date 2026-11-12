@@ -1,0 +1,430 @@
+{
+  "track": "intent",
+  "practice": false,
+  "model": {
+    "accuracy": 0.9011627906976745,
+    "macro_f1": 0.8972008067432583,
+    "report": {
+      "weather_query": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 18.0
+      },
+      "datetime_query": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 17.0
+      },
+      "alarm_set": {
+        "precision": 0.9047619047619048,
+        "recall": 0.95,
+        "f1-score": 0.926829268292683,
+        "support": 20.0
+      },
+      "calendar_set": {
+        "precision": 0.9333333333333333,
+        "recall": 0.875,
+        "f1-score": 0.9032258064516129,
+        "support": 16.0
+      },
+      "calendar_query": {
+        "precision": 0.7272727272727273,
+        "recall": 0.8888888888888888,
+        "f1-score": 0.8,
+        "support": 18.0
+      },
+      "lists_createoradd": {
+        "precision": 0.7777777777777778,
+        "recall": 0.875,
+        "f1-score": 0.8235294117647058,
+        "support": 16.0
+      },
+      "lists_query": {
+        "precision": 1.0,
+        "recall": 0.5294117647058824,
+        "f1-score": 0.6923076923076923,
+        "support": 17.0
+      },
+      "play_music": {
+        "precision": 0.9411764705882353,
+        "recall": 1.0,
+        "f1-score": 0.9696969696969697,
+        "support": 16.0
+      },
+      "news_query": {
+        "precision": 1.0,
+        "recall": 0.8823529411764706,
+        "f1-score": 0.9375,
+        "support": 17.0
+      },
+      "qa_definition": {
+        "precision": 0.85,
+        "recall": 1.0,
+        "f1-score": 0.918918918918919,
+        "support": 17.0
+      },
+      "accuracy": 0.9011627906976745,
+      "macro avg": {
+        "precision": 0.9134322213733979,
+        "recall": 0.9000653594771242,
+        "f1-score": 0.8972008067432583,
+        "support": 172.0
+      },
+      "weighted avg": {
+        "precision": 0.9132136540310274,
+        "recall": 0.9011627906976745,
+        "f1-score": 0.8977219346704574,
+        "support": 172.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        18,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        17,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        19,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        14,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        16,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        14,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        3,
+        4,
+        9,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        16,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        17
+      ]
+    ],
+    "label_order": [
+      "weather_query",
+      "datetime_query",
+      "alarm_set",
+      "calendar_set",
+      "calendar_query",
+      "lists_createoradd",
+      "lists_query",
+      "play_music",
+      "news_query",
+      "qa_definition"
+    ]
+  },
+  "majority_baseline": {
+    "accuracy": 0.11627906976744186,
+    "macro_f1": 0.020833333333333336,
+    "report": {
+      "weather_query": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 18.0
+      },
+      "datetime_query": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 17.0
+      },
+      "alarm_set": {
+        "precision": 0.11627906976744186,
+        "recall": 1.0,
+        "f1-score": 0.20833333333333334,
+        "support": 20.0
+      },
+      "calendar_set": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 16.0
+      },
+      "calendar_query": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 18.0
+      },
+      "lists_createoradd": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 16.0
+      },
+      "lists_query": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 17.0
+      },
+      "play_music": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 16.0
+      },
+      "news_query": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 17.0
+      },
+      "qa_definition": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 17.0
+      },
+      "accuracy": 0.11627906976744186,
+      "macro avg": {
+        "precision": 0.011627906976744186,
+        "recall": 0.1,
+        "f1-score": 0.020833333333333336,
+        "support": 172.0
+      },
+      "weighted avg": {
+        "precision": 0.013520822065981613,
+        "recall": 0.11627906976744186,
+        "f1-score": 0.02422480620155039,
+        "support": 172.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        0,
+        0,
+        18,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        17,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        20,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        16,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        18,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        16,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        17,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        16,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        17,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        17,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "label_order": [
+      "weather_query",
+      "datetime_query",
+      "alarm_set",
+      "calendar_set",
+      "calendar_query",
+      "lists_createoradd",
+      "lists_query",
+      "play_music",
+      "news_query",
+      "qa_definition"
+    ]
+  }
+}
