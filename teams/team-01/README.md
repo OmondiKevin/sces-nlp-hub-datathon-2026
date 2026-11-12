@@ -1,59 +1,35 @@
-# Team 01 | Project title
+# Team 01 | Final Submission
 
-PENDING SUBMISSION. Replace this placeholder with your completed README and project files.
+**Track:** Track B – Sentiment Analysis  
+**Language:** Kamba (kam-KE)  
+**Application Domain:** University Student Life & Campus Services Feedback  
 
-Replace the prompts below with your actual information. Keep the idea and approach concise. Do not invent results, review evidence or permissions.
+## 🔗 Project Links
+* **Demo & Presentation Video:**https://drive.google.com/file/d/1GtUvXtiUQyqzul92bDUi7WUo0pGZmCj-/view?usp=sharing
+* **Original Team Repository:** https://github.com/austinmuendomuia/NLP-DATATHON-TEAM_1
+* **Frozen Commit SHA:** 5bbc61d28f24376da8c48c352cfc0ede200beec4
 
-## Team and task
+## 💡 The Problem
+Many commonly used sentiment analysis systems are trained primarily on high-resource languages. Their performance does not easily transfer to Kamba due to differences in vocabulary, morphology, and negation. There is a need for a documented, reviewable Kamba dataset and baseline classifier capable of distinguishing favorable, unfavorable, and neutral statements within the domain of campus services and student life.
 
-- Team number and name:
-- Three members and their contributions (names/GitHub usernames only):
-- Working language/variety:
-- Track: A intent / B sentiment / C limited semantic parsing
-- Original team repository URL:
-- Full source commit SHA for the version submitted:
+## 🛠️ Our Approach
+1. **Data Collection:** We authored, reviewed, and finalized a highly balanced dataset of 300 Kamba sentences (100 positive, 100 negative, 100 neutral).
+2. **Splitting:** Data was strictly partitioned into 60% Train, 20% Dev, and 20% Test splits (exactly class-balanced), ensuring closely related minimal pairs stayed in the same split.
+3. **Modelling:** We trained a character-level TF-IDF Vectorizer combined with a Logistic Regression baseline. 
+4. **Demonstration:** We adapted the `app.py` Streamlit interface to accept new Kamba input, predict the sentiment, display uncalibrated probabilities, and transparently explain specific failure cases.
 
-## Idea and approach
+## 📊 Actual Results
+Our frozen evaluation run on the 60-example test split yielded:
+* **Test Accuracy:** 83.33%
+* **Macro-F1:** 83.24%
+* **Positive F1:** 83.33% | **Negative F1:** 84.09% | **Neutral F1:** 82.28%
 
-Explain the problem, who would use the solution and why the language matters in 2–4 sentences. Then explain how you obtained/reviewed the data, trained the model and built the demo in 3–5 concise steps. State what is new and what you reused.
+## ⚠️ Limitations
+* **Model Simplicity:** As a character n-gram frequency classifier, the model struggles with deep grammar, such as missing Kamba double-negation prefixes (e.g., *ndu-*).
+* **Narrow Domain:** The model may be unreliable if tested on topics entirely outside of campus feedback.
+* **Small Dataset:** 300 records is sufficient for a prototype but does not capture the full morphological variety of Kamba dialects. 
 
-## Data and review
-
-Give accepted contribution counts, per-label/slot coverage, train/dev/test counts, source/version/licence links, your changes, reviewer method and quality checks. Link the contribution data, annotation guide, source log, data card and review/quality report. Follow the handbook's track targets and independent test-review rules.
-
-If data cannot be redistributed or is too large for Git, give a stable accessible location, the version/checksum where possible, retrieval steps and the reason. Keep private permission evidence outside this public repository and use the agreed organiser channel for access.
-
-## Code and how to run
-
-List the relevant files, environment/dependency versions and exact installation, validation, training, evaluation and demo commands. Explain how to retrieve any model/data artefacts and where outputs are written. Do not include secrets.
-
-## Results and limitations
-
-Link actual metric files, per-label results, baseline comparison and test predictions. Include the additional semantic metrics where relevant. Explain up to five actual errors (all if fewer), limitations, and any optional improvements with evidence. Label illustrative outputs separately from observed results.
-
-## Presentation and demo video
-
-- Presentation/demo video URL (REQUIRED):
-- Optional second presentation/demo video:
-- Optional hosted app URL:
-
-Check that judges can view the video. Present your idea and approach briefly, show the trained model handling new input, discuss results/limitations and explain each member's contribution. A hosted app link alone does not replace the video.
-
-## Required materials
-
-Link each item using a relative path or an accessible external URL:
-
-- Contribution dataset and splits:
-- Annotation guide:
-- Source log and source terms:
-- Dataset card:
-- Quality/review report:
-- Contribution and AI-use statement:
-- Evaluation outputs and baseline comparison:
-- Runnable code and dependency file:
-- Trained artefacts or reproduction instructions:
-- Video link:
-
-## Attribution and permissions
-
-Credit the starter kit, upstream datasets/models/code and other assistance. State the terms of your original code/data and respect upstream terms. Specify any unresolved access/rights issue; do not publish uncleared material. Do not copy fictional claims from the kit's completed examples.
+## 👥 Member Contributions
+* **Austin Muendo:** UI/App development, model training, evaluation pipeline, video demonstration recording.
+* **Ian Kitheka:** Dataset documentation, language review, annotation guidelines, structural validation, and final project report.
+*(Note: A third team member was originally planned but withdrew due to personal circumstances. Work was redistributed among the two active members.)*
