@@ -1,0 +1,2162 @@
+[
+  {
+    "record_id": "rec_004",
+    "text": "Piga kengele baada ya dakika kumi na tano.",
+    "gold_frame": {
+      "intent": "alarm_set",
+      "slots": [
+        {
+          "type": "time",
+          "value": "baada ya dakika kumi na tano",
+          "start": 13,
+          "end": 41
+        }
+      ]
+    },
+    "predicted_frame": {
+      "intent": "alarm_set",
+      "slots": []
+    },
+    "full_frame_exact_match": false,
+    "json_valid": true,
+    "failed_tasks": [
+      "slots"
+    ],
+    "unseen_gold_slots": [
+      {
+        "type": "time",
+        "value": "baada ya dakika kumi na tano",
+        "start": 13,
+        "end": 41,
+        "exact_match": false
+      }
+    ]
+  },
+  {
+    "record_id": "rec_009",
+    "text": "Nataka kengele ianze saa tatu asubuhi kesho.",
+    "gold_frame": {
+      "intent": "alarm_set",
+      "slots": [
+        {
+          "type": "time",
+          "value": "saa tatu asubuhi",
+          "start": 21,
+          "end": 37
+        },
+        {
+          "type": "date",
+          "value": "kesho",
+          "start": 38,
+          "end": 43
+        }
+      ]
+    },
+    "predicted_frame": {
+      "intent": "alarm_set",
+      "slots": [
+        {
+          "type": "time",
+          "value": "asubuhi",
+          "start": 30,
+          "end": 37
+        },
+        {
+          "type": "date",
+          "value": "kesho",
+          "start": 38,
+          "end": 43
+        }
+      ]
+    },
+    "full_frame_exact_match": false,
+    "json_valid": true,
+    "failed_tasks": [
+      "slots"
+    ],
+    "unseen_gold_slots": [
+      {
+        "type": "time",
+        "value": "saa tatu asubuhi",
+        "start": 21,
+        "end": 37,
+        "exact_match": false
+      }
+    ]
+  },
+  {
+    "record_id": "rec_010",
+    "text": "Weka kengele ya mapumziko saa 12:00 Jumamosi.",
+    "gold_frame": {
+      "intent": "alarm_set",
+      "slots": [
+        {
+          "type": "item",
+          "value": "mapumziko",
+          "start": 16,
+          "end": 25
+        },
+        {
+          "type": "time",
+          "value": "saa 12:00",
+          "start": 26,
+          "end": 35
+        },
+        {
+          "type": "date",
+          "value": "Jumamosi",
+          "start": 36,
+          "end": 44
+        }
+      ]
+    },
+    "predicted_frame": {
+      "intent": "alarm_set",
+      "slots": [
+        {
+          "type": "time",
+          "value": "saa 12:00",
+          "start": 26,
+          "end": 35
+        },
+        {
+          "type": "date",
+          "value": "Jumamosi",
+          "start": 36,
+          "end": 44
+        }
+      ]
+    },
+    "full_frame_exact_match": false,
+    "json_valid": true,
+    "failed_tasks": [
+      "slots"
+    ],
+    "unseen_gold_slots": [
+      {
+        "type": "item",
+        "value": "mapumziko",
+        "start": 16,
+        "end": 25,
+        "exact_match": false
+      }
+    ]
+  },
+  {
+    "record_id": "rec_012",
+    "text": "Nahitaji kengele ya safari ya basi saa 06:15 Jumatano.",
+    "gold_frame": {
+      "intent": "alarm_set",
+      "slots": [
+        {
+          "type": "item",
+          "value": "safari ya basi",
+          "start": 20,
+          "end": 34
+        },
+        {
+          "type": "time",
+          "value": "saa 06:15",
+          "start": 35,
+          "end": 44
+        },
+        {
+          "type": "date",
+          "value": "Jumatano",
+          "start": 45,
+          "end": 53
+        }
+      ]
+    },
+    "predicted_frame": {
+      "intent": "alarm_set",
+      "slots": [
+        {
+          "type": "item",
+          "value": "safari ya basi",
+          "start": 20,
+          "end": 34
+        },
+        {
+          "type": "date",
+          "value": "Jumatano",
+          "start": 45,
+          "end": 53
+        }
+      ]
+    },
+    "full_frame_exact_match": false,
+    "json_valid": true,
+    "failed_tasks": [
+      "slots"
+    ],
+    "unseen_gold_slots": [
+      {
+        "type": "time",
+        "value": "saa 06:15",
+        "start": 35,
+        "end": 44,
+        "exact_match": false
+      }
+    ]
+  },
+  {
+    "record_id": "rec_015",
+    "text": "Pangia ukumbusho wa dawa saa nane usiku.",
+    "gold_frame": {
+      "intent": "alarm_set",
+      "slots": [
+        {
+          "type": "item",
+          "value": "dawa",
+          "start": 20,
+          "end": 24
+        },
+        {
+          "type": "time",
+          "value": "saa nane usiku",
+          "start": 25,
+          "end": 39
+        }
+      ]
+    },
+    "predicted_frame": {
+      "intent": "alarm_set",
+      "slots": [
+        {
+          "type": "item",
+          "value": "dawa",
+          "start": 20,
+          "end": 24
+        },
+        {
+          "type": "time",
+          "value": "usiku",
+          "start": 34,
+          "end": 39
+        }
+      ]
+    },
+    "full_frame_exact_match": false,
+    "json_valid": true,
+    "failed_tasks": [
+      "slots"
+    ],
+    "unseen_gold_slots": [
+      {
+        "type": "time",
+        "value": "saa nane usiku",
+        "start": 25,
+        "end": 39,
+        "exact_match": false
+      }
+    ]
+  },
+  {
+    "record_id": "rec_026",
+    "text": "Je, mkutano wa walimu umepangwa kesho?",
+    "gold_frame": {
+      "intent": "calendar_query",
+      "slots": [
+        {
+          "type": "item",
+          "value": "mkutano wa walimu",
+          "start": 4,
+          "end": 21
+        },
+        {
+          "type": "date",
+          "value": "kesho",
+          "start": 32,
+          "end": 37
+        }
+      ]
+    },
+    "predicted_frame": {
+      "intent": "calendar_query",
+      "slots": [
+        {
+          "type": "item",
+          "value": "mkutano wa walimu",
+          "start": 4,
+          "end": 21
+        },
+        {
+          "type": "date",
+          "value": "kesho",
+          "start": 32,
+          "end": 37
+        }
+      ]
+    },
+    "full_frame_exact_match": true,
+    "json_valid": true,
+    "failed_tasks": [],
+    "unseen_gold_slots": []
+  },
+  {
+    "record_id": "rec_027",
+    "text": "Miadi ya daktari imewekwa siku gani Alhamisi?",
+    "gold_frame": {
+      "intent": "calendar_query",
+      "slots": [
+        {
+          "type": "item",
+          "value": "Miadi ya daktari",
+          "start": 0,
+          "end": 16
+        },
+        {
+          "type": "date",
+          "value": "Alhamisi",
+          "start": 36,
+          "end": 44
+        }
+      ]
+    },
+    "predicted_frame": {
+      "intent": "datetime_query",
+      "slots": [
+        {
+          "type": "item",
+          "value": "Miadi",
+          "start": 0,
+          "end": 5
+        },
+        {
+          "type": "date",
+          "value": "Alhamisi",
+          "start": 36,
+          "end": 44
+        }
+      ]
+    },
+    "full_frame_exact_match": false,
+    "json_valid": true,
+    "failed_tasks": [
+      "intent",
+      "slots"
+    ],
+    "unseen_gold_slots": [
+      {
+        "type": "item",
+        "value": "Miadi ya daktari",
+        "start": 0,
+        "end": 16,
+        "exact_match": false
+      }
+    ]
+  },
+  {
+    "record_id": "rec_028",
+    "text": "Nionyeshe shughuli zilizopangwa wiki hii.",
+    "gold_frame": {
+      "intent": "calendar_query",
+      "slots": [
+        {
+          "type": "item",
+          "value": "shughuli",
+          "start": 10,
+          "end": 18
+        },
+        {
+          "type": "date",
+          "value": "wiki hii",
+          "start": 32,
+          "end": 40
+        }
+      ]
+    },
+    "predicted_frame": {
+      "intent": "calendar_query",
+      "slots": [
+        {
+          "type": "item",
+          "value": "shughuli",
+          "start": 10,
+          "end": 18
+        },
+        {
+          "type": "date",
+          "value": "wiki hii",
+          "start": 32,
+          "end": 40
+        }
+      ]
+    },
+    "full_frame_exact_match": true,
+    "json_valid": true,
+    "failed_tasks": [],
+    "unseen_gold_slots": []
+  },
+  {
+    "record_id": "rec_034",
+    "text": "Ratiba inaonyesha mafunzo ya kompyuta saa 14:00 Jumanne?",
+    "gold_frame": {
+      "intent": "calendar_query",
+      "slots": [
+        {
+          "type": "item",
+          "value": "mafunzo ya kompyuta",
+          "start": 18,
+          "end": 37
+        },
+        {
+          "type": "time",
+          "value": "saa 14:00",
+          "start": 38,
+          "end": 47
+        },
+        {
+          "type": "date",
+          "value": "Jumanne",
+          "start": 48,
+          "end": 55
+        }
+      ]
+    },
+    "predicted_frame": {
+      "intent": "calendar_set",
+      "slots": [
+        {
+          "type": "item",
+          "value": "mafunzo ya kompyuta",
+          "start": 18,
+          "end": 37
+        },
+        {
+          "type": "time",
+          "value": "saa 14:00",
+          "start": 38,
+          "end": 47
+        },
+        {
+          "type": "date",
+          "value": "Jumanne",
+          "start": 48,
+          "end": 55
+        }
+      ]
+    },
+    "full_frame_exact_match": false,
+    "json_valid": true,
+    "failed_tasks": [
+      "intent"
+    ],
+    "unseen_gold_slots": []
+  },
+  {
+    "record_id": "rec_036",
+    "text": "Angalia kama ziara ya kliniki ipo kwenye kalenda Alhamisi.",
+    "gold_frame": {
+      "intent": "calendar_query",
+      "slots": [
+        {
+          "type": "item",
+          "value": "ziara ya kliniki",
+          "start": 13,
+          "end": 29
+        },
+        {
+          "type": "date",
+          "value": "Alhamisi",
+          "start": 49,
+          "end": 57
+        }
+      ]
+    },
+    "predicted_frame": {
+      "intent": "calendar_set",
+      "slots": [
+        {
+          "type": "item",
+          "value": "ziara ya kliniki",
+          "start": 13,
+          "end": 29
+        },
+        {
+          "type": "term",
+          "value": "kalenda",
+          "start": 41,
+          "end": 48
+        },
+        {
+          "type": "date",
+          "value": "Alhamisi",
+          "start": 49,
+          "end": 57
+        }
+      ]
+    },
+    "full_frame_exact_match": false,
+    "json_valid": true,
+    "failed_tasks": [
+      "intent",
+      "slots"
+    ],
+    "unseen_gold_slots": []
+  },
+  {
+    "record_id": "rec_052",
+    "text": "Weka miadi ya daktari kwenye kalenda tarehe 12 mwezi ujao saa 10:30.",
+    "gold_frame": {
+      "intent": "calendar_set",
+      "slots": [
+        {
+          "type": "item",
+          "value": "miadi ya daktari",
+          "start": 5,
+          "end": 21
+        },
+        {
+          "type": "date",
+          "value": "tarehe 12 mwezi ujao",
+          "start": 37,
+          "end": 57
+        },
+        {
+          "type": "time",
+          "value": "saa 10:30",
+          "start": 58,
+          "end": 67
+        }
+      ]
+    },
+    "predicted_frame": {
+      "intent": "calendar_set",
+      "slots": [
+        {
+          "type": "item",
+          "value": "miadi",
+          "start": 5,
+          "end": 10
+        },
+        {
+          "type": "term",
+          "value": "kalenda",
+          "start": 29,
+          "end": 36
+        },
+        {
+          "type": "date",
+          "value": "mwezi ujao",
+          "start": 47,
+          "end": 57
+        }
+      ]
+    },
+    "full_frame_exact_match": false,
+    "json_valid": true,
+    "failed_tasks": [
+      "slots"
+    ],
+    "unseen_gold_slots": [
+      {
+        "type": "item",
+        "value": "miadi ya daktari",
+        "start": 5,
+        "end": 21,
+        "exact_match": false
+      },
+      {
+        "type": "date",
+        "value": "tarehe 12 mwezi ujao",
+        "start": 37,
+        "end": 57,
+        "exact_match": false
+      },
+      {
+        "type": "time",
+        "value": "saa 10:30",
+        "start": 58,
+        "end": 67,
+        "exact_match": false
+      }
+    ]
+  },
+  {
+    "record_id": "rec_054",
+    "text": "Panga kikao cha wazazi Ijumaa hii saa 08:00 shuleni.",
+    "gold_frame": {
+      "intent": "calendar_set",
+      "slots": [
+        {
+          "type": "item",
+          "value": "kikao cha wazazi",
+          "start": 6,
+          "end": 22
+        },
+        {
+          "type": "date",
+          "value": "Ijumaa hii",
+          "start": 23,
+          "end": 33
+        },
+        {
+          "type": "time",
+          "value": "saa 08:00",
+          "start": 34,
+          "end": 43
+        },
+        {
+          "type": "location",
+          "value": "shuleni",
+          "start": 44,
+          "end": 51
+        }
+      ]
+    },
+    "predicted_frame": {
+      "intent": "calendar_query",
+      "slots": [
+        {
+          "type": "item",
+          "value": "kikao cha wazazi",
+          "start": 6,
+          "end": 22
+        },
+        {
+          "type": "date",
+          "value": "Ijumaa",
+          "start": 23,
+          "end": 29
+        },
+        {
+          "type": "time",
+          "value": "saa 08:00",
+          "start": 34,
+          "end": 43
+        },
+        {
+          "type": "location",
+          "value": "shuleni",
+          "start": 44,
+          "end": 51
+        }
+      ]
+    },
+    "full_frame_exact_match": false,
+    "json_valid": true,
+    "failed_tasks": [
+      "intent",
+      "slots"
+    ],
+    "unseen_gold_slots": [
+      {
+        "type": "date",
+        "value": "Ijumaa hii",
+        "start": 23,
+        "end": 33,
+        "exact_match": false
+      }
+    ]
+  },
+  {
+    "record_id": "rec_055",
+    "text": "Nataka kukumbuka sherehe ya kuzaliwa tarehe 3 Mei saa kumi jioni.",
+    "gold_frame": {
+      "intent": "calendar_set",
+      "slots": [
+        {
+          "type": "item",
+          "value": "sherehe ya kuzaliwa",
+          "start": 17,
+          "end": 36
+        },
+        {
+          "type": "date",
+          "value": "tarehe 3 Mei",
+          "start": 37,
+          "end": 49
+        },
+        {
+          "type": "time",
+          "value": "saa kumi jioni",
+          "start": 50,
+          "end": 64
+        }
+      ]
+    },
+    "predicted_frame": {
+      "intent": "datetime_query",
+      "slots": [
+        {
+          "type": "term",
+          "value": "sherehe",
+          "start": 17,
+          "end": 24
+        },
+        {
+          "type": "time",
+          "value": "saa kumi jioni",
+          "start": 50,
+          "end": 64
+        }
+      ]
+    },
+    "full_frame_exact_match": false,
+    "json_valid": true,
+    "failed_tasks": [
+      "intent",
+      "slots"
+    ],
+    "unseen_gold_slots": [
+      {
+        "type": "item",
+        "value": "sherehe ya kuzaliwa",
+        "start": 17,
+        "end": 36,
+        "exact_match": false
+      },
+      {
+        "type": "date",
+        "value": "tarehe 3 Mei",
+        "start": 37,
+        "end": 49,
+        "exact_match": false
+      }
+    ]
+  },
+  {
+    "record_id": "rec_061",
+    "text": "Nipangie mkutano wa kamati kesho saa 16:00 kwenye chumba cha mikutano.",
+    "gold_frame": {
+      "intent": "calendar_set",
+      "slots": [
+        {
+          "type": "item",
+          "value": "mkutano wa kamati",
+          "start": 9,
+          "end": 26
+        },
+        {
+          "type": "date",
+          "value": "kesho",
+          "start": 27,
+          "end": 32
+        },
+        {
+          "type": "time",
+          "value": "saa 16:00",
+          "start": 33,
+          "end": 42
+        },
+        {
+          "type": "location",
+          "value": "chumba cha mikutano",
+          "start": 50,
+          "end": 69
+        }
+      ]
+    },
+    "predicted_frame": {
+      "intent": "calendar_set",
+      "slots": [
+        {
+          "type": "item",
+          "value": "mkutano wa kamati",
+          "start": 9,
+          "end": 26
+        },
+        {
+          "type": "date",
+          "value": "kesho",
+          "start": 27,
+          "end": 32
+        }
+      ]
+    },
+    "full_frame_exact_match": false,
+    "json_valid": true,
+    "failed_tasks": [
+      "slots"
+    ],
+    "unseen_gold_slots": [
+      {
+        "type": "time",
+        "value": "saa 16:00",
+        "start": 33,
+        "end": 42,
+        "exact_match": false
+      },
+      {
+        "type": "location",
+        "value": "chumba cha mikutano",
+        "start": 50,
+        "end": 69,
+        "exact_match": false
+      }
+    ]
+  },
+  {
+    "record_id": "rec_062",
+    "text": "Ongeza safari ya basi tarehe 6 mwezi ujao saa 06:30 kwenye ratiba yangu.",
+    "gold_frame": {
+      "intent": "calendar_set",
+      "slots": [
+        {
+          "type": "item",
+          "value": "safari ya basi",
+          "start": 7,
+          "end": 21
+        },
+        {
+          "type": "date",
+          "value": "tarehe 6 mwezi ujao",
+          "start": 22,
+          "end": 41
+        },
+        {
+          "type": "time",
+          "value": "saa 06:30",
+          "start": 42,
+          "end": 51
+        }
+      ]
+    },
+    "predicted_frame": {
+      "intent": "calendar_set",
+      "slots": [
+        {
+          "type": "item",
+          "value": "safari ya basi",
+          "start": 7,
+          "end": 21
+        },
+        {
+          "type": "date",
+          "value": "mwezi ujao",
+          "start": 31,
+          "end": 41
+        },
+        {
+          "type": "time",
+          "value": "saa 06:30",
+          "start": 42,
+          "end": 51
+        }
+      ]
+    },
+    "full_frame_exact_match": false,
+    "json_valid": true,
+    "failed_tasks": [
+      "slots"
+    ],
+    "unseen_gold_slots": [
+      {
+        "type": "date",
+        "value": "tarehe 6 mwezi ujao",
+        "start": 22,
+        "end": 41,
+        "exact_match": false
+      }
+    ]
+  },
+  {
+    "record_id": "rec_077",
+    "text": "Tarehe ya leo ni ipi?",
+    "gold_frame": {
+      "intent": "datetime_query",
+      "slots": [
+        {
+          "type": "date",
+          "value": "leo",
+          "start": 10,
+          "end": 13
+        }
+      ]
+    },
+    "predicted_frame": {
+      "intent": "datetime_query",
+      "slots": [
+        {
+          "type": "date",
+          "value": "leo",
+          "start": 10,
+          "end": 13
+        }
+      ]
+    },
+    "full_frame_exact_match": true,
+    "json_valid": true,
+    "failed_tasks": [],
+    "unseen_gold_slots": []
+  },
+  {
+    "record_id": "rec_081",
+    "text": "Muda gani umebaki kabla ya saa kumi na mbili jioni?",
+    "gold_frame": {
+      "intent": "datetime_query",
+      "slots": [
+        {
+          "type": "time",
+          "value": "saa kumi na mbili jioni",
+          "start": 27,
+          "end": 50
+        }
+      ]
+    },
+    "predicted_frame": {
+      "intent": "datetime_query",
+      "slots": [
+        {
+          "type": "time",
+          "value": "jioni",
+          "start": 45,
+          "end": 50
+        }
+      ]
+    },
+    "full_frame_exact_match": false,
+    "json_valid": true,
+    "failed_tasks": [
+      "slots"
+    ],
+    "unseen_gold_slots": [
+      {
+        "type": "time",
+        "value": "saa kumi na mbili jioni",
+        "start": 27,
+        "end": 50,
+        "exact_match": false
+      }
+    ]
+  },
+  {
+    "record_id": "rec_083",
+    "text": "Saa 07:45 huandikwaje kwa saa za Kiswahili?",
+    "gold_frame": {
+      "intent": "datetime_query",
+      "slots": [
+        {
+          "type": "time",
+          "value": "Saa 07:45",
+          "start": 0,
+          "end": 9
+        }
+      ]
+    },
+    "predicted_frame": {
+      "intent": "datetime_query",
+      "slots": []
+    },
+    "full_frame_exact_match": false,
+    "json_valid": true,
+    "failed_tasks": [
+      "slots"
+    ],
+    "unseen_gold_slots": [
+      {
+        "type": "time",
+        "value": "Saa 07:45",
+        "start": 0,
+        "end": 9,
+        "exact_match": false
+      }
+    ]
+  },
+  {
+    "record_id": "rec_085",
+    "text": "Siku ya kwanza ya mwezi ujao ni tarehe gani?",
+    "gold_frame": {
+      "intent": "datetime_query",
+      "slots": [
+        {
+          "type": "date",
+          "value": "mwezi ujao",
+          "start": 18,
+          "end": 28
+        }
+      ]
+    },
+    "predicted_frame": {
+      "intent": "datetime_query",
+      "slots": [
+        {
+          "type": "date",
+          "value": "mwezi ujao",
+          "start": 18,
+          "end": 28
+        }
+      ]
+    },
+    "full_frame_exact_match": true,
+    "json_valid": true,
+    "failed_tasks": [],
+    "unseen_gold_slots": []
+  },
+  {
+    "record_id": "rec_088",
+    "text": "Mwaka huu una siku ngapi?",
+    "gold_frame": {
+      "intent": "datetime_query",
+      "slots": [
+        {
+          "type": "date",
+          "value": "Mwaka huu",
+          "start": 0,
+          "end": 9
+        }
+      ]
+    },
+    "predicted_frame": {
+      "intent": "datetime_query",
+      "slots": [
+        {
+          "type": "date",
+          "value": "Mwaka huu",
+          "start": 0,
+          "end": 9
+        }
+      ]
+    },
+    "full_frame_exact_match": true,
+    "json_valid": true,
+    "failed_tasks": [],
+    "unseen_gold_slots": []
+  },
+  {
+    "record_id": "rec_102",
+    "text": "Unaweza kueleza maana ya akiba kwa mfano?",
+    "gold_frame": {
+      "intent": "qa_definition",
+      "slots": [
+        {
+          "type": "term",
+          "value": "akiba",
+          "start": 25,
+          "end": 30
+        }
+      ]
+    },
+    "predicted_frame": {
+      "intent": "qa_definition",
+      "slots": []
+    },
+    "full_frame_exact_match": false,
+    "json_valid": true,
+    "failed_tasks": [
+      "slots"
+    ],
+    "unseen_gold_slots": [
+      {
+        "type": "term",
+        "value": "akiba",
+        "start": 25,
+        "end": 30,
+        "exact_match": false
+      }
+    ]
+  },
+  {
+    "record_id": "rec_106",
+    "text": "Maana ya afya bora ni ipi?",
+    "gold_frame": {
+      "intent": "qa_definition",
+      "slots": [
+        {
+          "type": "term",
+          "value": "afya bora",
+          "start": 9,
+          "end": 18
+        }
+      ]
+    },
+    "predicted_frame": {
+      "intent": "qa_definition",
+      "slots": []
+    },
+    "full_frame_exact_match": false,
+    "json_valid": true,
+    "failed_tasks": [
+      "slots"
+    ],
+    "unseen_gold_slots": [
+      {
+        "type": "term",
+        "value": "afya bora",
+        "start": 9,
+        "end": 18,
+        "exact_match": false
+      }
+    ]
+  },
+  {
+    "record_id": "rec_107",
+    "text": "Nieleze maana ya ushirikiano.",
+    "gold_frame": {
+      "intent": "qa_definition",
+      "slots": [
+        {
+          "type": "term",
+          "value": "ushirikiano",
+          "start": 17,
+          "end": 28
+        }
+      ]
+    },
+    "predicted_frame": {
+      "intent": "qa_definition",
+      "slots": []
+    },
+    "full_frame_exact_match": false,
+    "json_valid": true,
+    "failed_tasks": [
+      "slots"
+    ],
+    "unseen_gold_slots": [
+      {
+        "type": "term",
+        "value": "ushirikiano",
+        "start": 17,
+        "end": 28,
+        "exact_match": false
+      }
+    ]
+  },
+  {
+    "record_id": "rec_110",
+    "text": "Unaposema jamii, unamaanisha nini?",
+    "gold_frame": {
+      "intent": "qa_definition",
+      "slots": [
+        {
+          "type": "term",
+          "value": "jamii",
+          "start": 10,
+          "end": 15
+        }
+      ]
+    },
+    "predicted_frame": {
+      "intent": "qa_definition",
+      "slots": []
+    },
+    "full_frame_exact_match": false,
+    "json_valid": true,
+    "failed_tasks": [
+      "slots"
+    ],
+    "unseen_gold_slots": [
+      {
+        "type": "term",
+        "value": "jamii",
+        "start": 10,
+        "end": 15,
+        "exact_match": false
+      }
+    ]
+  },
+  {
+    "record_id": "rec_111",
+    "text": "Tofauti ya kazi na ajira ni ipi?",
+    "gold_frame": {
+      "intent": "qa_definition",
+      "slots": [
+        {
+          "type": "term",
+          "value": "kazi",
+          "start": 11,
+          "end": 15
+        },
+        {
+          "type": "term",
+          "value": "ajira",
+          "start": 19,
+          "end": 24
+        }
+      ]
+    },
+    "predicted_frame": {
+      "intent": "qa_definition",
+      "slots": []
+    },
+    "full_frame_exact_match": false,
+    "json_valid": true,
+    "failed_tasks": [
+      "slots"
+    ],
+    "unseen_gold_slots": [
+      {
+        "type": "term",
+        "value": "kazi",
+        "start": 11,
+        "end": 15,
+        "exact_match": false
+      },
+      {
+        "type": "term",
+        "value": "ajira",
+        "start": 19,
+        "end": 24,
+        "exact_match": false
+      }
+    ]
+  },
+  {
+    "record_id": "rec_153",
+    "text": "Gor Mahia walifunga mabao mangapi katika mechi yao ya kirafiki?",
+    "gold_frame": {
+      "intent": "news_query",
+      "slots": [
+        {
+          "type": "term",
+          "value": "Gor Mahia",
+          "start": 0,
+          "end": 9
+        },
+        {
+          "type": "term",
+          "value": "mechi yao ya kirafiki",
+          "start": 41,
+          "end": 62
+        }
+      ]
+    },
+    "predicted_frame": {
+      "intent": "news_query",
+      "slots": []
+    },
+    "full_frame_exact_match": false,
+    "json_valid": true,
+    "failed_tasks": [
+      "slots"
+    ],
+    "unseen_gold_slots": [
+      {
+        "type": "term",
+        "value": "Gor Mahia",
+        "start": 0,
+        "end": 9,
+        "exact_match": false
+      },
+      {
+        "type": "term",
+        "value": "mechi yao ya kirafiki",
+        "start": 41,
+        "end": 62,
+        "exact_match": false
+      }
+    ]
+  },
+  {
+    "record_id": "rec_154",
+    "text": "Mwanahabari mgani amestaafu?",
+    "gold_frame": {
+      "intent": "news_query",
+      "slots": [
+        {
+          "type": "term",
+          "value": "Mwanahabari",
+          "start": 0,
+          "end": 11
+        }
+      ]
+    },
+    "predicted_frame": {
+      "intent": "news_query",
+      "slots": []
+    },
+    "full_frame_exact_match": false,
+    "json_valid": true,
+    "failed_tasks": [
+      "slots"
+    ],
+    "unseen_gold_slots": [
+      {
+        "type": "term",
+        "value": "Mwanahabari",
+        "start": 0,
+        "end": 11,
+        "exact_match": false
+      }
+    ]
+  },
+  {
+    "record_id": "rec_155",
+    "text": "Mwanasiasa gani alikuwa jijini leo?",
+    "gold_frame": {
+      "intent": "news_query",
+      "slots": [
+        {
+          "type": "term",
+          "value": "Mwanasiasa",
+          "start": 0,
+          "end": 10
+        },
+        {
+          "type": "date",
+          "value": "leo",
+          "start": 31,
+          "end": 34
+        }
+      ]
+    },
+    "predicted_frame": {
+      "intent": "news_query",
+      "slots": [
+        {
+          "type": "date",
+          "value": "leo",
+          "start": 31,
+          "end": 34
+        }
+      ]
+    },
+    "full_frame_exact_match": false,
+    "json_valid": true,
+    "failed_tasks": [
+      "slots"
+    ],
+    "unseen_gold_slots": [
+      {
+        "type": "term",
+        "value": "Mwanasiasa",
+        "start": 0,
+        "end": 10,
+        "exact_match": false
+      }
+    ]
+  },
+  {
+    "record_id": "rec_159",
+    "text": "Nipee waliohusika katika wizi ya pesa katika benki kuu kule Nairobi.",
+    "gold_frame": {
+      "intent": "news_query",
+      "slots": [
+        {
+          "type": "term",
+          "value": "wizi ya pesa katika benki kuu",
+          "start": 25,
+          "end": 54
+        },
+        {
+          "type": "location",
+          "value": "Nairobi",
+          "start": 60,
+          "end": 67
+        }
+      ]
+    },
+    "predicted_frame": {
+      "intent": "news_query",
+      "slots": [
+        {
+          "type": "location",
+          "value": "Nairobi",
+          "start": 60,
+          "end": 67
+        }
+      ]
+    },
+    "full_frame_exact_match": false,
+    "json_valid": true,
+    "failed_tasks": [
+      "slots"
+    ],
+    "unseen_gold_slots": [
+      {
+        "type": "term",
+        "value": "wizi ya pesa katika benki kuu",
+        "start": 25,
+        "end": 54,
+        "exact_match": false
+      }
+    ]
+  },
+  {
+    "record_id": "rec_163",
+    "text": "Harusi ya Diamond Platnumz ilifanyika wapi na lini?",
+    "gold_frame": {
+      "intent": "news_query",
+      "slots": [
+        {
+          "type": "term",
+          "value": "Harusi",
+          "start": 0,
+          "end": 6
+        },
+        {
+          "type": "term",
+          "value": "Diamond Platnumz",
+          "start": 10,
+          "end": 26
+        }
+      ]
+    },
+    "predicted_frame": {
+      "intent": "calendar_query",
+      "slots": [
+        {
+          "type": "term",
+          "value": "Harusi",
+          "start": 0,
+          "end": 6
+        }
+      ]
+    },
+    "full_frame_exact_match": false,
+    "json_valid": true,
+    "failed_tasks": [
+      "intent",
+      "slots"
+    ],
+    "unseen_gold_slots": [
+      {
+        "type": "term",
+        "value": "Diamond Platnumz",
+        "start": 10,
+        "end": 26,
+        "exact_match": false
+      }
+    ]
+  },
+  {
+    "record_id": "rec_179",
+    "text": "Naomba uniwekee wimbo wa Kodongklan.",
+    "gold_frame": {
+      "intent": "play_music",
+      "slots": [
+        {
+          "type": "item",
+          "value": "Kodongklan",
+          "start": 25,
+          "end": 35
+        }
+      ]
+    },
+    "predicted_frame": {
+      "intent": "play_music",
+      "slots": []
+    },
+    "full_frame_exact_match": false,
+    "json_valid": true,
+    "failed_tasks": [
+      "slots"
+    ],
+    "unseen_gold_slots": [
+      {
+        "type": "item",
+        "value": "Kodongklan",
+        "start": 25,
+        "end": 35,
+        "exact_match": false
+      }
+    ]
+  },
+  {
+    "record_id": "rec_180",
+    "text": "Weka ngoma inayoitwa Mayday ya Fally Ipupa.",
+    "gold_frame": {
+      "intent": "play_music",
+      "slots": [
+        {
+          "type": "item",
+          "value": "Mayday",
+          "start": 21,
+          "end": 27
+        },
+        {
+          "type": "term",
+          "value": "Fally Ipupa",
+          "start": 31,
+          "end": 42
+        }
+      ]
+    },
+    "predicted_frame": {
+      "intent": "qa_definition",
+      "slots": []
+    },
+    "full_frame_exact_match": false,
+    "json_valid": true,
+    "failed_tasks": [
+      "intent",
+      "slots"
+    ],
+    "unseen_gold_slots": [
+      {
+        "type": "item",
+        "value": "Mayday",
+        "start": 21,
+        "end": 27,
+        "exact_match": false
+      },
+      {
+        "type": "term",
+        "value": "Fally Ipupa",
+        "start": 31,
+        "end": 42,
+        "exact_match": false
+      }
+    ]
+  },
+  {
+    "record_id": "rec_182",
+    "text": "Nitumbuize na wimbo za Oliver Mtukudzi.",
+    "gold_frame": {
+      "intent": "play_music",
+      "slots": [
+        {
+          "type": "term",
+          "value": "Oliver Mtukudzi",
+          "start": 23,
+          "end": 38
+        }
+      ]
+    },
+    "predicted_frame": {
+      "intent": "play_music",
+      "slots": []
+    },
+    "full_frame_exact_match": false,
+    "json_valid": true,
+    "failed_tasks": [
+      "slots"
+    ],
+    "unseen_gold_slots": [
+      {
+        "type": "term",
+        "value": "Oliver Mtukudzi",
+        "start": 23,
+        "end": 38,
+        "exact_match": false
+      }
+    ]
+  },
+  {
+    "record_id": "rec_187",
+    "text": "Tumbuiza wageni wangu na nyimbo za Wanavokali.",
+    "gold_frame": {
+      "intent": "play_music",
+      "slots": [
+        {
+          "type": "term",
+          "value": "Wanavokali",
+          "start": 35,
+          "end": 45
+        }
+      ]
+    },
+    "predicted_frame": {
+      "intent": "play_music",
+      "slots": []
+    },
+    "full_frame_exact_match": false,
+    "json_valid": true,
+    "failed_tasks": [
+      "slots"
+    ],
+    "unseen_gold_slots": [
+      {
+        "type": "term",
+        "value": "Wanavokali",
+        "start": 35,
+        "end": 45,
+        "exact_match": false
+      }
+    ]
+  },
+  {
+    "record_id": "rec_190",
+    "text": "Nisikilizishe wimbo ya Bien mpya inayoitwa I'll be Okay.",
+    "gold_frame": {
+      "intent": "play_music",
+      "slots": [
+        {
+          "type": "term",
+          "value": "Bien",
+          "start": 23,
+          "end": 27
+        },
+        {
+          "type": "item",
+          "value": "I'll be Okay",
+          "start": 43,
+          "end": 55
+        }
+      ]
+    },
+    "predicted_frame": {
+      "intent": "play_music",
+      "slots": []
+    },
+    "full_frame_exact_match": false,
+    "json_valid": true,
+    "failed_tasks": [
+      "slots"
+    ],
+    "unseen_gold_slots": [
+      {
+        "type": "term",
+        "value": "Bien",
+        "start": 23,
+        "end": 27,
+        "exact_match": false
+      },
+      {
+        "type": "item",
+        "value": "I'll be Okay",
+        "start": 43,
+        "end": 55,
+        "exact_match": false
+      }
+    ]
+  },
+  {
+    "record_id": "rec_203",
+    "text": "Ongeza jina la fundi wa mabomba kwenye orodha ya mafundi.",
+    "gold_frame": {
+      "intent": "lists_createoradd",
+      "slots": [
+        {
+          "type": "item",
+          "value": "jina la fundi wa mabomba",
+          "start": 7,
+          "end": 31
+        }
+      ]
+    },
+    "predicted_frame": {
+      "intent": "lists_createoradd",
+      "slots": []
+    },
+    "full_frame_exact_match": false,
+    "json_valid": true,
+    "failed_tasks": [
+      "slots"
+    ],
+    "unseen_gold_slots": [
+      {
+        "type": "item",
+        "value": "jina la fundi wa mabomba",
+        "start": 7,
+        "end": 31,
+        "exact_match": false
+      }
+    ]
+  },
+  {
+    "record_id": "rec_208",
+    "text": "Ongeza jina la mwalimu mpya kwenye orodha ya walimu.",
+    "gold_frame": {
+      "intent": "lists_createoradd",
+      "slots": [
+        {
+          "type": "item",
+          "value": "jina la mwalimu mpya",
+          "start": 7,
+          "end": 27
+        }
+      ]
+    },
+    "predicted_frame": {
+      "intent": "lists_createoradd",
+      "slots": []
+    },
+    "full_frame_exact_match": false,
+    "json_valid": true,
+    "failed_tasks": [
+      "slots"
+    ],
+    "unseen_gold_slots": [
+      {
+        "type": "item",
+        "value": "jina la mwalimu mpya",
+        "start": 7,
+        "end": 27,
+        "exact_match": false
+      }
+    ]
+  },
+  {
+    "record_id": "rec_210",
+    "text": "Ongeza maadhimisho ya ndoa ya tarehe 18 Julai kwenye orodha ya tarehe muhimu.",
+    "gold_frame": {
+      "intent": "lists_createoradd",
+      "slots": [
+        {
+          "type": "date",
+          "value": "18 Julai",
+          "start": 37,
+          "end": 45
+        }
+      ]
+    },
+    "predicted_frame": {
+      "intent": "lists_createoradd",
+      "slots": []
+    },
+    "full_frame_exact_match": false,
+    "json_valid": true,
+    "failed_tasks": [
+      "slots"
+    ],
+    "unseen_gold_slots": [
+      {
+        "type": "date",
+        "value": "18 Julai",
+        "start": 37,
+        "end": 45,
+        "exact_match": false
+      }
+    ]
+  },
+  {
+    "record_id": "rec_212",
+    "text": "Unda orodha ya vitu: viazi, vitunguu na karoti.",
+    "gold_frame": {
+      "intent": "lists_createoradd",
+      "slots": [
+        {
+          "type": "item",
+          "value": "viazi",
+          "start": 21,
+          "end": 26
+        },
+        {
+          "type": "item",
+          "value": "vitunguu",
+          "start": 28,
+          "end": 36
+        },
+        {
+          "type": "item",
+          "value": "karoti",
+          "start": 40,
+          "end": 46
+        }
+      ]
+    },
+    "predicted_frame": {
+      "intent": "lists_createoradd",
+      "slots": []
+    },
+    "full_frame_exact_match": false,
+    "json_valid": true,
+    "failed_tasks": [
+      "slots"
+    ],
+    "unseen_gold_slots": [
+      {
+        "type": "item",
+        "value": "viazi",
+        "start": 21,
+        "end": 26,
+        "exact_match": false
+      },
+      {
+        "type": "item",
+        "value": "vitunguu",
+        "start": 28,
+        "end": 36,
+        "exact_match": false
+      },
+      {
+        "type": "item",
+        "value": "karoti",
+        "start": 40,
+        "end": 46,
+        "exact_match": false
+      }
+    ]
+  },
+  {
+    "record_id": "rec_213",
+    "text": "Ongeza kikao cha darasa cha Ijumaa saa 12:30 kwenye orodha ya mikutano.",
+    "gold_frame": {
+      "intent": "lists_createoradd",
+      "slots": [
+        {
+          "type": "item",
+          "value": "kikao cha darasa",
+          "start": 7,
+          "end": 23
+        },
+        {
+          "type": "date",
+          "value": "Ijumaa",
+          "start": 28,
+          "end": 34
+        },
+        {
+          "type": "time",
+          "value": "12:30",
+          "start": 39,
+          "end": 44
+        }
+      ]
+    },
+    "predicted_frame": {
+      "intent": "lists_createoradd",
+      "slots": [
+        {
+          "type": "date",
+          "value": "Ijumaa",
+          "start": 28,
+          "end": 34
+        }
+      ]
+    },
+    "full_frame_exact_match": false,
+    "json_valid": true,
+    "failed_tasks": [
+      "slots"
+    ],
+    "unseen_gold_slots": [
+      {
+        "type": "item",
+        "value": "kikao cha darasa",
+        "start": 7,
+        "end": 23,
+        "exact_match": false
+      },
+      {
+        "type": "time",
+        "value": "12:30",
+        "start": 39,
+        "end": 44,
+        "exact_match": false
+      }
+    ]
+  },
+  {
+    "record_id": "rec_227",
+    "text": "Hali ya anga ya wiki inayofuata imesemekana  kuwa?",
+    "gold_frame": {
+      "intent": "weather_query",
+      "slots": [
+        {
+          "type": "date",
+          "value": "wiki inayofuata",
+          "start": 16,
+          "end": 31
+        }
+      ]
+    },
+    "predicted_frame": {
+      "intent": "weather_query",
+      "slots": [
+        {
+          "type": "date",
+          "value": "wiki inayofuata",
+          "start": 16,
+          "end": 31
+        }
+      ]
+    },
+    "full_frame_exact_match": true,
+    "json_valid": true,
+    "failed_tasks": [],
+    "unseen_gold_slots": []
+  },
+  {
+    "record_id": "rec_230",
+    "text": "Kesho itakuwa sawa kuanika mtama ama kutanyesha?",
+    "gold_frame": {
+      "intent": "weather_query",
+      "slots": [
+        {
+          "type": "date",
+          "value": "Kesho",
+          "start": 0,
+          "end": 5
+        }
+      ]
+    },
+    "predicted_frame": {
+      "intent": "weather_query",
+      "slots": [
+        {
+          "type": "date",
+          "value": "Kesho",
+          "start": 0,
+          "end": 5
+        }
+      ]
+    },
+    "full_frame_exact_match": true,
+    "json_valid": true,
+    "failed_tasks": [],
+    "unseen_gold_slots": []
+  },
+  {
+    "record_id": "rec_232",
+    "text": "Kesho kutwa kutakuwa na jua siku yote?",
+    "gold_frame": {
+      "intent": "weather_query",
+      "slots": [
+        {
+          "type": "date",
+          "value": "Kesho kutwa",
+          "start": 0,
+          "end": 11
+        },
+        {
+          "type": "term",
+          "value": "jua",
+          "start": 24,
+          "end": 27
+        }
+      ]
+    },
+    "predicted_frame": {
+      "intent": "weather_query",
+      "slots": [
+        {
+          "type": "date",
+          "value": "Kesho",
+          "start": 0,
+          "end": 5
+        }
+      ]
+    },
+    "full_frame_exact_match": false,
+    "json_valid": true,
+    "failed_tasks": [
+      "slots"
+    ],
+    "unseen_gold_slots": [
+      {
+        "type": "date",
+        "value": "Kesho kutwa",
+        "start": 0,
+        "end": 11,
+        "exact_match": false
+      },
+      {
+        "type": "term",
+        "value": "jua",
+        "start": 24,
+        "end": 27,
+        "exact_match": false
+      }
+    ]
+  },
+  {
+    "record_id": "rec_234",
+    "text": "Kutakuwa na joto leo ama baridi?",
+    "gold_frame": {
+      "intent": "weather_query",
+      "slots": [
+        {
+          "type": "term",
+          "value": "joto",
+          "start": 12,
+          "end": 16
+        },
+        {
+          "type": "date",
+          "value": "leo",
+          "start": 17,
+          "end": 20
+        },
+        {
+          "type": "term",
+          "value": "baridi",
+          "start": 25,
+          "end": 31
+        }
+      ]
+    },
+    "predicted_frame": {
+      "intent": "weather_query",
+      "slots": [
+        {
+          "type": "term",
+          "value": "joto",
+          "start": 12,
+          "end": 16
+        },
+        {
+          "type": "date",
+          "value": "leo",
+          "start": 17,
+          "end": 20
+        }
+      ]
+    },
+    "full_frame_exact_match": false,
+    "json_valid": true,
+    "failed_tasks": [
+      "slots"
+    ],
+    "unseen_gold_slots": [
+      {
+        "type": "term",
+        "value": "baridi",
+        "start": 25,
+        "end": 31,
+        "exact_match": false
+      }
+    ]
+  },
+  {
+    "record_id": "rec_235",
+    "text": "Mjini Nakuru kunanyesha ama jua inawaka?",
+    "gold_frame": {
+      "intent": "weather_query",
+      "slots": [
+        {
+          "type": "location",
+          "value": "Nakuru",
+          "start": 6,
+          "end": 12
+        },
+        {
+          "type": "term",
+          "value": "jua",
+          "start": 28,
+          "end": 31
+        }
+      ]
+    },
+    "predicted_frame": {
+      "intent": "weather_query",
+      "slots": [
+        {
+          "type": "location",
+          "value": "Nakuru",
+          "start": 6,
+          "end": 12
+        }
+      ]
+    },
+    "full_frame_exact_match": false,
+    "json_valid": true,
+    "failed_tasks": [
+      "slots"
+    ],
+    "unseen_gold_slots": [
+      {
+        "type": "term",
+        "value": "jua",
+        "start": 28,
+        "end": 31,
+        "exact_match": false
+      }
+    ]
+  },
+  {
+    "record_id": "T22-NEW-LQ-001",
+    "text": "Nisomee orodha yangu ya manunuzi ya leo.",
+    "gold_frame": {
+      "intent": "lists_query",
+      "slots": [
+        {
+          "type": "date",
+          "value": "leo",
+          "start": 36,
+          "end": 39
+        }
+      ]
+    },
+    "predicted_frame": {
+      "intent": "lists_query",
+      "slots": [
+        {
+          "type": "date",
+          "value": "leo",
+          "start": 36,
+          "end": 39
+        }
+      ]
+    },
+    "full_frame_exact_match": true,
+    "json_valid": true,
+    "failed_tasks": [],
+    "unseen_gold_slots": []
+  },
+  {
+    "record_id": "T22-NEW-LQ-002",
+    "text": "Niliandika nini kwenye listi ya sokoni?",
+    "gold_frame": {
+      "intent": "lists_query",
+      "slots": []
+    },
+    "predicted_frame": {
+      "intent": "lists_query",
+      "slots": []
+    },
+    "full_frame_exact_match": true,
+    "json_valid": true,
+    "failed_tasks": [],
+    "unseen_gold_slots": []
+  },
+  {
+    "record_id": "T22-NEW-LQ-005",
+    "text": "Nionyeshe vitu vyote vilivyo kwenye orodha ya supamaketi.",
+    "gold_frame": {
+      "intent": "lists_query",
+      "slots": []
+    },
+    "predicted_frame": {
+      "intent": "lists_query",
+      "slots": []
+    },
+    "full_frame_exact_match": true,
+    "json_valid": true,
+    "failed_tasks": [],
+    "unseen_gold_slots": []
+  },
+  {
+    "record_id": "T22-NEW-LQ-007",
+    "text": "Niambie vitu ambavyo bado sijavinunua kwenye orodha ya leo.",
+    "gold_frame": {
+      "intent": "lists_query",
+      "slots": [
+        {
+          "type": "date",
+          "value": "leo",
+          "start": 55,
+          "end": 58
+        }
+      ]
+    },
+    "predicted_frame": {
+      "intent": "lists_query",
+      "slots": [
+        {
+          "type": "date",
+          "value": "leo",
+          "start": 55,
+          "end": 58
+        }
+      ]
+    },
+    "full_frame_exact_match": true,
+    "json_valid": true,
+    "failed_tasks": [],
+    "unseen_gold_slots": []
+  },
+  {
+    "record_id": "T22-NEW-LQ-012",
+    "text": "Je, nimeshamaliza vitu vyote kwenye orodha ya leo?",
+    "gold_frame": {
+      "intent": "lists_query",
+      "slots": [
+        {
+          "type": "date",
+          "value": "leo",
+          "start": 46,
+          "end": 49
+        }
+      ]
+    },
+    "predicted_frame": {
+      "intent": "lists_query",
+      "slots": [
+        {
+          "type": "date",
+          "value": "leo",
+          "start": 46,
+          "end": 49
+        }
+      ]
+    },
+    "full_frame_exact_match": true,
+    "json_valid": true,
+    "failed_tasks": [],
+    "unseen_gold_slots": []
+  }
+]

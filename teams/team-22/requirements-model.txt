@@ -1,0 +1,8 @@
+# Select the PyTorch wheel that matches the Colab/local CUDA runtime when needed.
+torch>=2.6,<3
+transformers==5.3.0
+sentencepiece>=0.2,<0.3
+pandas>=2.2,<4
+numpy>=1.26,<3
+scikit-learn>=1.5,<2
+tzdata>=2025.2

@@ -1,0 +1,234 @@
+{
+  "format": "team-submission-snapshot-v1",
+  "source_commit_for_submission": "42f0bd0d31448235462da8a3bdc2ac5315a86939",
+  "file_count": 45,
+  "files": [
+    {
+      "path": "audit_track_c.py",
+      "bytes": 14258,
+      "sha256": "2b1fef1ea7e591e58d873b1f88f01b7819baf90e79b409107b5b0f2ed6936074"
+    },
+    {
+      "path": "compare_track_c_results.py",
+      "bytes": 4533,
+      "sha256": "ded3c7557930b74886d4576c9eabec38e79d1eb81b6fb38532bf596b2fd03b2e"
+    },
+    {
+      "path": "compare_track_c_validation.py",
+      "bytes": 4005,
+      "sha256": "223a5d01b376e4543fb859c30b72abbf9a65786e10a90addfd899fe975619a0c"
+    },
+    {
+      "path": "docs__data__annotation_guide.md",
+      "bytes": 4343,
+      "sha256": "7b12a0994042f2951160acd6bb94de1df5f2cfd872f74f987010993714882818"
+    },
+    {
+      "path": "docs__data__data_plan.md",
+      "bytes": 3327,
+      "sha256": "ef3162f117ec19d869324ef0656600c119706a07ac4758159373ba07eae78da5"
+    },
+    {
+      "path": "docs__data__dataset_card.md",
+      "bytes": 3432,
+      "sha256": "27b2babfa1985568906c8bb29610c9a75850a9840a58ae806cd148587d8b579f"
+    },
+    {
+      "path": "docs__data__quality_report.md",
+      "bytes": 4491,
+      "sha256": "eda2b7e80f809bd518b57c1506582e7d010a608e480e8f4f2893a18934385a00"
+    },
+    {
+      "path": "docs__model__COLAB_TRACK_C_RUN.md",
+      "bytes": 10251,
+      "sha256": "ce9178ceb8fee55371b0843a66f18763e1dfe84868264670c50ef692b2180b61"
+    },
+    {
+      "path": "docs__model__MODEL_EVALUATION_PROTOCOL.md",
+      "bytes": 6793,
+      "sha256": "60be23d9fddef1a24b848a6728239d38e05bf68839d45becc17e2fd16bcdd207"
+    },
+    {
+      "path": "docs__model__TRACK_C_EVIDENCE.md",
+      "bytes": 3373,
+      "sha256": "13701aeaadf67523dbad38c0cb216981a47945f936913c974a272ea8e580fff8"
+    },
+    {
+      "path": "docs__team__contribution_and_ai_use.md",
+      "bytes": 1535,
+      "sha256": "1459f7dbeedf28405dde49244fbed3bf64f7d4cc7e3e7d96016fd2193ff88547"
+    },
+    {
+      "path": "evaluate_track_c_baselines.py",
+      "bytes": 10858,
+      "sha256": "ac28e73f044231ffa814626416a24ee4d8dc10a2c84635408017a58d5ed00de7"
+    },
+    {
+      "path": "models__track_c_final__label_mappings.json",
+      "bytes": 584,
+      "sha256": "1fe52b51f3cfca2c9865b249beb4ab21be968d37f14566eed0d894f38a429879"
+    },
+    {
+      "path": "models__track_c_final__metrics_and_errors.json",
+      "bytes": 88656,
+      "sha256": "e8430c76f0943742caf0696d950cef8eb9b136cf213ab51bb1e17fbfff149b17"
+    },
+    {
+      "path": "models__track_c_final__run_manifest.json",
+      "bytes": 2342,
+      "sha256": "88be6809b9cfd76b5e3c005025c61ff4c96a0f2ae79f719b10c8c444b762932a"
+    },
+    {
+      "path": "models__track_c_final__test_predictions.json",
+      "bytes": 46545,
+      "sha256": "ba792a2cefe07b8d71b7ac9122423d0f4e2efb685ed8d49c16fa85d588bb0771"
+    },
+    {
+      "path": "models__track_c_final__validation_metrics.json",
+      "bytes": 16947,
+      "sha256": "f78517d8526486f0bfc73a1f0e8cf47361af434b78eab65307f47a1501522d18"
+    },
+    {
+      "path": "models__track_c_final__validation_predictions.json",
+      "bytes": 52323,
+      "sha256": "97d8aa2b26ec9b48ed9a8691876ebccad9b6d113e213aacc6c6bc3749a867b1e"
+    },
+    {
+      "path": "provenance__README.md",
+      "bytes": 828,
+      "sha256": "1e743c3608b13a13da21fb918c63dc6ff2ba22d2439420622bfc408317371037"
+    },
+    {
+      "path": "provenance__Team_22_Source_Log.csv",
+      "bytes": 98821,
+      "sha256": "71a053f705cca572d6ae10fdeaefbb46e471c4b315a5b47e778d74d437d85602"
+    },
+    {
+      "path": "provenance__track_c_label_correction_log.csv",
+      "bytes": 13828,
+      "sha256": "8a1d4fff45451809c0af9078d4e670ea21fd36e95f6ba62e626efc851256ca3e"
+    },
+    {
+      "path": "provenance__track_c_split_reassignment.json",
+      "bytes": 16250,
+      "sha256": "0b708db86ce0bd77c7f7bb15a1a26167c397557d1e7e02aa350931655234cb8d"
+    },
+    {
+      "path": "README.md",
+      "bytes": 9725,
+      "sha256": "3bf8bc9289ac5a03ebd5e750d0c45ca6e49b2a47d12922069e9003e5d62583b1"
+    },
+    {
+      "path": "reassign_track_c_splits.py",
+      "bytes": 6929,
+      "sha256": "cd453b08a41615fbbf28d9adbe0c334ec08e9967550b75220bcd6b38ceb0198b"
+    },
+    {
+      "path": "requirements-model.txt",
+      "bytes": 206,
+      "sha256": "bc48f6f40ca9de1b25d69c2e04008475c22c17c62ae69be3862849c8486a0aeb"
+    },
+    {
+      "path": "results__track_c_baselines__baseline_metrics.json",
+      "bytes": 112284,
+      "sha256": "baabe7677cb71d5919b29a790bdd0b193c8155786e67de7c3276657f7208a18b"
+    },
+    {
+      "path": "results__track_c_baselines__char_tfidf_empty_slot_predictions.json",
+      "bytes": 39566,
+      "sha256": "171086daf91ab2ee2355b8df80c57f67f109bb4f761ced4dcfa215181015e803"
+    },
+    {
+      "path": "results__track_c_baselines__char_tfidf_plus_train_surface_value_matcher_predictions.json",
+      "bytes": 46014,
+      "sha256": "95fea67e2b3d6bfd13c35fcaea7a619f7f31cf64612068b43b4315324557cb31"
+    },
+    {
+      "path": "results__track_c_baselines__intent_char_tfidf_logistic_regression_predictions.json",
+      "bytes": 39566,
+      "sha256": "171086daf91ab2ee2355b8df80c57f67f109bb4f761ced4dcfa215181015e803"
+    },
+    {
+      "path": "results__track_c_baselines__intent_majority_predictions.json",
+      "bytes": 40052,
+      "sha256": "5f4259d577e2bbf0e6c01fdb29fa7256ae79a95fdb0853e4262b47ad75a27609"
+    },
+    {
+      "path": "results__track_c_baselines__per_label_report.csv",
+      "bytes": 2699,
+      "sha256": "e9f67d803e894aa06791595fcfc7689f847751555ada64a985a40aa5009b8408"
+    },
+    {
+      "path": "results__track_c_final__comparison.md",
+      "bytes": 2111,
+      "sha256": "ad7b4018f133a732fda430677675454edbf4bd9c208cffa30326140a85060ea2"
+    },
+    {
+      "path": "sauti__colab_demo.py",
+      "bytes": 6076,
+      "sha256": "54077efa2a4a86b25b4dec4acc92ca9c8b52dc9fb0ee8bfd45b0aaf338f485b4"
+    },
+    {
+      "path": "sauti__README.md",
+      "bytes": 2392,
+      "sha256": "4898d69d3493f7c16809123ea734c483ad1c8b8d9b1651aa89c587bf4c6cc147"
+    },
+    {
+      "path": "sauti__requirements.txt",
+      "bytes": 93,
+      "sha256": "62ae7457887217290267e4015ed743ff2f2ec7f8fd2ebe84c1ddebeb401275b9"
+    },
+    {
+      "path": "sauti__sauti.py",
+      "bytes": 4132,
+      "sha256": "4551213b32f895941aa4fd4541181b7c82b682e9dbf95b5f6bf8160b7926ee5f"
+    },
+    {
+      "path": "sauti__sauti_model.py",
+      "bytes": 10728,
+      "sha256": "6c35dfac907620f65dd5c9a76c44c0ad890cff025d9fa28ac68a3313707726fd"
+    },
+    {
+      "path": "sauti__tests__test_sauti.py",
+      "bytes": 5731,
+      "sha256": "089b2a28a991a5ec2fff55add8108222175feec808e204dcff701d3cd55741c7"
+    },
+    {
+      "path": "sauti__web__app.css",
+      "bytes": 6643,
+      "sha256": "3ac1f0af848fe3502002d267db7519713d48f76b6c6ca0a52781fee092a1ee52"
+    },
+    {
+      "path": "sauti__web__app.js",
+      "bytes": 6164,
+      "sha256": "ce1f4e250288f35cda95b9e5fa7f842d366e1a4b3c70d1b5362d0b15373c854b"
+    },
+    {
+      "path": "sauti__web__index.html",
+      "bytes": 3391,
+      "sha256": "a42b4e9776c97a7ecd69f30fec68104fb284d7bb52cce0d3cb9c1ba2fbe9c5be"
+    },
+    {
+      "path": "team-22-source.zip",
+      "bytes": 136395,
+      "sha256": "ae61b65b542e59f646fd89c0aa9f6d26091729a87ac3f9e564669c7989a083a9"
+    },
+    {
+      "path": "Team_22_Dataset_Track_C.csv",
+      "bytes": 190258,
+      "sha256": "0e10c800925e101af08aee1213f55543dcc508a024da918d6c87d3a96703835f"
+    },
+    {
+      "path": "track_c_evaluation.py",
+      "bytes": 17774,
+      "sha256": "fd5ea4d807c06c2866182963f03db28531aa9277a7627ee0626ff42f84de206f"
+    },
+    {
+      "path": "train_joint_intent_slot.py",
+      "bytes": 52294,
+      "sha256": "0ef0a1deaf695bea4439ed3d1f3c0e203daef82a0b2fb2d4b54fc13da635a672"
+    }
+  ],
+  "submission_snapshot_sha256": "17267791e19c2b862ef35bae8e7a9977ad033ad1bc412efca167a093b37a3190",
+  "snapshot_hash_algorithm": "SHA-256 of sorted UTF-8 lines: path<TAB>file_sha256"
+}

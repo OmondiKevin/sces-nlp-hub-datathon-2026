@@ -1,0 +1,3224 @@
+{
+  "model_name": "castorini/afriberta_large",
+  "slot_decoder": "constrained_linear_chain_crf",
+  "slot_value_augmentation": {
+    "enabled": true,
+    "generated_examples": 133,
+    "replacement_policy": "same intent, slot type, and whitespace word count"
+  },
+  "optimizer": {
+    "learning_rate": 2e-05,
+    "weight_decay": 0.01,
+    "learning_rate_groups": [
+      2e-05
+    ]
+  },
+  "seed": 42,
+  "best_epoch": 8,
+  "checkpoint_selection": {
+    "split": "validation",
+    "priority": [
+      "full_frame_exact_match",
+      "intent_macro_f1",
+      "exact_type_character_span_slot_f1"
+    ],
+    "best_validation_key": [
+      0.5,
+      1.0,
+      0.806282722513089
+    ]
+  },
+  "best_validation": {
+    "intent": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "per_label": {
+        "alarm_set": {
+          "support": 5,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "calendar_query": {
+          "support": 5,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "calendar_set": {
+          "support": 5,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "datetime_query": {
+          "support": 5,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "lists_createoradd": {
+          "support": 5,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "lists_query": {
+          "support": 5,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "news_query": {
+          "support": 5,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "play_music": {
+          "support": 5,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "qa_definition": {
+          "support": 5,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "weather_query": {
+          "support": 5,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "confusion_matrix": {
+        "alarm_set": {
+          "alarm_set": 5,
+          "calendar_query": 0,
+          "calendar_set": 0,
+          "datetime_query": 0,
+          "lists_createoradd": 0,
+          "lists_query": 0,
+          "news_query": 0,
+          "play_music": 0,
+          "qa_definition": 0,
+          "weather_query": 0
+        },
+        "calendar_query": {
+          "alarm_set": 0,
+          "calendar_query": 5,
+          "calendar_set": 0,
+          "datetime_query": 0,
+          "lists_createoradd": 0,
+          "lists_query": 0,
+          "news_query": 0,
+          "play_music": 0,
+          "qa_definition": 0,
+          "weather_query": 0
+        },
+        "calendar_set": {
+          "alarm_set": 0,
+          "calendar_query": 0,
+          "calendar_set": 5,
+          "datetime_query": 0,
+          "lists_createoradd": 0,
+          "lists_query": 0,
+          "news_query": 0,
+          "play_music": 0,
+          "qa_definition": 0,
+          "weather_query": 0
+        },
+        "datetime_query": {
+          "alarm_set": 0,
+          "calendar_query": 0,
+          "calendar_set": 0,
+          "datetime_query": 5,
+          "lists_createoradd": 0,
+          "lists_query": 0,
+          "news_query": 0,
+          "play_music": 0,
+          "qa_definition": 0,
+          "weather_query": 0
+        },
+        "lists_createoradd": {
+          "alarm_set": 0,
+          "calendar_query": 0,
+          "calendar_set": 0,
+          "datetime_query": 0,
+          "lists_createoradd": 5,
+          "lists_query": 0,
+          "news_query": 0,
+          "play_music": 0,
+          "qa_definition": 0,
+          "weather_query": 0
+        },
+        "lists_query": {
+          "alarm_set": 0,
+          "calendar_query": 0,
+          "calendar_set": 0,
+          "datetime_query": 0,
+          "lists_createoradd": 0,
+          "lists_query": 5,
+          "news_query": 0,
+          "play_music": 0,
+          "qa_definition": 0,
+          "weather_query": 0
+        },
+        "news_query": {
+          "alarm_set": 0,
+          "calendar_query": 0,
+          "calendar_set": 0,
+          "datetime_query": 0,
+          "lists_createoradd": 0,
+          "lists_query": 0,
+          "news_query": 5,
+          "play_music": 0,
+          "qa_definition": 0,
+          "weather_query": 0
+        },
+        "play_music": {
+          "alarm_set": 0,
+          "calendar_query": 0,
+          "calendar_set": 0,
+          "datetime_query": 0,
+          "lists_createoradd": 0,
+          "lists_query": 0,
+          "news_query": 0,
+          "play_music": 5,
+          "qa_definition": 0,
+          "weather_query": 0
+        },
+        "qa_definition": {
+          "alarm_set": 0,
+          "calendar_query": 0,
+          "calendar_set": 0,
+          "datetime_query": 0,
+          "lists_createoradd": 0,
+          "lists_query": 0,
+          "news_query": 0,
+          "play_music": 0,
+          "qa_definition": 5,
+          "weather_query": 0
+        },
+        "weather_query": {
+          "alarm_set": 0,
+          "calendar_query": 0,
+          "calendar_set": 0,
+          "datetime_query": 0,
+          "lists_createoradd": 0,
+          "lists_query": 0,
+          "news_query": 0,
+          "play_music": 0,
+          "qa_definition": 0,
+          "weather_query": 5
+        }
+      },
+      "examples": 50
+    },
+    "slot_exact_type_character_span_micro": {
+      "precision": 0.8651685393258427,
+      "recall": 0.7549019607843137,
+      "f1": 0.806282722513089,
+      "true_positive": 77,
+      "false_positive": 12,
+      "false_negative": 25,
+      "gold_spans": 102,
+      "predicted_spans": 89
+    },
+    "full_frame_exact_match": 0.5,
+    "full_frame_exact_count": 25,
+    "json_validity": {
+      "valid": 50,
+      "total": 50,
+      "rate": 1.0
+    },
+    "unseen_slot_values": {
+      "distinct_type_value_pairs": 58,
+      "gold_unseen_slots": 61,
+      "exactly_recovered": 39,
+      "exact_recall": 0.639344262295082,
+      "errors": [
+        {
+          "record_id": "rec_068",
+          "text": "Nipangie mkutano wa kikundi Jumatano ijayo saa 15:00 kwenye maktaba.",
+          "type": "location",
+          "value": "maktaba",
+          "start": 60,
+          "end": 67,
+          "exact_match": false
+        },
+        {
+          "record_id": "rec_069",
+          "text": "Ongeza kipindi cha mazoezi kila Jumanne saa 11:00.",
+          "type": "date",
+          "value": "kila Jumanne",
+          "start": 27,
+          "end": 39,
+          "exact_match": false
+        },
+        {
+          "record_id": "rec_094",
+          "text": "Muda kati ya saa mbili na saa tano ni kiasi gani?",
+          "type": "time",
+          "value": "saa mbili",
+          "start": 13,
+          "end": 22,
+          "exact_match": false
+        },
+        {
+          "record_id": "rec_094",
+          "text": "Muda kati ya saa mbili na saa tano ni kiasi gani?",
+          "type": "time",
+          "value": "saa tano",
+          "start": 26,
+          "end": 34,
+          "exact_match": false
+        },
+        {
+          "record_id": "rec_119",
+          "text": "Lishe bora ni nini?",
+          "type": "term",
+          "value": "Lishe bora",
+          "start": 0,
+          "end": 10,
+          "exact_match": false
+        },
+        {
+          "record_id": "rec_166",
+          "text": "Rais alipeana kanuni gani mpya kuhusu ushuru wa forodha?",
+          "type": "term",
+          "value": "Rais",
+          "start": 0,
+          "end": 4,
+          "exact_match": false
+        },
+        {
+          "record_id": "rec_167",
+          "text": "Ni nini kilichoendelea wakati Rais wa Ufaransa alizuru nchi jana?",
+          "type": "term",
+          "value": "Rais",
+          "start": 30,
+          "end": 34,
+          "exact_match": false
+        },
+        {
+          "record_id": "rec_167",
+          "text": "Ni nini kilichoendelea wakati Rais wa Ufaransa alizuru nchi jana?",
+          "type": "location",
+          "value": "Ufaransa",
+          "start": 38,
+          "end": 46,
+          "exact_match": false
+        },
+        {
+          "record_id": "rec_168",
+          "text": "Wangapi waliaga dunia wakati meli ilipozama baharini Japani leo saa tano?",
+          "type": "term",
+          "value": "meli ilipozama",
+          "start": 29,
+          "end": 43,
+          "exact_match": false
+        },
+        {
+          "record_id": "rec_168",
+          "text": "Wangapi waliaga dunia wakati meli ilipozama baharini Japani leo saa tano?",
+          "type": "location",
+          "value": "Japani",
+          "start": 53,
+          "end": 59,
+          "exact_match": false
+        },
+        {
+          "record_id": "rec_169",
+          "text": "Mtetemeko wa ardhi ulisababisha maafa magani kule Uturuki wiki uliopita?",
+          "type": "term",
+          "value": "Mtetemeko wa ardhi",
+          "start": 0,
+          "end": 18,
+          "exact_match": false
+        },
+        {
+          "record_id": "rec_170",
+          "text": "Serikali imeweka mikakati gani kukatisha mgomo wa walimu wa vyuo vikuu?",
+          "type": "term",
+          "value": "Serikali",
+          "start": 0,
+          "end": 8,
+          "exact_match": false
+        },
+        {
+          "record_id": "rec_191",
+          "text": "Nichezee nyimbo inayoitwa Twende ya Eric Wainaina.",
+          "type": "item",
+          "value": "Twende",
+          "start": 26,
+          "end": 32,
+          "exact_match": false
+        },
+        {
+          "record_id": "rec_192",
+          "text": "NIpe wimbo iliyotokea jana ya Bruno Mars.",
+          "type": "term",
+          "value": "Bruno Mars",
+          "start": 30,
+          "end": 40,
+          "exact_match": false
+        },
+        {
+          "record_id": "rec_193",
+          "text": "Cheza wimbo ya Bob Marley.",
+          "type": "term",
+          "value": "Bob Marley",
+          "start": 15,
+          "end": 25,
+          "exact_match": false
+        },
+        {
+          "record_id": "rec_194",
+          "text": "Nichezee wimbo unaoitwa Kulosa.",
+          "type": "item",
+          "value": "Kulosa",
+          "start": 24,
+          "end": 30,
+          "exact_match": false
+        },
+        {
+          "record_id": "rec_217",
+          "text": "Ongeza ziara ya bibi ya tarehe 3 Desemba huko Kisii kwenye orodha ya ziara za familia.",
+          "type": "date",
+          "value": "3 Desemba",
+          "start": 31,
+          "end": 40,
+          "exact_match": false
+        },
+        {
+          "record_id": "rec_217",
+          "text": "Ongeza ziara ya bibi ya tarehe 3 Desemba huko Kisii kwenye orodha ya ziara za familia.",
+          "type": "location",
+          "value": "Kisii",
+          "start": 46,
+          "end": 51,
+          "exact_match": false
+        },
+        {
+          "record_id": "rec_241",
+          "text": "Kutakuwa na upepo mkali Mombasa mchana?",
+          "type": "time",
+          "value": "mchana",
+          "start": 32,
+          "end": 38,
+          "exact_match": false
+        },
+        {
+          "record_id": "rec_243",
+          "text": "Hali ya hewa mjini Nakuru itakuwaje wikendi hii?",
+          "type": "location",
+          "value": "mjini Nakuru",
+          "start": 13,
+          "end": 25,
+          "exact_match": false
+        },
+        {
+          "record_id": "rec_244",
+          "text": "Je, mawingu yatafunika Nairobi jioni?",
+          "type": "term",
+          "value": "mawingu",
+          "start": 4,
+          "end": 11,
+          "exact_match": false
+        },
+        {
+          "record_id": "T22-NEW-LQ-016",
+          "text": "Angalia kama niliandika pasipoti kwenye listi ya kubeba.",
+          "type": "item",
+          "value": "pasipoti",
+          "start": 24,
+          "end": 32,
+          "exact_match": false
+        }
+      ]
+    },
+    "error_analysis": [
+      {
+        "record_id": "rec_020",
+        "text": "Kengele ya safari ilie saa nne asubuhi Alhamisi.",
+        "gold_frame": {
+          "intent": "alarm_set",
+          "slots": [
+            {
+              "type": "item",
+              "value": "safari",
+              "start": 11,
+              "end": 17
+            },
+            {
+              "type": "time",
+              "value": "saa nne asubuhi",
+              "start": 23,
+              "end": 38
+            },
+            {
+              "type": "date",
+              "value": "Alhamisi",
+              "start": 39,
+              "end": 47
+            }
+          ]
+        },
+        "predicted_frame": {
+          "intent": "alarm_set",
+          "slots": [
+            {
+              "type": "time",
+              "value": "saa nne asubuhi",
+              "start": 23,
+              "end": 38
+            },
+            {
+              "type": "date",
+              "value": "Alhamisi",
+              "start": 39,
+              "end": 47
+            }
+          ]
+        },
+        "full_frame_exact_match": false,
+        "json_valid": true,
+        "failed_tasks": [
+          "slots"
+        ],
+        "unseen_gold_slots": []
+      },
+      {
+        "record_id": "rec_042",
+        "text": "Mahojiano ya kazi yatafanyika wapi?",
+        "gold_frame": {
+          "intent": "calendar_query",
+          "slots": [
+            {
+              "type": "item",
+              "value": "Mahojiano ya kazi",
+              "start": 0,
+              "end": 17
+            }
+          ]
+        },
+        "predicted_frame": {
+          "intent": "calendar_query",
+          "slots": [
+            {
+              "type": "term",
+              "value": "kazi",
+              "start": 13,
+              "end": 17
+            }
+          ]
+        },
+        "full_frame_exact_match": false,
+        "json_valid": true,
+        "failed_tasks": [
+          "slots"
+        ],
+        "unseen_gold_slots": []
+      },
+      {
+        "record_id": "rec_068",
+        "text": "Nipangie mkutano wa kikundi Jumatano ijayo saa 15:00 kwenye maktaba.",
+        "gold_frame": {
+          "intent": "calendar_set",
+          "slots": [
+            {
+              "type": "item",
+              "value": "mkutano wa kikundi",
+              "start": 9,
+              "end": 27
+            },
+            {
+              "type": "date",
+              "value": "Jumatano ijayo",
+              "start": 28,
+              "end": 42
+            },
+            {
+              "type": "time",
+              "value": "saa 15:00",
+              "start": 43,
+              "end": 52
+            },
+            {
+              "type": "location",
+              "value": "maktaba",
+              "start": 60,
+              "end": 67
+            }
+          ]
+        },
+        "predicted_frame": {
+          "intent": "calendar_set",
+          "slots": [
+            {
+              "type": "item",
+              "value": "mkutano wa kikundi",
+              "start": 9,
+              "end": 27
+            },
+            {
+              "type": "date",
+              "value": "Jumatano ijayo",
+              "start": 28,
+              "end": 42
+            },
+            {
+              "type": "time",
+              "value": "saa 15:00",
+              "start": 43,
+              "end": 52
+            }
+          ]
+        },
+        "full_frame_exact_match": false,
+        "json_valid": true,
+        "failed_tasks": [
+          "slots"
+        ],
+        "unseen_gold_slots": [
+          {
+            "type": "item",
+            "value": "mkutano wa kikundi",
+            "start": 9,
+            "end": 27,
+            "exact_match": true
+          },
+          {
+            "type": "date",
+            "value": "Jumatano ijayo",
+            "start": 28,
+            "end": 42,
+            "exact_match": true
+          },
+          {
+            "type": "location",
+            "value": "maktaba",
+            "start": 60,
+            "end": 67,
+            "exact_match": false
+          }
+        ]
+      },
+      {
+        "record_id": "rec_069",
+        "text": "Ongeza kipindi cha mazoezi kila Jumanne saa 11:00.",
+        "gold_frame": {
+          "intent": "calendar_set",
+          "slots": [
+            {
+              "type": "item",
+              "value": "kipindi cha mazoezi",
+              "start": 7,
+              "end": 26
+            },
+            {
+              "type": "date",
+              "value": "kila Jumanne",
+              "start": 27,
+              "end": 39
+            },
+            {
+              "type": "time",
+              "value": "saa 11:00",
+              "start": 40,
+              "end": 49
+            }
+          ]
+        },
+        "predicted_frame": {
+          "intent": "calendar_set",
+          "slots": [
+            {
+              "type": "item",
+              "value": "kipindi cha mazoezi",
+              "start": 7,
+              "end": 26
+            },
+            {
+              "type": "date",
+              "value": "Jumanne",
+              "start": 32,
+              "end": 39
+            },
+            {
+              "type": "time",
+              "value": "saa 11:00",
+              "start": 40,
+              "end": 49
+            }
+          ]
+        },
+        "full_frame_exact_match": false,
+        "json_valid": true,
+        "failed_tasks": [
+          "slots"
+        ],
+        "unseen_gold_slots": [
+          {
+            "type": "item",
+            "value": "kipindi cha mazoezi",
+            "start": 7,
+            "end": 26,
+            "exact_match": true
+          },
+          {
+            "type": "date",
+            "value": "kila Jumanne",
+            "start": 27,
+            "end": 39,
+            "exact_match": false
+          }
+        ]
+      },
+      {
+        "record_id": "rec_092",
+        "text": "Saa 18:20 ni saa ngapi kwa saa za Kiswahili?",
+        "gold_frame": {
+          "intent": "datetime_query",
+          "slots": [
+            {
+              "type": "time",
+              "value": "Saa 18:20",
+              "start": 0,
+              "end": 9
+            }
+          ]
+        },
+        "predicted_frame": {
+          "intent": "datetime_query",
+          "slots": [
+            {
+              "type": "time",
+              "value": "Saa 18:20",
+              "start": 0,
+              "end": 9
+            },
+            {
+              "type": "location",
+              "value": "Kiswahili",
+              "start": 34,
+              "end": 43
+            }
+          ]
+        },
+        "full_frame_exact_match": false,
+        "json_valid": true,
+        "failed_tasks": [
+          "slots"
+        ],
+        "unseen_gold_slots": [
+          {
+            "type": "time",
+            "value": "Saa 18:20",
+            "start": 0,
+            "end": 9,
+            "exact_match": true
+          }
+        ]
+      }
+    ],
+    "loss": 0.3503020874091557,
+    "best_epoch": 8,
+    "selection_key": [
+      0.5,
+      1.0,
+      0.806282722513089
+    ],
+    "examples": 50
+  },
+  "split_sizes": {
+    "train": 150,
+    "validation": 50,
+    "test": 50
+  },
+  "per_intent_split": {
+    "alarm_set": {
+      "train": 15,
+      "validation": 5,
+      "test": 5
+    },
+    "calendar_query": {
+      "train": 15,
+      "validation": 5,
+      "test": 5
+    },
+    "calendar_set": {
+      "train": 15,
+      "validation": 5,
+      "test": 5
+    },
+    "datetime_query": {
+      "train": 15,
+      "validation": 5,
+      "test": 5
+    },
+    "lists_createoradd": {
+      "train": 15,
+      "validation": 5,
+      "test": 5
+    },
+    "lists_query": {
+      "train": 15,
+      "validation": 5,
+      "test": 5
+    },
+    "news_query": {
+      "train": 15,
+      "validation": 5,
+      "test": 5
+    },
+    "play_music": {
+      "train": 15,
+      "validation": 5,
+      "test": 5
+    },
+    "qa_definition": {
+      "train": 15,
+      "validation": 5,
+      "test": 5
+    },
+    "weather_query": {
+      "train": 15,
+      "validation": 5,
+      "test": 5
+    }
+  },
+  "intent_labels": [
+    "alarm_set",
+    "calendar_query",
+    "calendar_set",
+    "datetime_query",
+    "lists_createoradd",
+    "lists_query",
+    "news_query",
+    "play_music",
+    "qa_definition",
+    "weather_query"
+  ],
+  "slot_labels": [
+    "O",
+    "B-date",
+    "I-date",
+    "B-item",
+    "I-item",
+    "B-location",
+    "I-location",
+    "B-term",
+    "I-term",
+    "B-time",
+    "I-time"
+  ],
+  "test": {
+    "intent": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "per_label": {
+        "alarm_set": {
+          "support": 5,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "calendar_query": {
+          "support": 5,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "calendar_set": {
+          "support": 5,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "datetime_query": {
+          "support": 5,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "lists_createoradd": {
+          "support": 5,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "lists_query": {
+          "support": 5,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "news_query": {
+          "support": 5,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "play_music": {
+          "support": 5,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "qa_definition": {
+          "support": 5,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "weather_query": {
+          "support": 5,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "confusion_matrix": {
+        "alarm_set": {
+          "alarm_set": 5,
+          "calendar_query": 0,
+          "calendar_set": 0,
+          "datetime_query": 0,
+          "lists_createoradd": 0,
+          "lists_query": 0,
+          "news_query": 0,
+          "play_music": 0,
+          "qa_definition": 0,
+          "weather_query": 0
+        },
+        "calendar_query": {
+          "alarm_set": 0,
+          "calendar_query": 5,
+          "calendar_set": 0,
+          "datetime_query": 0,
+          "lists_createoradd": 0,
+          "lists_query": 0,
+          "news_query": 0,
+          "play_music": 0,
+          "qa_definition": 0,
+          "weather_query": 0
+        },
+        "calendar_set": {
+          "alarm_set": 0,
+          "calendar_query": 0,
+          "calendar_set": 5,
+          "datetime_query": 0,
+          "lists_createoradd": 0,
+          "lists_query": 0,
+          "news_query": 0,
+          "play_music": 0,
+          "qa_definition": 0,
+          "weather_query": 0
+        },
+        "datetime_query": {
+          "alarm_set": 0,
+          "calendar_query": 0,
+          "calendar_set": 0,
+          "datetime_query": 5,
+          "lists_createoradd": 0,
+          "lists_query": 0,
+          "news_query": 0,
+          "play_music": 0,
+          "qa_definition": 0,
+          "weather_query": 0
+        },
+        "lists_createoradd": {
+          "alarm_set": 0,
+          "calendar_query": 0,
+          "calendar_set": 0,
+          "datetime_query": 0,
+          "lists_createoradd": 5,
+          "lists_query": 0,
+          "news_query": 0,
+          "play_music": 0,
+          "qa_definition": 0,
+          "weather_query": 0
+        },
+        "lists_query": {
+          "alarm_set": 0,
+          "calendar_query": 0,
+          "calendar_set": 0,
+          "datetime_query": 0,
+          "lists_createoradd": 0,
+          "lists_query": 5,
+          "news_query": 0,
+          "play_music": 0,
+          "qa_definition": 0,
+          "weather_query": 0
+        },
+        "news_query": {
+          "alarm_set": 0,
+          "calendar_query": 0,
+          "calendar_set": 0,
+          "datetime_query": 0,
+          "lists_createoradd": 0,
+          "lists_query": 0,
+          "news_query": 5,
+          "play_music": 0,
+          "qa_definition": 0,
+          "weather_query": 0
+        },
+        "play_music": {
+          "alarm_set": 0,
+          "calendar_query": 0,
+          "calendar_set": 0,
+          "datetime_query": 0,
+          "lists_createoradd": 0,
+          "lists_query": 0,
+          "news_query": 0,
+          "play_music": 5,
+          "qa_definition": 0,
+          "weather_query": 0
+        },
+        "qa_definition": {
+          "alarm_set": 0,
+          "calendar_query": 0,
+          "calendar_set": 0,
+          "datetime_query": 0,
+          "lists_createoradd": 0,
+          "lists_query": 0,
+          "news_query": 0,
+          "play_music": 0,
+          "qa_definition": 5,
+          "weather_query": 0
+        },
+        "weather_query": {
+          "alarm_set": 0,
+          "calendar_query": 0,
+          "calendar_set": 0,
+          "datetime_query": 0,
+          "lists_createoradd": 0,
+          "lists_query": 0,
+          "news_query": 0,
+          "play_music": 0,
+          "qa_definition": 0,
+          "weather_query": 5
+        }
+      },
+      "examples": 50
+    },
+    "slot_exact_type_character_span_micro": {
+      "precision": 0.8533333333333334,
+      "recall": 0.735632183908046,
+      "f1": 0.7901234567901233,
+      "true_positive": 64,
+      "false_positive": 11,
+      "false_negative": 23,
+      "gold_spans": 87,
+      "predicted_spans": 75
+    },
+    "full_frame_exact_match": 0.58,
+    "full_frame_exact_count": 29,
+    "json_validity": {
+      "valid": 50,
+      "total": 50,
+      "rate": 1.0
+    },
+    "unseen_slot_values": {
+      "distinct_type_value_pairs": 46,
+      "gold_unseen_slots": 48,
+      "exactly_recovered": 28,
+      "exact_recall": 0.5833333333333334,
+      "errors": [
+        {
+          "record_id": "rec_055",
+          "text": "Nataka kukumbuka sherehe ya kuzaliwa tarehe 3 Mei saa kumi jioni.",
+          "type": "item",
+          "value": "sherehe ya kuzaliwa",
+          "start": 17,
+          "end": 36,
+          "exact_match": false
+        },
+        {
+          "record_id": "rec_106",
+          "text": "Maana ya afya bora ni ipi?",
+          "type": "term",
+          "value": "afya bora",
+          "start": 9,
+          "end": 18,
+          "exact_match": false
+        },
+        {
+          "record_id": "rec_153",
+          "text": "Gor Mahia walifunga mabao mangapi katika mechi yao ya kirafiki?",
+          "type": "term",
+          "value": "mechi yao ya kirafiki",
+          "start": 41,
+          "end": 62,
+          "exact_match": false
+        },
+        {
+          "record_id": "rec_154",
+          "text": "Mwanahabari mgani amestaafu?",
+          "type": "term",
+          "value": "Mwanahabari",
+          "start": 0,
+          "end": 11,
+          "exact_match": false
+        },
+        {
+          "record_id": "rec_155",
+          "text": "Mwanasiasa gani alikuwa jijini leo?",
+          "type": "term",
+          "value": "Mwanasiasa",
+          "start": 0,
+          "end": 10,
+          "exact_match": false
+        },
+        {
+          "record_id": "rec_159",
+          "text": "Nipee waliohusika katika wizi ya pesa katika benki kuu kule Nairobi.",
+          "type": "term",
+          "value": "wizi ya pesa katika benki kuu",
+          "start": 25,
+          "end": 54,
+          "exact_match": false
+        },
+        {
+          "record_id": "rec_179",
+          "text": "Naomba uniwekee wimbo wa Kodongklan.",
+          "type": "item",
+          "value": "Kodongklan",
+          "start": 25,
+          "end": 35,
+          "exact_match": false
+        },
+        {
+          "record_id": "rec_180",
+          "text": "Weka ngoma inayoitwa Mayday ya Fally Ipupa.",
+          "type": "item",
+          "value": "Mayday",
+          "start": 21,
+          "end": 27,
+          "exact_match": false
+        },
+        {
+          "record_id": "rec_180",
+          "text": "Weka ngoma inayoitwa Mayday ya Fally Ipupa.",
+          "type": "term",
+          "value": "Fally Ipupa",
+          "start": 31,
+          "end": 42,
+          "exact_match": false
+        },
+        {
+          "record_id": "rec_182",
+          "text": "Nitumbuize na wimbo za Oliver Mtukudzi.",
+          "type": "term",
+          "value": "Oliver Mtukudzi",
+          "start": 23,
+          "end": 38,
+          "exact_match": false
+        },
+        {
+          "record_id": "rec_190",
+          "text": "Nisikilizishe wimbo ya Bien mpya inayoitwa I'll be Okay.",
+          "type": "item",
+          "value": "I'll be Okay",
+          "start": 43,
+          "end": 55,
+          "exact_match": false
+        },
+        {
+          "record_id": "rec_203",
+          "text": "Ongeza jina la fundi wa mabomba kwenye orodha ya mafundi.",
+          "type": "item",
+          "value": "jina la fundi wa mabomba",
+          "start": 7,
+          "end": 31,
+          "exact_match": false
+        },
+        {
+          "record_id": "rec_208",
+          "text": "Ongeza jina la mwalimu mpya kwenye orodha ya walimu.",
+          "type": "item",
+          "value": "jina la mwalimu mpya",
+          "start": 7,
+          "end": 27,
+          "exact_match": false
+        },
+        {
+          "record_id": "rec_210",
+          "text": "Ongeza maadhimisho ya ndoa ya tarehe 18 Julai kwenye orodha ya tarehe muhimu.",
+          "type": "date",
+          "value": "18 Julai",
+          "start": 37,
+          "end": 45,
+          "exact_match": false
+        },
+        {
+          "record_id": "rec_212",
+          "text": "Unda orodha ya vitu: viazi, vitunguu na karoti.",
+          "type": "item",
+          "value": "viazi",
+          "start": 21,
+          "end": 26,
+          "exact_match": false
+        },
+        {
+          "record_id": "rec_212",
+          "text": "Unda orodha ya vitu: viazi, vitunguu na karoti.",
+          "type": "item",
+          "value": "vitunguu",
+          "start": 28,
+          "end": 36,
+          "exact_match": false
+        },
+        {
+          "record_id": "rec_213",
+          "text": "Ongeza kikao cha darasa cha Ijumaa saa 12:30 kwenye orodha ya mikutano.",
+          "type": "time",
+          "value": "12:30",
+          "start": 39,
+          "end": 44,
+          "exact_match": false
+        },
+        {
+          "record_id": "rec_232",
+          "text": "Kesho kutwa kutakuwa na jua siku yote?",
+          "type": "term",
+          "value": "jua",
+          "start": 24,
+          "end": 27,
+          "exact_match": false
+        },
+        {
+          "record_id": "rec_234",
+          "text": "Kutakuwa na joto leo ama baridi?",
+          "type": "term",
+          "value": "baridi",
+          "start": 25,
+          "end": 31,
+          "exact_match": false
+        },
+        {
+          "record_id": "rec_235",
+          "text": "Mjini Nakuru kunanyesha ama jua inawaka?",
+          "type": "term",
+          "value": "jua",
+          "start": 28,
+          "end": 31,
+          "exact_match": false
+        }
+      ]
+    },
+    "loss": 0.35368457649435314,
+    "examples": 50
+  },
+  "error_analysis": [
+    {
+      "record_id": "rec_028",
+      "text": "Nionyeshe shughuli zilizopangwa wiki hii.",
+      "gold_frame": {
+        "intent": "calendar_query",
+        "slots": [
+          {
+            "type": "item",
+            "value": "shughuli",
+            "start": 10,
+            "end": 18
+          },
+          {
+            "type": "date",
+            "value": "wiki hii",
+            "start": 32,
+            "end": 40
+          }
+        ]
+      },
+      "predicted_frame": {
+        "intent": "calendar_query",
+        "slots": [
+          {
+            "type": "date",
+            "value": "wiki hii",
+            "start": 32,
+            "end": 40
+          }
+        ]
+      },
+      "full_frame_exact_match": false,
+      "json_valid": true,
+      "failed_tasks": [
+        "slots"
+      ],
+      "unseen_gold_slots": []
+    },
+    {
+      "record_id": "rec_055",
+      "text": "Nataka kukumbuka sherehe ya kuzaliwa tarehe 3 Mei saa kumi jioni.",
+      "gold_frame": {
+        "intent": "calendar_set",
+        "slots": [
+          {
+            "type": "item",
+            "value": "sherehe ya kuzaliwa",
+            "start": 17,
+            "end": 36
+          },
+          {
+            "type": "date",
+            "value": "tarehe 3 Mei",
+            "start": 37,
+            "end": 49
+          },
+          {
+            "type": "time",
+            "value": "saa kumi jioni",
+            "start": 50,
+            "end": 64
+          }
+        ]
+      },
+      "predicted_frame": {
+        "intent": "calendar_set",
+        "slots": [
+          {
+            "type": "date",
+            "value": "tarehe 3 Mei",
+            "start": 37,
+            "end": 49
+          },
+          {
+            "type": "time",
+            "value": "saa kumi jioni",
+            "start": 50,
+            "end": 64
+          }
+        ]
+      },
+      "full_frame_exact_match": false,
+      "json_valid": true,
+      "failed_tasks": [
+        "slots"
+      ],
+      "unseen_gold_slots": [
+        {
+          "type": "item",
+          "value": "sherehe ya kuzaliwa",
+          "start": 17,
+          "end": 36,
+          "exact_match": false
+        },
+        {
+          "type": "date",
+          "value": "tarehe 3 Mei",
+          "start": 37,
+          "end": 49,
+          "exact_match": true
+        }
+      ]
+    },
+    {
+      "record_id": "rec_083",
+      "text": "Saa 07:45 huandikwaje kwa saa za Kiswahili?",
+      "gold_frame": {
+        "intent": "datetime_query",
+        "slots": [
+          {
+            "type": "time",
+            "value": "Saa 07:45",
+            "start": 0,
+            "end": 9
+          }
+        ]
+      },
+      "predicted_frame": {
+        "intent": "datetime_query",
+        "slots": [
+          {
+            "type": "time",
+            "value": "Saa 07:45",
+            "start": 0,
+            "end": 9
+          },
+          {
+            "type": "location",
+            "value": "Kiswahili",
+            "start": 33,
+            "end": 42
+          }
+        ]
+      },
+      "full_frame_exact_match": false,
+      "json_valid": true,
+      "failed_tasks": [
+        "slots"
+      ],
+      "unseen_gold_slots": [
+        {
+          "type": "time",
+          "value": "Saa 07:45",
+          "start": 0,
+          "end": 9,
+          "exact_match": true
+        }
+      ]
+    },
+    {
+      "record_id": "rec_106",
+      "text": "Maana ya afya bora ni ipi?",
+      "gold_frame": {
+        "intent": "qa_definition",
+        "slots": [
+          {
+            "type": "term",
+            "value": "afya bora",
+            "start": 9,
+            "end": 18
+          }
+        ]
+      },
+      "predicted_frame": {
+        "intent": "qa_definition",
+        "slots": [
+          {
+            "type": "term",
+            "value": "afya",
+            "start": 9,
+            "end": 13
+          }
+        ]
+      },
+      "full_frame_exact_match": false,
+      "json_valid": true,
+      "failed_tasks": [
+        "slots"
+      ],
+      "unseen_gold_slots": [
+        {
+          "type": "term",
+          "value": "afya bora",
+          "start": 9,
+          "end": 18,
+          "exact_match": false
+        }
+      ]
+    },
+    {
+      "record_id": "rec_153",
+      "text": "Gor Mahia walifunga mabao mangapi katika mechi yao ya kirafiki?",
+      "gold_frame": {
+        "intent": "news_query",
+        "slots": [
+          {
+            "type": "term",
+            "value": "Gor Mahia",
+            "start": 0,
+            "end": 9
+          },
+          {
+            "type": "term",
+            "value": "mechi yao ya kirafiki",
+            "start": 41,
+            "end": 62
+          }
+        ]
+      },
+      "predicted_frame": {
+        "intent": "news_query",
+        "slots": [
+          {
+            "type": "term",
+            "value": "Gor Mahia",
+            "start": 0,
+            "end": 9
+          }
+        ]
+      },
+      "full_frame_exact_match": false,
+      "json_valid": true,
+      "failed_tasks": [
+        "slots"
+      ],
+      "unseen_gold_slots": [
+        {
+          "type": "term",
+          "value": "Gor Mahia",
+          "start": 0,
+          "end": 9,
+          "exact_match": true
+        },
+        {
+          "type": "term",
+          "value": "mechi yao ya kirafiki",
+          "start": 41,
+          "end": 62,
+          "exact_match": false
+        }
+      ]
+    }
+  ],
+  "training_history": [
+    {
+      "epoch": 1,
+      "train_loss": 4.161656041940053,
+      "skipped_optimizer_steps": 2,
+      "validation": {
+        "intent": {
+          "accuracy": 0.3,
+          "macro_f1": 0.2047036297036297,
+          "per_label": {
+            "alarm_set": {
+              "support": 5,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "calendar_query": {
+              "support": 5,
+              "precision": 0.3333333333333333,
+              "recall": 0.2,
+              "f1": 0.25
+            },
+            "calendar_set": {
+              "support": 5,
+              "precision": 0.29411764705882354,
+              "recall": 1.0,
+              "f1": 0.45454545454545453
+            },
+            "datetime_query": {
+              "support": 5,
+              "precision": 0.25,
+              "recall": 0.8,
+              "f1": 0.38095238095238093
+            },
+            "lists_createoradd": {
+              "support": 5,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "lists_query": {
+              "support": 5,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "news_query": {
+              "support": 5,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "play_music": {
+              "support": 5,
+              "precision": 0.6666666666666666,
+              "recall": 0.4,
+              "f1": 0.5
+            },
+            "qa_definition": {
+              "support": 5,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "weather_query": {
+              "support": 5,
+              "precision": 0.375,
+              "recall": 0.6,
+              "f1": 0.4615384615384615
+            }
+          },
+          "confusion_matrix": {
+            "alarm_set": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 5,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "calendar_query": {
+              "alarm_set": 0,
+              "calendar_query": 1,
+              "calendar_set": 2,
+              "datetime_query": 1,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 1
+            },
+            "calendar_set": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 5,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "datetime_query": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 4,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 1
+            },
+            "lists_createoradd": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 3,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 2,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "lists_query": {
+              "alarm_set": 0,
+              "calendar_query": 2,
+              "calendar_set": 1,
+              "datetime_query": 1,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 1,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "news_query": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 2,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 3
+            },
+            "play_music": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 1,
+              "datetime_query": 2,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 2,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "qa_definition": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 5,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "weather_query": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 1,
+              "lists_createoradd": 0,
+              "lists_query": 1,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 3
+            }
+          },
+          "examples": 50
+        },
+        "slot_exact_type_character_span_micro": {
+          "precision": 0.7692307692307693,
+          "recall": 0.09803921568627451,
+          "f1": 0.1739130434782609,
+          "true_positive": 10,
+          "false_positive": 3,
+          "false_negative": 92,
+          "gold_spans": 102,
+          "predicted_spans": 13
+        },
+        "full_frame_exact_match": 0.02,
+        "full_frame_exact_count": 1,
+        "json_validity": {
+          "valid": 50,
+          "total": 50,
+          "rate": 1.0
+        },
+        "unseen_slot_values": {
+          "distinct_type_value_pairs": 58,
+          "gold_unseen_slots": 61,
+          "exactly_recovered": 3,
+          "exact_recall": 0.04918032786885246
+        },
+        "loss": 3.0478669234684537
+      }
+    },
+    {
+      "epoch": 2,
+      "train_loss": 2.5938678648736744,
+      "skipped_optimizer_steps": 0,
+      "validation": {
+        "intent": {
+          "accuracy": 0.72,
+          "macro_f1": 0.6729292929292929,
+          "per_label": {
+            "alarm_set": {
+              "support": 5,
+              "precision": 0.8333333333333334,
+              "recall": 1.0,
+              "f1": 0.9090909090909091
+            },
+            "calendar_query": {
+              "support": 5,
+              "precision": 0.5,
+              "recall": 0.4,
+              "f1": 0.4444444444444445
+            },
+            "calendar_set": {
+              "support": 5,
+              "precision": 0.8333333333333334,
+              "recall": 1.0,
+              "f1": 0.9090909090909091
+            },
+            "datetime_query": {
+              "support": 5,
+              "precision": 0.75,
+              "recall": 0.6,
+              "f1": 0.6666666666666665
+            },
+            "lists_createoradd": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "lists_query": {
+              "support": 5,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            },
+            "news_query": {
+              "support": 5,
+              "precision": 0.6666666666666666,
+              "recall": 0.4,
+              "f1": 0.5
+            },
+            "play_music": {
+              "support": 5,
+              "precision": 0.7142857142857143,
+              "recall": 1.0,
+              "f1": 0.8333333333333333
+            },
+            "qa_definition": {
+              "support": 5,
+              "precision": 0.8,
+              "recall": 0.8,
+              "f1": 0.8000000000000002
+            },
+            "weather_query": {
+              "support": 5,
+              "precision": 0.5,
+              "recall": 1.0,
+              "f1": 0.6666666666666666
+            }
+          },
+          "confusion_matrix": {
+            "alarm_set": {
+              "alarm_set": 5,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "calendar_query": {
+              "alarm_set": 0,
+              "calendar_query": 2,
+              "calendar_set": 1,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 1,
+              "weather_query": 1
+            },
+            "calendar_set": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 5,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "datetime_query": {
+              "alarm_set": 1,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 3,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 1
+            },
+            "lists_createoradd": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 0,
+              "lists_createoradd": 5,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "lists_query": {
+              "alarm_set": 0,
+              "calendar_query": 2,
+              "calendar_set": 0,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 1,
+              "play_music": 2,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "news_query": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 2,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 3
+            },
+            "play_music": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 5,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "qa_definition": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 1,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 4,
+              "weather_query": 0
+            },
+            "weather_query": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 5
+            }
+          },
+          "examples": 50
+        },
+        "slot_exact_type_character_span_micro": {
+          "precision": 0.5,
+          "recall": 0.19607843137254902,
+          "f1": 0.28169014084507044,
+          "true_positive": 20,
+          "false_positive": 20,
+          "false_negative": 82,
+          "gold_spans": 102,
+          "predicted_spans": 40
+        },
+        "full_frame_exact_match": 0.02,
+        "full_frame_exact_count": 1,
+        "json_validity": {
+          "valid": 50,
+          "total": 50,
+          "rate": 1.0
+        },
+        "unseen_slot_values": {
+          "distinct_type_value_pairs": 58,
+          "gold_unseen_slots": 61,
+          "exactly_recovered": 9,
+          "exact_recall": 0.14754098360655737
+        },
+        "loss": 1.9102950947625297
+      }
+    },
+    {
+      "epoch": 3,
+      "train_loss": 1.4696096347437964,
+      "skipped_optimizer_steps": 0,
+      "validation": {
+        "intent": {
+          "accuracy": 0.92,
+          "macro_f1": 0.9195959595959596,
+          "per_label": {
+            "alarm_set": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "calendar_query": {
+              "support": 5,
+              "precision": 0.8,
+              "recall": 0.8,
+              "f1": 0.8000000000000002
+            },
+            "calendar_set": {
+              "support": 5,
+              "precision": 0.8333333333333334,
+              "recall": 1.0,
+              "f1": 0.9090909090909091
+            },
+            "datetime_query": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 0.8,
+              "f1": 0.888888888888889
+            },
+            "lists_createoradd": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "lists_query": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 0.8,
+              "f1": 0.888888888888889
+            },
+            "news_query": {
+              "support": 5,
+              "precision": 0.8,
+              "recall": 0.8,
+              "f1": 0.8000000000000002
+            },
+            "play_music": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "qa_definition": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "weather_query": {
+              "support": 5,
+              "precision": 0.8333333333333334,
+              "recall": 1.0,
+              "f1": 0.9090909090909091
+            }
+          },
+          "confusion_matrix": {
+            "alarm_set": {
+              "alarm_set": 5,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "calendar_query": {
+              "alarm_set": 0,
+              "calendar_query": 4,
+              "calendar_set": 1,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "calendar_set": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 5,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "datetime_query": {
+              "alarm_set": 0,
+              "calendar_query": 1,
+              "calendar_set": 0,
+              "datetime_query": 4,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "lists_createoradd": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 0,
+              "lists_createoradd": 5,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "lists_query": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 4,
+              "news_query": 1,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "news_query": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 4,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 1
+            },
+            "play_music": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 5,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "qa_definition": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 5,
+              "weather_query": 0
+            },
+            "weather_query": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 5
+            }
+          },
+          "examples": 50
+        },
+        "slot_exact_type_character_span_micro": {
+          "precision": 0.6037735849056604,
+          "recall": 0.3137254901960784,
+          "f1": 0.4129032258064516,
+          "true_positive": 32,
+          "false_positive": 21,
+          "false_negative": 70,
+          "gold_spans": 102,
+          "predicted_spans": 53
+        },
+        "full_frame_exact_match": 0.18,
+        "full_frame_exact_count": 9,
+        "json_validity": {
+          "valid": 50,
+          "total": 50,
+          "rate": 1.0
+        },
+        "unseen_slot_values": {
+          "distinct_type_value_pairs": 58,
+          "gold_unseen_slots": 61,
+          "exactly_recovered": 16,
+          "exact_recall": 0.26229508196721313
+        },
+        "loss": 1.1623792222567968
+      }
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.8253366318013933,
+      "skipped_optimizer_steps": 0,
+      "validation": {
+        "intent": {
+          "accuracy": 0.96,
+          "macro_f1": 0.9597979797979799,
+          "per_label": {
+            "alarm_set": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "calendar_query": {
+              "support": 5,
+              "precision": 0.8,
+              "recall": 0.8,
+              "f1": 0.8000000000000002
+            },
+            "calendar_set": {
+              "support": 5,
+              "precision": 0.8333333333333334,
+              "recall": 1.0,
+              "f1": 0.9090909090909091
+            },
+            "datetime_query": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 0.8,
+              "f1": 0.888888888888889
+            },
+            "lists_createoradd": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "lists_query": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "news_query": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "play_music": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "qa_definition": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "weather_query": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            }
+          },
+          "confusion_matrix": {
+            "alarm_set": {
+              "alarm_set": 5,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "calendar_query": {
+              "alarm_set": 0,
+              "calendar_query": 4,
+              "calendar_set": 1,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "calendar_set": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 5,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "datetime_query": {
+              "alarm_set": 0,
+              "calendar_query": 1,
+              "calendar_set": 0,
+              "datetime_query": 4,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "lists_createoradd": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 0,
+              "lists_createoradd": 5,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "lists_query": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 5,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "news_query": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 5,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "play_music": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 5,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "qa_definition": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 5,
+              "weather_query": 0
+            },
+            "weather_query": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 5
+            }
+          },
+          "examples": 50
+        },
+        "slot_exact_type_character_span_micro": {
+          "precision": 0.7464788732394366,
+          "recall": 0.5196078431372549,
+          "f1": 0.6127167630057804,
+          "true_positive": 53,
+          "false_positive": 18,
+          "false_negative": 49,
+          "gold_spans": 102,
+          "predicted_spans": 71
+        },
+        "full_frame_exact_match": 0.3,
+        "full_frame_exact_count": 15,
+        "json_validity": {
+          "valid": 50,
+          "total": 50,
+          "rate": 1.0
+        },
+        "unseen_slot_values": {
+          "distinct_type_value_pairs": 58,
+          "gold_unseen_slots": 61,
+          "exactly_recovered": 26,
+          "exact_recall": 0.4262295081967213
+        },
+        "loss": 0.7206290279115949
+      }
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.48405540982882184,
+      "skipped_optimizer_steps": 0,
+      "validation": {
+        "intent": {
+          "accuracy": 0.98,
+          "macro_f1": 0.9797979797979798,
+          "per_label": {
+            "alarm_set": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "calendar_query": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "calendar_set": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "datetime_query": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "lists_createoradd": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "lists_query": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "news_query": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 0.8,
+              "f1": 0.888888888888889
+            },
+            "play_music": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "qa_definition": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "weather_query": {
+              "support": 5,
+              "precision": 0.8333333333333334,
+              "recall": 1.0,
+              "f1": 0.9090909090909091
+            }
+          },
+          "confusion_matrix": {
+            "alarm_set": {
+              "alarm_set": 5,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "calendar_query": {
+              "alarm_set": 0,
+              "calendar_query": 5,
+              "calendar_set": 0,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "calendar_set": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 5,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "datetime_query": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 5,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "lists_createoradd": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 0,
+              "lists_createoradd": 5,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "lists_query": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 5,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "news_query": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 4,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 1
+            },
+            "play_music": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 5,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "qa_definition": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 5,
+              "weather_query": 0
+            },
+            "weather_query": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 5
+            }
+          },
+          "examples": 50
+        },
+        "slot_exact_type_character_span_micro": {
+          "precision": 0.7894736842105263,
+          "recall": 0.5882352941176471,
+          "f1": 0.6741573033707866,
+          "true_positive": 60,
+          "false_positive": 16,
+          "false_negative": 42,
+          "gold_spans": 102,
+          "predicted_spans": 76
+        },
+        "full_frame_exact_match": 0.4,
+        "full_frame_exact_count": 20,
+        "json_validity": {
+          "valid": 50,
+          "total": 50,
+          "rate": 1.0
+        },
+        "unseen_slot_values": {
+          "distinct_type_value_pairs": 58,
+          "gold_unseen_slots": 61,
+          "exactly_recovered": 30,
+          "exact_recall": 0.4918032786885246
+        },
+        "loss": 0.5124827197619847
+      }
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.3018861686189969,
+      "skipped_optimizer_steps": 0,
+      "validation": {
+        "intent": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0,
+          "per_label": {
+            "alarm_set": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "calendar_query": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "calendar_set": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "datetime_query": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "lists_createoradd": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "lists_query": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "news_query": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "play_music": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "qa_definition": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "weather_query": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            }
+          },
+          "confusion_matrix": {
+            "alarm_set": {
+              "alarm_set": 5,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "calendar_query": {
+              "alarm_set": 0,
+              "calendar_query": 5,
+              "calendar_set": 0,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "calendar_set": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 5,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "datetime_query": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 5,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "lists_createoradd": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 0,
+              "lists_createoradd": 5,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "lists_query": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 5,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "news_query": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 5,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "play_music": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 5,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "qa_definition": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 5,
+              "weather_query": 0
+            },
+            "weather_query": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 5
+            }
+          },
+          "examples": 50
+        },
+        "slot_exact_type_character_span_micro": {
+          "precision": 0.7857142857142857,
+          "recall": 0.6470588235294118,
+          "f1": 0.7096774193548386,
+          "true_positive": 66,
+          "false_positive": 18,
+          "false_negative": 36,
+          "gold_spans": 102,
+          "predicted_spans": 84
+        },
+        "full_frame_exact_match": 0.44,
+        "full_frame_exact_count": 22,
+        "json_validity": {
+          "valid": 50,
+          "total": 50,
+          "rate": 1.0
+        },
+        "unseen_slot_values": {
+          "distinct_type_value_pairs": 58,
+          "gold_unseen_slots": 61,
+          "exactly_recovered": 34,
+          "exact_recall": 0.5573770491803278
+        },
+        "loss": 0.4094488152435848
+      }
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.22224894000424278,
+      "skipped_optimizer_steps": 0,
+      "validation": {
+        "intent": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0,
+          "per_label": {
+            "alarm_set": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "calendar_query": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "calendar_set": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "datetime_query": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "lists_createoradd": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "lists_query": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "news_query": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "play_music": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "qa_definition": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "weather_query": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            }
+          },
+          "confusion_matrix": {
+            "alarm_set": {
+              "alarm_set": 5,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "calendar_query": {
+              "alarm_set": 0,
+              "calendar_query": 5,
+              "calendar_set": 0,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "calendar_set": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 5,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "datetime_query": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 5,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "lists_createoradd": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 0,
+              "lists_createoradd": 5,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "lists_query": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 5,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "news_query": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 5,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "play_music": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 5,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "qa_definition": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 5,
+              "weather_query": 0
+            },
+            "weather_query": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 5
+            }
+          },
+          "examples": 50
+        },
+        "slot_exact_type_character_span_micro": {
+          "precision": 0.8539325842696629,
+          "recall": 0.7450980392156863,
+          "f1": 0.7958115183246073,
+          "true_positive": 76,
+          "false_positive": 13,
+          "false_negative": 26,
+          "gold_spans": 102,
+          "predicted_spans": 89
+        },
+        "full_frame_exact_match": 0.5,
+        "full_frame_exact_count": 25,
+        "json_validity": {
+          "valid": 50,
+          "total": 50,
+          "rate": 1.0
+        },
+        "unseen_slot_values": {
+          "distinct_type_value_pairs": 58,
+          "gold_unseen_slots": 61,
+          "exactly_recovered": 40,
+          "exact_recall": 0.6557377049180327
+        },
+        "loss": 0.36345845673765453
+      }
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.1757724177506235,
+      "skipped_optimizer_steps": 0,
+      "validation": {
+        "intent": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0,
+          "per_label": {
+            "alarm_set": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "calendar_query": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "calendar_set": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "datetime_query": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "lists_createoradd": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "lists_query": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "news_query": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "play_music": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "qa_definition": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            },
+            "weather_query": {
+              "support": 5,
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0
+            }
+          },
+          "confusion_matrix": {
+            "alarm_set": {
+              "alarm_set": 5,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "calendar_query": {
+              "alarm_set": 0,
+              "calendar_query": 5,
+              "calendar_set": 0,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "calendar_set": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 5,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "datetime_query": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 5,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "lists_createoradd": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 0,
+              "lists_createoradd": 5,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "lists_query": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 5,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "news_query": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 5,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "play_music": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 5,
+              "qa_definition": 0,
+              "weather_query": 0
+            },
+            "qa_definition": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 5,
+              "weather_query": 0
+            },
+            "weather_query": {
+              "alarm_set": 0,
+              "calendar_query": 0,
+              "calendar_set": 0,
+              "datetime_query": 0,
+              "lists_createoradd": 0,
+              "lists_query": 0,
+              "news_query": 0,
+              "play_music": 0,
+              "qa_definition": 0,
+              "weather_query": 5
+            }
+          },
+          "examples": 50
+        },
+        "slot_exact_type_character_span_micro": {
+          "precision": 0.8651685393258427,
+          "recall": 0.7549019607843137,
+          "f1": 0.806282722513089,
+          "true_positive": 77,
+          "false_positive": 12,
+          "false_negative": 25,
+          "gold_spans": 102,
+          "predicted_spans": 89
+        },
+        "full_frame_exact_match": 0.5,
+        "full_frame_exact_count": 25,
+        "json_validity": {
+          "valid": 50,
+          "total": 50,
+          "rate": 1.0
+        },
+        "unseen_slot_values": {
+          "distinct_type_value_pairs": 58,
+          "gold_unseen_slots": 61,
+          "exactly_recovered": 39,
+          "exact_recall": 0.639344262295082
+        },
+        "loss": 0.3503020874091557
+      }
+    }
+  ]
+}

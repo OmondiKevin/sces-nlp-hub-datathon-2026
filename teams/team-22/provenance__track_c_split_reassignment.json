@@ -1,0 +1,717 @@
+{
+  "seed_label": "team22-track-c-fresh-test-v1",
+  "rows": 250,
+  "selection": "five per intent selected from former train by SHA-256 rank; former test moved to train",
+  "reassigned_records": 100,
+  "fresh_test_record_ids": [
+    "T22-NEW-LQ-001",
+    "T22-NEW-LQ-002",
+    "T22-NEW-LQ-005",
+    "T22-NEW-LQ-007",
+    "T22-NEW-LQ-012",
+    "rec_004",
+    "rec_009",
+    "rec_010",
+    "rec_012",
+    "rec_015",
+    "rec_026",
+    "rec_027",
+    "rec_028",
+    "rec_034",
+    "rec_036",
+    "rec_052",
+    "rec_054",
+    "rec_055",
+    "rec_061",
+    "rec_062",
+    "rec_077",
+    "rec_081",
+    "rec_083",
+    "rec_085",
+    "rec_088",
+    "rec_102",
+    "rec_106",
+    "rec_107",
+    "rec_110",
+    "rec_111",
+    "rec_153",
+    "rec_154",
+    "rec_155",
+    "rec_159",
+    "rec_163",
+    "rec_179",
+    "rec_180",
+    "rec_182",
+    "rec_187",
+    "rec_190",
+    "rec_203",
+    "rec_208",
+    "rec_210",
+    "rec_212",
+    "rec_213",
+    "rec_227",
+    "rec_230",
+    "rec_232",
+    "rec_234",
+    "rec_235"
+  ],
+  "records": [
+    {
+      "record_id": "rec_004",
+      "intent": "alarm_set",
+      "previous_split": "train",
+      "new_split": "test"
+    },
+    {
+      "record_id": "rec_009",
+      "intent": "alarm_set",
+      "previous_split": "train",
+      "new_split": "test"
+    },
+    {
+      "record_id": "rec_010",
+      "intent": "alarm_set",
+      "previous_split": "train",
+      "new_split": "test"
+    },
+    {
+      "record_id": "rec_012",
+      "intent": "alarm_set",
+      "previous_split": "train",
+      "new_split": "test"
+    },
+    {
+      "record_id": "rec_015",
+      "intent": "alarm_set",
+      "previous_split": "train",
+      "new_split": "test"
+    },
+    {
+      "record_id": "rec_021",
+      "intent": "alarm_set",
+      "previous_split": "test",
+      "new_split": "train"
+    },
+    {
+      "record_id": "rec_022",
+      "intent": "alarm_set",
+      "previous_split": "test",
+      "new_split": "train"
+    },
+    {
+      "record_id": "rec_023",
+      "intent": "alarm_set",
+      "previous_split": "test",
+      "new_split": "train"
+    },
+    {
+      "record_id": "rec_024",
+      "intent": "alarm_set",
+      "previous_split": "test",
+      "new_split": "train"
+    },
+    {
+      "record_id": "rec_025",
+      "intent": "alarm_set",
+      "previous_split": "test",
+      "new_split": "train"
+    },
+    {
+      "record_id": "rec_026",
+      "intent": "calendar_query",
+      "previous_split": "train",
+      "new_split": "test"
+    },
+    {
+      "record_id": "rec_027",
+      "intent": "calendar_query",
+      "previous_split": "train",
+      "new_split": "test"
+    },
+    {
+      "record_id": "rec_028",
+      "intent": "calendar_query",
+      "previous_split": "train",
+      "new_split": "test"
+    },
+    {
+      "record_id": "rec_034",
+      "intent": "calendar_query",
+      "previous_split": "train",
+      "new_split": "test"
+    },
+    {
+      "record_id": "rec_036",
+      "intent": "calendar_query",
+      "previous_split": "train",
+      "new_split": "test"
+    },
+    {
+      "record_id": "rec_046",
+      "intent": "calendar_query",
+      "previous_split": "test",
+      "new_split": "train"
+    },
+    {
+      "record_id": "rec_047",
+      "intent": "calendar_query",
+      "previous_split": "test",
+      "new_split": "train"
+    },
+    {
+      "record_id": "rec_048",
+      "intent": "calendar_query",
+      "previous_split": "test",
+      "new_split": "train"
+    },
+    {
+      "record_id": "rec_049",
+      "intent": "calendar_query",
+      "previous_split": "test",
+      "new_split": "train"
+    },
+    {
+      "record_id": "rec_050",
+      "intent": "calendar_query",
+      "previous_split": "test",
+      "new_split": "train"
+    },
+    {
+      "record_id": "rec_052",
+      "intent": "calendar_set",
+      "previous_split": "train",
+      "new_split": "test"
+    },
+    {
+      "record_id": "rec_054",
+      "intent": "calendar_set",
+      "previous_split": "train",
+      "new_split": "test"
+    },
+    {
+      "record_id": "rec_055",
+      "intent": "calendar_set",
+      "previous_split": "train",
+      "new_split": "test"
+    },
+    {
+      "record_id": "rec_061",
+      "intent": "calendar_set",
+      "previous_split": "train",
+      "new_split": "test"
+    },
+    {
+      "record_id": "rec_062",
+      "intent": "calendar_set",
+      "previous_split": "train",
+      "new_split": "test"
+    },
+    {
+      "record_id": "rec_071",
+      "intent": "calendar_set",
+      "previous_split": "test",
+      "new_split": "train"
+    },
+    {
+      "record_id": "rec_072",
+      "intent": "calendar_set",
+      "previous_split": "test",
+      "new_split": "train"
+    },
+    {
+      "record_id": "rec_073",
+      "intent": "calendar_set",
+      "previous_split": "test",
+      "new_split": "train"
+    },
+    {
+      "record_id": "rec_074",
+      "intent": "calendar_set",
+      "previous_split": "test",
+      "new_split": "train"
+    },
+    {
+      "record_id": "rec_077",
+      "intent": "datetime_query",
+      "previous_split": "train",
+      "new_split": "test"
+    },
+    {
+      "record_id": "rec_081",
+      "intent": "datetime_query",
+      "previous_split": "train",
+      "new_split": "test"
+    },
+    {
+      "record_id": "rec_083",
+      "intent": "datetime_query",
+      "previous_split": "train",
+      "new_split": "test"
+    },
+    {
+      "record_id": "rec_085",
+      "intent": "datetime_query",
+      "previous_split": "train",
+      "new_split": "test"
+    },
+    {
+      "record_id": "rec_088",
+      "intent": "datetime_query",
+      "previous_split": "train",
+      "new_split": "test"
+    },
+    {
+      "record_id": "rec_096",
+      "intent": "datetime_query",
+      "previous_split": "test",
+      "new_split": "train"
+    },
+    {
+      "record_id": "rec_097",
+      "intent": "datetime_query",
+      "previous_split": "test",
+      "new_split": "train"
+    },
+    {
+      "record_id": "rec_098",
+      "intent": "datetime_query",
+      "previous_split": "test",
+      "new_split": "train"
+    },
+    {
+      "record_id": "rec_099",
+      "intent": "datetime_query",
+      "previous_split": "test",
+      "new_split": "train"
+    },
+    {
+      "record_id": "rec_100",
+      "intent": "datetime_query",
+      "previous_split": "test",
+      "new_split": "train"
+    },
+    {
+      "record_id": "rec_102",
+      "intent": "qa_definition",
+      "previous_split": "train",
+      "new_split": "test"
+    },
+    {
+      "record_id": "rec_106",
+      "intent": "qa_definition",
+      "previous_split": "train",
+      "new_split": "test"
+    },
+    {
+      "record_id": "rec_107",
+      "intent": "qa_definition",
+      "previous_split": "train",
+      "new_split": "test"
+    },
+    {
+      "record_id": "rec_110",
+      "intent": "qa_definition",
+      "previous_split": "train",
+      "new_split": "test"
+    },
+    {
+      "record_id": "rec_111",
+      "intent": "qa_definition",
+      "previous_split": "train",
+      "new_split": "test"
+    },
+    {
+      "record_id": "rec_121",
+      "intent": "qa_definition",
+      "previous_split": "test",
+      "new_split": "train"
+    },
+    {
+      "record_id": "rec_122",
+      "intent": "qa_definition",
+      "previous_split": "test",
+      "new_split": "train"
+    },
+    {
+      "record_id": "rec_123",
+      "intent": "qa_definition",
+      "previous_split": "test",
+      "new_split": "train"
+    },
+    {
+      "record_id": "rec_124",
+      "intent": "qa_definition",
+      "previous_split": "test",
+      "new_split": "train"
+    },
+    {
+      "record_id": "rec_125",
+      "intent": "qa_definition",
+      "previous_split": "test",
+      "new_split": "train"
+    },
+    {
+      "record_id": "rec_153",
+      "intent": "news_query",
+      "previous_split": "train",
+      "new_split": "test"
+    },
+    {
+      "record_id": "rec_154",
+      "intent": "news_query",
+      "previous_split": "train",
+      "new_split": "test"
+    },
+    {
+      "record_id": "rec_155",
+      "intent": "news_query",
+      "previous_split": "train",
+      "new_split": "test"
+    },
+    {
+      "record_id": "rec_159",
+      "intent": "news_query",
+      "previous_split": "train",
+      "new_split": "test"
+    },
+    {
+      "record_id": "rec_163",
+      "intent": "news_query",
+      "previous_split": "train",
+      "new_split": "test"
+    },
+    {
+      "record_id": "rec_171",
+      "intent": "news_query",
+      "previous_split": "test",
+      "new_split": "train"
+    },
+    {
+      "record_id": "rec_172",
+      "intent": "news_query",
+      "previous_split": "test",
+      "new_split": "train"
+    },
+    {
+      "record_id": "rec_173",
+      "intent": "news_query",
+      "previous_split": "test",
+      "new_split": "train"
+    },
+    {
+      "record_id": "rec_174",
+      "intent": "news_query",
+      "previous_split": "test",
+      "new_split": "train"
+    },
+    {
+      "record_id": "rec_175",
+      "intent": "news_query",
+      "previous_split": "test",
+      "new_split": "train"
+    },
+    {
+      "record_id": "rec_179",
+      "intent": "play_music",
+      "previous_split": "train",
+      "new_split": "test"
+    },
+    {
+      "record_id": "rec_180",
+      "intent": "play_music",
+      "previous_split": "train",
+      "new_split": "test"
+    },
+    {
+      "record_id": "rec_182",
+      "intent": "play_music",
+      "previous_split": "train",
+      "new_split": "test"
+    },
+    {
+      "record_id": "rec_187",
+      "intent": "play_music",
+      "previous_split": "train",
+      "new_split": "test"
+    },
+    {
+      "record_id": "rec_190",
+      "intent": "play_music",
+      "previous_split": "train",
+      "new_split": "test"
+    },
+    {
+      "record_id": "rec_196",
+      "intent": "play_music",
+      "previous_split": "test",
+      "new_split": "train"
+    },
+    {
+      "record_id": "rec_197",
+      "intent": "play_music",
+      "previous_split": "test",
+      "new_split": "train"
+    },
+    {
+      "record_id": "rec_198",
+      "intent": "play_music",
+      "previous_split": "test",
+      "new_split": "train"
+    },
+    {
+      "record_id": "rec_199",
+      "intent": "play_music",
+      "previous_split": "test",
+      "new_split": "train"
+    },
+    {
+      "record_id": "rec_200",
+      "intent": "play_music",
+      "previous_split": "test",
+      "new_split": "train"
+    },
+    {
+      "record_id": "rec_203",
+      "intent": "lists_createoradd",
+      "previous_split": "train",
+      "new_split": "test"
+    },
+    {
+      "record_id": "rec_208",
+      "intent": "lists_createoradd",
+      "previous_split": "train",
+      "new_split": "test"
+    },
+    {
+      "record_id": "rec_210",
+      "intent": "lists_createoradd",
+      "previous_split": "train",
+      "new_split": "test"
+    },
+    {
+      "record_id": "rec_212",
+      "intent": "lists_createoradd",
+      "previous_split": "train",
+      "new_split": "test"
+    },
+    {
+      "record_id": "rec_213",
+      "intent": "lists_createoradd",
+      "previous_split": "train",
+      "new_split": "test"
+    },
+    {
+      "record_id": "rec_221",
+      "intent": "lists_createoradd",
+      "previous_split": "test",
+      "new_split": "train"
+    },
+    {
+      "record_id": "rec_222",
+      "intent": "lists_createoradd",
+      "previous_split": "test",
+      "new_split": "train"
+    },
+    {
+      "record_id": "rec_223",
+      "intent": "lists_createoradd",
+      "previous_split": "test",
+      "new_split": "train"
+    },
+    {
+      "record_id": "rec_224",
+      "intent": "lists_createoradd",
+      "previous_split": "test",
+      "new_split": "train"
+    },
+    {
+      "record_id": "rec_225",
+      "intent": "lists_createoradd",
+      "previous_split": "test",
+      "new_split": "train"
+    },
+    {
+      "record_id": "rec_227",
+      "intent": "weather_query",
+      "previous_split": "train",
+      "new_split": "test"
+    },
+    {
+      "record_id": "rec_230",
+      "intent": "weather_query",
+      "previous_split": "train",
+      "new_split": "test"
+    },
+    {
+      "record_id": "rec_232",
+      "intent": "weather_query",
+      "previous_split": "train",
+      "new_split": "test"
+    },
+    {
+      "record_id": "rec_234",
+      "intent": "weather_query",
+      "previous_split": "train",
+      "new_split": "test"
+    },
+    {
+      "record_id": "rec_235",
+      "intent": "weather_query",
+      "previous_split": "train",
+      "new_split": "test"
+    },
+    {
+      "record_id": "rec_246",
+      "intent": "weather_query",
+      "previous_split": "test",
+      "new_split": "train"
+    },
+    {
+      "record_id": "rec_247",
+      "intent": "weather_query",
+      "previous_split": "test",
+      "new_split": "train"
+    },
+    {
+      "record_id": "rec_248",
+      "intent": "weather_query",
+      "previous_split": "test",
+      "new_split": "train"
+    },
+    {
+      "record_id": "rec_249",
+      "intent": "weather_query",
+      "previous_split": "test",
+      "new_split": "train"
+    },
+    {
+      "record_id": "rec_250",
+      "intent": "weather_query",
+      "previous_split": "test",
+      "new_split": "train"
+    },
+    {
+      "record_id": "T22-NEW-LQ-001",
+      "intent": "lists_query",
+      "previous_split": "train",
+      "new_split": "test"
+    },
+    {
+      "record_id": "T22-NEW-LQ-002",
+      "intent": "lists_query",
+      "previous_split": "train",
+      "new_split": "test"
+    },
+    {
+      "record_id": "T22-NEW-LQ-005",
+      "intent": "lists_query",
+      "previous_split": "train",
+      "new_split": "test"
+    },
+    {
+      "record_id": "T22-NEW-LQ-007",
+      "intent": "lists_query",
+      "previous_split": "train",
+      "new_split": "test"
+    },
+    {
+      "record_id": "T22-NEW-LQ-012",
+      "intent": "lists_query",
+      "previous_split": "train",
+      "new_split": "test"
+    },
+    {
+      "record_id": "T22-NEW-LQ-019",
+      "intent": "lists_query",
+      "previous_split": "test",
+      "new_split": "train"
+    },
+    {
+      "record_id": "T22-NEW-LQ-022",
+      "intent": "lists_query",
+      "previous_split": "test",
+      "new_split": "train"
+    },
+    {
+      "record_id": "T22-NEW-LQ-023",
+      "intent": "lists_query",
+      "previous_split": "test",
+      "new_split": "train"
+    },
+    {
+      "record_id": "T22-NEW-LQ-024",
+      "intent": "lists_query",
+      "previous_split": "test",
+      "new_split": "train"
+    },
+    {
+      "record_id": "T22-NEW-LQ-025",
+      "intent": "lists_query",
+      "previous_split": "test",
+      "new_split": "train"
+    },
+    {
+      "record_id": "T22-NEW-CALSET-TEST-001",
+      "intent": "calendar_set",
+      "previous_split": "test",
+      "new_split": "train"
+    }
+  ],
+  "split_sizes": {
+    "train": 150,
+    "validation": 50,
+    "test": 50
+  },
+  "per_intent_split": {
+    "alarm_set": {
+      "train": 15,
+      "validation": 5,
+      "test": 5
+    },
+    "calendar_query": {
+      "train": 15,
+      "validation": 5,
+      "test": 5
+    },
+    "calendar_set": {
+      "train": 15,
+      "validation": 5,
+      "test": 5
+    },
+    "datetime_query": {
+      "train": 15,
+      "validation": 5,
+      "test": 5
+    },
+    "lists_createoradd": {
+      "train": 15,
+      "validation": 5,
+      "test": 5
+    },
+    "lists_query": {
+      "train": 15,
+      "validation": 5,
+      "test": 5
+    },
+    "news_query": {
+      "train": 15,
+      "validation": 5,
+      "test": 5
+    },
+    "play_music": {
+      "train": 15,
+      "validation": 5,
+      "test": 5
+    },
+    "qa_definition": {
+      "train": 15,
+      "validation": 5,
+      "test": 5
+    },
+    "weather_query": {
+      "train": 15,
+      "validation": 5,
+      "test": 5
+    }
+  }
+}

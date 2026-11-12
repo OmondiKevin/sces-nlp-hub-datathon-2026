@@ -1,0 +1,95 @@
+{
+  "track": "C",
+  "model_name": "castorini/afriberta_large",
+  "seed": 42,
+  "dataset_path": "/content/xtenders-nlp-datathon/Team_22_Dataset_Track_C.csv",
+  "dataset_sha256": "0756d1b54581bd23eab36a0455e987e3ca6d45d51f61ab5f544d146058509193",
+  "training_script": "train_joint_intent_slot.py",
+  "training_script_sha256": "b6ebb50940370fd6ed37338a8ce390e3167eb8004c3e2ce4443f9edb5fd6e2d3",
+  "evaluation_script": "track_c_evaluation.py",
+  "evaluation_script_sha256": "fd5ea4d807c06c2866182963f03db28531aa9277a7627ee0626ff42f84de206f",
+  "baseline_script": "evaluate_track_c_baselines.py",
+  "baseline_script_sha256": "ac28e73f044231ffa814626416a24ee4d8dc10a2c84635408017a58d5ed00de7",
+  "checkpoint": "best_model.pt",
+  "checkpoint_sha256": "25939b8a36c84453414a069e0e92fdb92437d347823ae0767ad618305f1fd971",
+  "split_sizes": {
+    "train": 150,
+    "validation": 50,
+    "test": 50
+  },
+  "per_intent_split": {
+    "alarm_set": {
+      "train": 15,
+      "validation": 5,
+      "test": 5
+    },
+    "calendar_query": {
+      "train": 15,
+      "validation": 5,
+      "test": 5
+    },
+    "calendar_set": {
+      "train": 15,
+      "validation": 5,
+      "test": 5
+    },
+    "datetime_query": {
+      "train": 15,
+      "validation": 5,
+      "test": 5
+    },
+    "lists_createoradd": {
+      "train": 15,
+      "validation": 5,
+      "test": 5
+    },
+    "lists_query": {
+      "train": 15,
+      "validation": 5,
+      "test": 5
+    },
+    "news_query": {
+      "train": 15,
+      "validation": 5,
+      "test": 5
+    },
+    "play_music": {
+      "train": 15,
+      "validation": 5,
+      "test": 5
+    },
+    "qa_definition": {
+      "train": 15,
+      "validation": 5,
+      "test": 5
+    },
+    "weather_query": {
+      "train": 15,
+      "validation": 5,
+      "test": 5
+    }
+  },
+  "test_evaluated": true,
+  "python_version": "3.13.16",
+  "device": "cuda",
+  "cuda_version": "13.0",
+  "gpu_name": "Tesla T4",
+  "package_versions": {
+    "torch": "2.14.1+cu130",
+    "transformers": "5.3.0",
+    "pandas": "2.2.3",
+    "numpy": "2.4.6",
+    "scikit-learn": "1.6.1"
+  },
+  "run_arguments": {
+    "epochs": 8,
+    "batch_size": 8,
+    "gradient_accumulation_steps": 2,
+    "learning_rate": 2e-05,
+    "max_length": 128,
+    "precision": "fp16",
+    "use_crf": true,
+    "augment_slot_values": true,
+    "validation_only": false
+  }
+}
