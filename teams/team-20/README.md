@@ -1,59 +1,84 @@
-# Team 20 | Project title
+# Rada — Team 20
 
-PENDING SUBMISSION. Replace this placeholder with your completed README and project files.
+**Track A · Written Kiswahili and Sheng**
 
-Replace the prompts below with your actual information. Keep the idea and approach concise. Do not invent results, review evidence or permissions.
+Kathy Auma · Irene Gitau · Hafswa Sufi
 
-## Team and task
+## The idea
 
-- Team number and name:
-- Three members and their contributions (names/GitHub usernames only):
-- Working language/variety:
-- Track: A intent / B sentiment / C limited semantic parsing
-- Original team repository URL:
-- Full source commit SHA for the version submitted:
+People should be able to approach useful digital tools in the language they use. We wanted to see whether a small model could recognise everyday requests written in Kiswahili and Sheng, including mixed wording such as “Nichezee doba”.
 
-## Idea and approach
+Rada identifies ten request types, including music, weather, alarms, calendars and lists. This is an assessment prototype. It shows a predicted category and a simulated response; it does not perform real actions.
 
-Explain the problem, who would use the solution and why the language matters in 2–4 sentences. Then explain how you obtained/reviewed the data, trained the model and built the demo in 3–5 concise steps. State what is new and what you reused.
+## Watch or try
 
-## Data and review
+- [Presentation and demo video folder](https://drive.google.com/drive/folders/1i1df1u6QQKMaxye50ZqwFpT_Ttq78b8a?usp=sharing)
+- [Live prototype](https://sheng-intent-3nkn9auhiujhbpwvvwirby.streamlit.app/)
 
-Give accepted contribution counts, per-label/slot coverage, train/dev/test counts, source/version/licence links, your changes, reviewer method and quality checks. Link the contribution data, annotation guide, source log, data card and review/quality report. Follow the handbook's track targets and independent test-review rules.
+## What we did
 
-If data cannot be redistributed or is too large for Git, give a stable accessible location, the version/checksum where possible, retrieval steps and the reason. Keep private permission evidence outside this public repository and use the agreed organiser channel for access.
+1. Asked people what they would say to an assistant in everyday situations.
+2. Reviewed their wording and labels; kept **324 human-written examples**.
+3. Used **213 for training, 55 for development and 56 for the final test**. Related scenario groups stayed together.
+4. Compared our data alone with adding 200 or 500 Kiswahili training examples from MASSIVE. We selected the version with 500 additional examples.
+5. Selected the best development version, froze it and ran the final test once.
 
-## Code and how to run
+The organiser kit supplied the ten labels and starting model. We contributed the collected data, review work, experiment and demonstration. MASSIVE examples are counted separately.
 
-List the relevant files, environment/dependency versions and exact installation, validation, training, evaluation and demo commands. Explain how to retrieve any model/data artefacts and where outputs are written. Do not include secrets.
+## Results and limits
 
-## Results and limitations
+**Final test: 43/56 correct — 76.8% accuracy, macro-F1 0.764.** Macro-F1 gives each category equal importance. Always guessing the most common training category gave 8.9% accuracy.
 
-Link actual metric files, per-label results, baseline comparison and test predictions. Include the additional semantic metrics where relevant. Explain up to five actual errors (all if fewer), limitations, and any optional improvements with evidence. Label illustrative outputs separately from observed results.
+On development data, adding 500 MASSIVE examples increased correct predictions from 42/55 to 44/55. This is not a measured final-test improvement over the team-only model.
 
-## Presentation and demo video
+The sample is small. Some labels are debatable, some requests need context, and the same respondent can appear in different splits. Rada also forces unsupported requests into a known category. We have not measured real-world usability or improved access. [Results and five errors](docs/RESULTS.md).
 
-- Presentation/demo video URL (REQUIRED):
-- Optional second presentation/demo video:
-- Optional hosted app URL:
+## Run it
 
-Check that judges can view the video. Present your idea and approach briefly, show the trained model handling new input, discuss results/limitations and explain each member's contribution. A hosted app link alone does not replace the video.
+Use Python 3.12 from the project folder:
 
-## Required materials
+```bash
+python -m pip install -r requirements.txt
+python -m streamlit run app.py
+```
 
-Link each item using a relative path or an accessible external URL:
+The saved model is included; no API key or retraining is needed. [Validation, training, evaluation and test commands](docs/REPRODUCIBILITY.md).
 
-- Contribution dataset and splits:
-- Annotation guide:
-- Source log and source terms:
-- Dataset card:
-- Quality/review report:
-- Contribution and AI-use statement:
-- Evaluation outputs and baseline comparison:
-- Runnable code and dependency file:
-- Trained artefacts or reproduction instructions:
-- Video link:
+## Follow the project
 
-## Attribution and permissions
+| Step | Read or open | What it explains |
+| --- | --- | --- |
+| 1. Collect | [Original and later spreadsheets](docs/QUALITY_REPORT.md#from-the-form-to-the-final-dataset) | The responses we gathered. |
+| 2. Review | [Annotation guide](ANNOTATION_GUIDE.md) and [review summary](docs/QUALITY_REPORT.md#review-guide-and-final-export) | Labelling rules and the status of the completed export. |
+| 3. Prepare | [Cleaning report](docs/QUALITY_REPORT.md), [source log](docs/SOURCE_LOG.csv), src/prepare.py | Human decisions, code checks and changes. |
+| 4. Final dataset | [contribution.csv](https://github.com/Annah-2003/sheng-intent/blob/main/assessment/data/contribution.csv), [split counts](reports/split_counts.csv) and [dataset card](docs/DATASET_CARD.md) | 324 accepted records: 213 training, 55 development and 56 test. The CSV's split column identifies each record's assignment. |
+| 5. Train and test | [Results and five errors](docs/RESULTS.md), reports/test.json, reports/confusion_matrix.csv | Model comparison, final scores and failures. |
+| 6. Demonstrate | Video link above, app.py and [design explanation](docs/HCI_DESIGN.md) | What the prototype does and how the interaction works. |
+| 7. Check contributions | [Team and AI-use statement](docs/TEAM.md) | Responsibilities and reused material. |
+| 8. Run it | [Full commands](docs/REPRODUCIBILITY.md), src/, notebooks/, models/ | Installation, saved models and reconstruction. |
 
-Credit the starter kit, upstream datasets/models/code and other assistance. State the terms of your original code/data and respect upstream terms. Specify any unresolved access/rights issue; do not publish uncleared material. Do not copy fictional claims from the kit's completed examples.
+Our annotation guide keeps the original rules and examples, with updated status and file references. We preserved [version 1.1](docs/history/ANNOTATION_GUIDE_v1.1.md) unchanged for reference.
+
+## Team and credits
+
+We used [ClickUp](https://app.clickup.com/9012897541/v/s/901211092343) to assign tasks and track our progress.
+
+**Data Lead — Kathy Auma**
+
+Coordinates collection, reviews the wording and intent labels, and maintains the review decisions.
+
+**Model Lead — Hafswa Sufi**
+
+Prepares the data and splits, trains and evaluates the model, and builds the demonstration interface.
+
+**Documentation Lead — Irene Gitau**
+
+Brings the report sections together and checks the sources, results, run instructions and submission checklist.
+
+AI assistance and the team's contribution statement are recorded in [docs/TEAM.md](docs/TEAM.md).
+
+Starter code retains its MIT notice. MASSIVE is CC BY 4.0; the photograph is CC BY-SA 4.0 with [credit](assets/PHOTO_CREDIT.md). Our [spreadsheets, review logs and final dataset](https://github.com/Annah-2003/sheng-intent/tree/main/assessment) show how we prepared the data.
+
+**Original team repository:** https://github.com/Annah-2003/sheng-intent
+
+**Submitted source commit:** [bc98c8ada8e04e0347090a1f77ba0d6fae6addb2](https://github.com/Annah-2003/sheng-intent/commit/bc98c8ada8e04e0347090a1f77ba0d6fae6addb2)
