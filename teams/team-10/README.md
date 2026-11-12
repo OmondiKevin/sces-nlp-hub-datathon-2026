@@ -1,59 +1,62 @@
-# Team 10 | Project title
+# Team 10 "Maneno Mashinani": Kikuyu sentiment analysis (Strathmore NLP Hub Datathon 2026)
 
-PENDING SUBMISSION. Replace this placeholder with your completed README and project files.
+**Track:** B, sentiment (positive / negative / neutral), sentence level. **Domain:** campus cafeteria. **Language:** Kikuyu (`ki`).
+**Demo video:** https://drive.google.com/file/d/1b7NWf434sJjEGYJkX0dOSmFBo4N_4ex4/view?usp=sharing
 
-Replace the prompts below with your actual information. Keep the idea and approach concise. Do not invent results, review evidence or permissions.
+## Idea
+A small Kikuyu sentiment dataset and baseline model. The model labels one sentence about the campus cafeteria as positive, negative or neutral. This is sentence-level opinion only, not emotion detection or sarcasm understanding.
 
-## Team and task
+## Data (`data/contribution.csv`)
+- 325 Kikuyu sentences: 110 positive, 107 negative, 108 neutral. No duplicates, no blanks, no personal data.
+- Method: the English source sentences were **written by an AI (Claude)** and then **translated and adapted into Kikuyu by one team member** (`source_method = human_localised`, `source_dataset = claude_generated_english_v1`). The English text is not in this repository.
+- Review: a Kikuyu-speaking family member of a team member (not a team member; reviewer code `T10-R1`) reviewed a random sample of 72 rows (24 per label). Verdicts: 32 OK, 35 FIX (suggested rewording), 5 DROP. The 5 dropped rows were removed (`data/exclusion_log.csv`). In 2 FIX rows only diacritics/spacing differed, so we kept the original text. In 33 rows we adopted her rewording (typed mostly without diacritics). 67 rows are `independently_reviewed`; the other 258 are `self_reviewed`.
+- Splits: random, seed 10, 205 train / 60 dev / 60 test (20 per label in dev and test). **All 60 test rows are independently reviewed**, and the unmodified `validate.py` passes.
 
-- Team number and name:
-- Three members and their contributions (names/GitHub usernames only):
-- Working language/variety:
-- Track: A intent / B sentiment / C limited semantic parsing
-- Original team repository URL:
-- Full source commit SHA for the version submitted:
+## Approach
+Character n-gram TF-IDF + logistic regression (the starter-kit baseline) against a majority-class baseline. Code: `core.py`, `train.py`, `evaluate.py`, `app.py` (Streamlit demo), `assign_splits.py`, `apply_review.py`.
 
-## Idea and approach
+## Results
+| | Accuracy | Macro-F1 | Majority-baseline macro-F1 |
+|---|---|---|---|
+| Dev (60 rows) | 0.750 | 0.739 | 0.167 |
+| Test (60 rows) | 0.683 | 0.640 | 0.167 |
 
-Explain the problem, who would use the solution and why the language matters in 2–4 sentences. Then explain how you obtained/reviewed the data, trained the model and built the demo in 3–5 concise steps. State what is new and what you reused.
+Test confusion matrix (rows = true, columns = predicted; order positive, negative, neutral):
+```
+positive  19   0   1
+negative  10   5   5
+neutral    3   0  17
+```
+Per-label recall on test: positive 0.95, negative 0.25, neutral 0.85. The model rarely misses positive sentences but often predicts positive or neutral for true negatives (15 of 20 negatives were wrong). 19 of 60 test sentences were wrong. Full predictions: `artifacts/sentiment/test_predictions.csv`. Test was evaluated once after the settings were frozen.
 
-## Data and review
+### Error analysis (5 of the 19 actual test errors)
+- `T10-A-014` (true negative, predicted positive)
+- `T10-A-046` (true negative, predicted neutral)
+- `T10-A-075` (true neutral, predicted positive)
+- `T10-A-078` (true neutral, predicted positive)
+- `T10-A-081` (true negative, predicted positive)
 
-Give accepted contribution counts, per-label/slot coverage, train/dev/test counts, source/version/licence links, your changes, reviewer method and quality checks. Link the contribution data, annotation guide, source log, data card and review/quality report. Follow the handbook's track targets and independent test-review rules.
+Pattern across all 19 errors: 10 negatives were predicted positive and 5 negatives neutral. We have not verified why individual sentences failed. Likely contributors are the small training set (about 68 sentences per label), a character-based model that leans on surface word pieces, and negative opinions phrased without an obvious negative word. A Kikuyu speaker should check these rows.
 
-If data cannot be redistributed or is too large for Git, give a stable accessible location, the version/checksum where possible, retrieval steps and the reason. Keep private permission evidence outside this public repository and use the agreed organiser channel for access.
+## Limitations (please read)
+1. **Review covers only a sample.** One reviewer checked 72 of the 330 original rows. Rows outside that sample (258) are only `self_reviewed`; only 7 train/dev rows were independently reviewed. The test set is fully independently reviewed.
+2. **One reviewer, one translator.** The reviewer is a single family member and not a team member; the two teammates assigned to review could not be reached. Her rewordings for 33 rows were typed mostly without diacritics (ĩ, ũ), so orthography in the data is now mixed, and we cannot confirm that every reworded sentence keeps its original label.
+3. The English source sentences are AI-written, so the Kikuyu is a translation of synthetic text, not naturally occurring speech.
+4. Small data (325 rows); results vary with the random split and the 60-row test set is small. No minimum score is claimed. Negative sentences are poorly detected (recall 0.25).
+5. The demo's probability is uncalibrated and the model always picks one of the three labels, even for unsupported input.
 
-## Code and how to run
+## Run it
+```
+python -m pip install -r requirements.txt
+python validate.py --track sentiment --data data/contribution.csv
+python train.py    --track sentiment --data data/contribution.csv
+python evaluate.py --track sentiment --data data/contribution.csv
+python -m streamlit run app.py    # choose "sentiment"
+```
+Training writes the model to `artifacts/sentiment/model.joblib` (not committed; only load `.joblib` files you created or trust).
 
-List the relevant files, environment/dependency versions and exact installation, validation, training, evaluation and demo commands. Explain how to retrieve any model/data artefacts and where outputs are written. Do not include secrets.
+## Team contributions
+See `CONTRIBUTIONS.md` and `docs/AI_USE_STATEMENT.md`.
 
-## Results and limitations
-
-Link actual metric files, per-label results, baseline comparison and test predictions. Include the additional semantic metrics where relevant. Explain up to five actual errors (all if fewer), limitations, and any optional improvements with evidence. Label illustrative outputs separately from observed results.
-
-## Presentation and demo video
-
-- Presentation/demo video URL (REQUIRED):
-- Optional second presentation/demo video:
-- Optional hosted app URL:
-
-Check that judges can view the video. Present your idea and approach briefly, show the trained model handling new input, discuss results/limitations and explain each member's contribution. A hosted app link alone does not replace the video.
-
-## Required materials
-
-Link each item using a relative path or an accessible external URL:
-
-- Contribution dataset and splits:
-- Annotation guide:
-- Source log and source terms:
-- Dataset card:
-- Quality/review report:
-- Contribution and AI-use statement:
-- Evaluation outputs and baseline comparison:
-- Runnable code and dependency file:
-- Trained artefacts or reproduction instructions:
-- Video link:
-
-## Attribution and permissions
-
-Credit the starter kit, upstream datasets/models/code and other assistance. State the terms of your original code/data and respect upstream terms. Specify any unresolved access/rights issue; do not publish uncleared material. Do not copy fictional claims from the kit's completed examples.
+## Credits and licences
+Starter code from the Strathmore NLP Hub Datathon kit (MIT, see `LICENSE_CODE.txt`). AI assistance: Claude (Anthropic) wrote the English source sentences and helped with scripts and documentation; it did not write or edit the Kikuyu text. Kikuyu data: team contribution under the team's documented permission.
