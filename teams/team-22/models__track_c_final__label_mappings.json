@@ -1,0 +1,34 @@
+{
+  "intent_to_id": {
+    "alarm_set": 0,
+    "calendar_query": 1,
+    "calendar_set": 2,
+    "datetime_query": 3,
+    "lists_createoradd": 4,
+    "lists_query": 5,
+    "news_query": 6,
+    "play_music": 7,
+    "qa_definition": 8,
+    "weather_query": 9
+  },
+  "slot_label_to_id": {
+    "O": 0,
+    "B-date": 1,
+    "I-date": 2,
+    "B-item": 3,
+    "I-item": 4,
+    "B-location": 5,
+    "I-location": 6,
+    "B-term": 7,
+    "I-term": 8,
+    "B-time": 9,
+    "I-time": 10
+  },
+  "slot_type_to_id": {
+    "date": 0,
+    "item": 1,
+    "location": 2,
+    "term": 3,
+    "time": 4
+  }
+}

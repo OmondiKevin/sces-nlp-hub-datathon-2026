@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="sw">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Sauti · Msaidizi wa Kiswahili</title>
+<link rel="stylesheet" href="/app.css">
+<header class="bar">
+  <div class="bar-inner">
+    <a class="brand" href="#workspace" aria-label="Sauti">
+      <span class="logo" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+      <strong>Sauti<span>.</span></strong>
+    </a>
+    <div class="tools">
+      <button id="theme" class="icon-button" type="button" aria-label="Tumia mandhari meusi" aria-pressed="false">◐</button>
+      <button id="new-chat" class="reset-button" type="button" disabled>Anza upya</button>
+    </div>
+  </div>
+</header>
+<main id="workspace" class="workspace">
+  <section class="intro" aria-labelledby="intro-title">
+    <p class="eyebrow">MSAIDIZI WA KISWAHILI</p>
+    <h1 id="intro-title">Habari! <em>Nikusaidieje?</em></h1>
+    <p>Andika ombi lako uone jinsi Sauti imelielewa.</p>
+    <div class="signal" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  </section>
+  <div class="panels">
+    <section class="panel input-panel" aria-labelledby="input-title">
+      <div class="panel-heading"><span class="panel-icon" aria-hidden="true">✎</span><h2 id="input-title">Ombi lako</h2></div>
+      <form id="composer">
+        <label class="sr-only" for="message">Andika ombi lako kwa Kiswahili</label>
+        <textarea id="message" name="message" maxlength="280" required autocomplete="off" placeholder="Mfano: Weka kengele kesho saa moja asubuhi." aria-describedby="character-count"></textarea>
+        <div class="composer-actions">
+          <span id="character-count">0 / 280</span>
+          <button id="send" type="submit" disabled>Tuma ombi <span aria-hidden="true">↗</span></button>
+        </div>
+      </form>
+      <section class="examples" aria-labelledby="examples-title">
+        <h3 id="examples-title">Jaribu mfano</h3>
+        <div class="prompts">
+          <button type="button" data-prompt="Weka kengele kesho saa moja asubuhi.">Kengele</button>
+          <button type="button" data-prompt="Hali ya hewa ikoje Nairobi kesho?">Hali ya hewa</button>
+          <button type="button" data-prompt="Panga mkutano Ijumaa saa nne.">Kalenda</button>
+          <button type="button" data-prompt="Ongeza maziwa kwenye orodha ya manunuzi.">Orodha</button>
+          <button type="button" data-prompt="Weka kenglee kehso saa moja asubuhi.">Ombi lenye tahajia potofu</button>
+        </div>
+      </section>
+    </section>
+    <section id="conversation" class="panel output-panel" aria-labelledby="output-title">
+      <div class="panel-heading"><span class="panel-icon" aria-hidden="true">✦</span><h2 id="output-title">Jibu la Sauti</h2></div>
+      <div id="welcome" class="empty">
+        <span class="empty-icon" aria-hidden="true">✦</span>
+        <p>Jibu litaonekana hapa</p>
+        <small>Tuma ombi ili kuona kitendo kilichotambuliwa na maelezo yake.</small>
+      </div>
+      <div id="thread" role="log" aria-label="Maombi na majibu" aria-live="polite" aria-relevant="additions" tabindex="0" hidden></div>
+      <p id="status" role="status"></p>
+    </section>
+  </div>
+</main>
+<script src="/app.js" defer></script>
+</html>
