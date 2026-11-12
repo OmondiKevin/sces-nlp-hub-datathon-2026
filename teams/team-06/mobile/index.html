@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Luganda Intent Demo</title>
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--ink:#1a1d23;--mute:#5d6572;--line:#e1e4ea;--acc:#1f6feb;--ok:#1a7f4b;--bad:#b42318;--warn:#9a6700}
+@media(prefers-color-scheme:dark){:root{--bg:#0f1115;--card:#181b21;--ink:#eceff4;--mute:#9aa3b2;--line:#2a2f39;--acc:#6aa5ff;--ok:#4cc38a;--bad:#ff7b72;--warn:#e3b341}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 system-ui,sans-serif;padding-bottom:84px}
+header{padding:16px;padding-top:max(16px,env(safe-area-inset-top))}h1{margin:0;font-size:20px}header p{margin:2px 0 0;color:var(--mute);font-size:14px}
+main{padding:0 16px}.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:12px}
+h2{font-size:16px;margin:0 0 8px}small,.mute{color:var(--mute)}
+textarea{width:100%;font:inherit;color:inherit;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:10px;min-height:76px;resize:vertical}
+button{font:inherit;border:0;border-radius:10px;padding:12px 16px;background:var(--acc);color:#fff;font-weight:600;width:100%;min-height:44px}
+.chip{display:inline-block;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:999px;padding:8px 12px;margin:0 6px 6px 0;font-size:14px;width:auto;font-weight:400;min-height:36px;text-align:left}
+.bar{height:8px;border-radius:4px;background:var(--line);overflow:hidden}.bar i{display:block;height:100%;background:var(--acc)}
+.row{display:flex;justify-content:space-between;gap:8px;font-size:14px;margin:8px 0 3px}
+.phone{border:2px dashed var(--line);border-radius:12px;padding:12px;margin-top:10px}
+.ok{color:var(--ok)}.bad{color:var(--bad)}.warn{color:var(--warn)}
+nav{position:fixed;bottom:0;left:0;right:0;display:flex;background:var(--card);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
+nav button{background:none;color:var(--mute);border-radius:0;flex:1;padding:14px 4px;font-size:14px}nav button.on{color:var(--acc);box-shadow:inset 0 3px 0 var(--acc)}
+.sec{display:none}.sec.on{display:block}.big{font-size:32px;font-weight:700}
+</style></head><body>
+<header><h1>Intent demo · <span id="lang">Luganda</span></h1><p>Real model predictions. Actions are simulated only.</p></header>
+<main>
+<section class="sec on" id="try">
+ <div class="card"><h2>Type a request</h2>
+  <textarea id="t" placeholder="e.g. Embeera y'obudde eritya leero?"></textarea>
+  <div style="height:8px"></div><button id="go">Predict</button>
+  <p><small>Samples from the held-out test set (tap to run):</small></p><div id="samples"></div></div>
+ <div id="res"></div>
+</section>
+<section class="sec" id="works"><div class="card"><h2>What works</h2><div id="head"></div></div>
+ <div class="card"><h2>Score per intent (F1)</h2><div id="bars"></div></div>
+ <div class="card"><h2>Correct test predictions</h2><small>Tap one to run it live.</small><div id="okl"></div></div></section>
+<section class="sec" id="miss"><div class="card"><h2>What goes wrong</h2><p class="mute" id="mi"></p></div><div id="errs"></div>
+ <div class="card"><h2>Limits to know</h2><ul class="mute" style="padding-left:18px;margin:0">
+  <li>The model always picks one of 10 intents, even for text outside them.</li>
+  <li>Scores are uncalibrated and the model is often unsure: correct test answers averaged about 33% confidence, wrong ones about 19%.</li>
+  <li>Only 50 test rows (5 per intent), so a single error moves an intent's F1 by 0.1 or more.</li>
+  <li>Character n-gram model. It does not understand grammar or meaning.</li></ul></div></section>
+</main>
+<nav><button class="on" data-s="try">Try it</button><button data-s="works">What works</button><button data-s="miss">Mistakes</button></nav>
+<script>
+const $=s=>document.querySelector(s),pct=x=>(x*100).toFixed(0)+'%',esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>{document.querySelectorAll('nav button,.sec').forEach(e=>e.classList.remove('on'));b.classList.add('on');$('#'+b.dataset.s).classList.add('on');scrollTo(0,0)});
+async function predict(text){text=(text||$('#t').value).trim();if(!text){$('#res').innerHTML='<div class="card warn">Enter some text first.</div>';return}
+ $('#t').value=text;$('#res').innerHTML='<div class="card mute">Running model…</div>';
+ try{const r=await fetch('/api/predict',{method:'POST',body:JSON.stringify({text})});if(!r.ok)throw 0;const d=await r.json();
+ $('#res').innerHTML=`<div class="card"><small>Model says the user wants to</small><div class="big">${esc(d.name)}</div>
+ <div class="row"><span>Confidence (uncalibrated)</span><b>${pct(d.p)}</b></div><div class="bar"><i style="width:${d.p*100}%"></i></div>
+ ${d.low_confidence?'<p class="warn"><b>Low confidence.</b> The model is close to guessing. The input may be outside its 10 intents, or unlike its 150 training examples.</p>':''}
+ <div class="phone"><small>Simulated action. Nothing is executed.</small><div>▶ ${esc(d.action)}</div></div>
+ <h2 style="margin-top:14px">Top 3</h2>${d.top.map(t=>`<div class="row"><span>${esc(t.name)}</span><span>${pct(t.p)}</span></div><div class="bar"><i style="width:${t.p*100}%"></i></div>`).join('')}</div>`}
+ catch(e){$('#res').innerHTML='<div class="card bad">Could not reach the model server.</div>'}}
+$('#go').onclick=()=>predict();
+document.body.addEventListener('click',ev=>{const b=ev.target.closest('[data-t]');if(!b)return;document.querySelector('nav [data-s=try]').click();predict(b.dataset.t)});
+fetch('/api/summary').then(r=>r.json()).then(s=>{$('#lang').textContent=s.language;
+ const right=Math.round(s.acc*s.n);
+ const pick=s.correct.filter((_,i)=>i%12===0).concat(s.errors.slice(0,2));
+ $('#samples').innerHTML=pick.map(x=>`<button class="chip" data-t="${esc(x.text)}">${esc(x.text)}</button>`).join('');
+ $('#head').innerHTML=`<div class="big ok">${pct(s.acc)}</div><div>accuracy on ${s.n} unseen test examples (${right} right, ${s.n-right} wrong)</div><p>Macro-F1 <b>${s.f1.toFixed(2)}</b> vs <b>${s.base_f1.toFixed(2)}</b> for always guessing one intent. The model learned real signal from 250 hand-written, independently reviewed examples.</p>`;
+ $('#bars').innerHTML=s.per_label.map(l=>`<div class="row"><span>${esc(l.name)}</span><span>${l.f1.toFixed(2)} <small>n=${l.n}</small></span></div><div class="bar"><i style="width:${l.f1*100}%;background:${l.f1>=.9?'var(--ok)':l.f1>=.8?'var(--acc)':'var(--warn)'}"></i></div>`).join('');
+ $('#okl').innerHTML=s.correct.map(x=>`<button class="chip" data-t="${esc(x.text)}">✓ ${esc(x.text)}</button>`).join('');
+ $('#mi').textContent=`${s.errors.length} of ${s.n} test examples were wrong. All ${s.errors.length} are shown, with why the model likely erred.`;
+ $('#errs').innerHTML=s.errors.map(e=>`<div class="card"><b>${esc(e.text)}</b><div class="row"><span>Correct intent</span><span class="ok">${esc(e.gold_name)}</span></div><div class="row"><span>Model said</span><span class="bad">${esc(e.pred_name)} (${pct(e.p)})</span></div><p>${esc(e.why)}</p><button class="chip" data-t="${esc(e.text)}">Run it live</button></div>`).join('')});
+</script></body></html>
