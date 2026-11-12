@@ -1,59 +1,202 @@
-# Team 11 | Project title
+﻿# Team 11 | LuoSense
 
-PENDING SUBMISSION. Replace this placeholder with your completed README and project files.
+LuoSense is an experimental Dholuo sentiment-classification project developed for the Strathmore NLP Hub Datathon 2026.
 
-Replace the prompts below with your actual information. Keep the idea and approach concise. Do not invent results, review evidence or permissions.
+## 1. Team and task
 
-## Team and task
+- **Team:** Team 11
+- **Project:** LuoSense
+- **Working language:** Dholuo
+- **Track:** Track B - Sentiment
+- **Team members:**
+  - **Emma Awuor Ogwayo (@Emzogwayo):** Technical lead. Led technical development and integration, sentiment-classification pipeline, model training and evaluation, Streamlit application, technical troubleshooting, repository integration and submission documentation.
+  - **Celestine Mboya:** Identified and sourced the original sentiment dataset; contributed to Dholuo translation, language checking and dataset preparation.
+  - **Nicholas Njue:** Prepared and organised the Excel dataset workbook; contributed to data entry, structuring and preparation of the final contribution dataset.
+- **Original team repository:** https://github.com/Nexnju/nlp-datathon-2026-team-11
+- **Source commit:** `9f39174c8ec9eb7bf9d388b9cff9d2f2abff07a`
 
-- Team number and name:
-- Three members and their contributions (names/GitHub usernames only):
-- Working language/variety:
-- Track: A intent / B sentiment / C limited semantic parsing
-- Original team repository URL:
-- Full source commit SHA for the version submitted:
+## 2. Idea and approach
 
-## Idea and approach
+LuoSense explores three-class sentiment classification for Dholuo text. It uses character-level text features and a Logistic Regression classifier to predict whether a text expresses positive, negative or neutral sentiment.
 
-Explain the problem, who would use the solution and why the language matters in 2–4 sentences. Then explain how you obtained/reviewed the data, trained the model and built the demo in 3–5 concise steps. State what is new and what you reused.
+The project workflow was:
 
-## Data and review
+1. Identify an existing Sindhi sentiment dataset and prepare Dholuo draft text.
+2. Organise the contribution records, sentiment labels, review metadata and dataset splits.
+3. Run structural validation and train a character-level TF-IDF and Logistic Regression model.
+4. Evaluate the trained model using development and held-out test data.
+5. Develop a Streamlit interface to demonstrate sentiment predictions.
 
-Give accepted contribution counts, per-label/slot coverage, train/dev/test counts, source/version/licence links, your changes, reviewer method and quality checks. Link the contribution data, annotation guide, source log, data card and review/quality report. Follow the handbook's track targets and independent test-review rules.
+The project uses the datathon starter-kit workflow with a project-specific dataset, trained model and demonstration interface.
 
-If data cannot be redistributed or is too large for Git, give a stable accessible location, the version/checksum where possible, retrieval steps and the reason. Keep private permission evidence outside this public repository and use the agreed organiser channel for access.
+## 3. Data and review
 
-## Code and how to run
+the final contribution dataset contains 300 records, balanced across three sentiment classes.
 
-List the relevant files, environment/dependency versions and exact installation, validation, training, evaluation and demo commands. Explain how to retrieve any model/data artefacts and where outputs are written. Do not include secrets.
+| Sentiment | Records |
+|---|---:|
+| Positive | 100 |
+| Negative | 100 |
+| Neutral | 100 |
+| **Total** | **300** |
 
-## Results and limitations
+The dataset is split into:
+- Training: 180 records
+- Development: 60 records
+- Test: 60 records
 
-Link actual metric files, per-label results, baseline comparison and test predictions. Include the additional semantic metrics where relevant. Explain up to five actual errors (all if fewer), limitations, and any optional improvements with evidence. Label illustrative outputs separately from observed results.
+The dataset metadata records:
+- 276 records as `machine_translated`, where translated output was used largely as produced.
+- 24 records as `human_localised`, where initial translated drafts were subsequently human-localised.
+- 217 self-reviewed records and 83 independently reviewed records.
+- All 60 test records have independent-review metadata.
 
-## Presentation and demo video
+Google Translate was used to produce the initial Dholuo drafts for all 300 records from Sindhi source material. These figures do not establish that all records were manually translated or fully validated by fluent Dholuo speakers.
 
-- Presentation/demo video URL (REQUIRED):
-- Optional second presentation/demo video:
-- Optional hosted app URL:
+The structural validator reported:
 
-Check that judges can view the video. Present your idea and approach briefly, show the trained model handling new input, discuss results/limitations and explain each member's contribution. A hosted app link alone does not replace the video.
+`PASS: 300 records; language quality, permission and semantic duplicate review remain human responsibilities.`
 
-## Required materials
+This confirms structural checks only. It does not certify Dholuo linguistic quality, semantic correctness or redistribution permissions.
 
-Link each item using a relative path or an accessible external URL:
+### Source dataset and access
 
-- Contribution dataset and splits:
-- Annotation guide:
-- Source log and source terms:
-- Dataset card:
-- Quality/review report:
-- Contribution and AI-use statement:
-- Evaluation outputs and baseline comparison:
-- Runnable code and dependency file:
-- Trained artefacts or reproduction instructions:
-- Video link:
+The identified source is Ali Nawaz, *Sindhi Sentiment Analysis Dataset*, listed on Mozilla Data Collective:
 
-## Attribution and permissions
+https://mozilladatacollective.com/datasets/cmrlqkecf00jynu07k7fb90iv
 
-Credit the starter kit, upstream datasets/models/code and other assistance. State the terms of your original code/data and respect upstream terms. Specify any unresolved access/rights issue; do not publish uncleared material. Do not copy fictional claims from the kit's completed examples.
+The source listing identifies the licence as CC BY-NC 4.0. The exact downloaded source version and source record IDs were not retained or confirmed. Redistribution permissions for the derivative Dholuo dataset have not been established.
+
+The contribution CSV is therefore not included in this public repository. The dataset should be provided to judges only through an organiser-approved access route.
+
+Further documentation:
+- [Annotation guide](docs/annotation_guide.md)
+- [Contributions and AI-use statement](docs/contributions.md)
+- [Dataset card](docs/dataset_card.md)
+- [Data quality report](docs/data_quality_report.md)
+- [Evaluation report](docs/evaluation_report.md)
+- [Provenance and rights](docs/provenance_and_rights.md)
+- [Validator output](submission/evidence/validator_output.txt)
+
+## 4. Code and how to run
+
+### Requirements
+
+The project uses Python and the dependencies listed in `requirements.txt`:
+
+- scikit-learn 1.7.2
+- pandas 2.2 or later, below version 3
+- Streamlit 1.40 or later, below version 2
+- joblib 1.4 or later, below version 2
+
+Create and activate a virtual environment in PowerShell:
+
+```powershell
+py -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+### Validation, training and evaluation
+
+These commands require the contribution dataset to be available as `data/contribution.csv` through an organiser-approved access route:
+
+```powershell
+python validate.py --data data/contribution.csv --track sentiment
+python train.py --data data/contribution.csv --track sentiment
+python evaluate.py --data data/contribution.csv --track sentiment
+```
+
+Training saves the model and development metrics under `artifacts/sentiment/`. Evaluation saves the test metrics and per-label report in the same directory.
+
+### Run the Streamlit demonstration
+
+With the trained model available at `artifacts/sentiment/model.joblib`, run:
+
+```powershell
+streamlit run app.py
+```
+
+The application loads the sentiment model from `artifacts/sentiment/model.joblib`. Dataset-backed examples require the contribution CSV, which is not included in this public repository pending rights clarification.
+
+## 5. Model results and limitations
+
+The selected classifier is a scikit-learn pipeline consisting of:
+
+- Character-level TF-IDF vectorisation using character n-grams of length 2â€“5.
+- Logistic Regression with `max_iter=1000` and `random_state=42`.
+
+### Held-out test results
+
+| Metric | LuoSense model | Majority baseline |
+|---|---:|---:|
+| Accuracy | 61.67% | 33.33% |
+| Macro-F1 | 0.6114 | 0.1667 |
+
+### Per-class test F1
+
+| Class | F1-score |
+|---|---:|
+| Positive | 0.6512 |
+| Negative | 0.5000 |
+| Neutral | 0.6829 |
+
+The test set contains 60 records. The confusion matrix below uses the label order positive, negative, neutral.
+
+```text
+                 Predicted
+Actual          Positive  Negative  Neutral
+Positive            14         4        2
+Negative             6         9        5
+Neutral              3         3       14
+```
+
+Development results:
+- Accuracy: 70.00%
+- Macro-F1: 0.6984
+
+Saved evaluation artefacts:
+- [Development metrics](artifacts/sentiment/dev_metrics.json)
+- [Test metrics](artifacts/sentiment/test_metrics.json)
+- [Per-label report](artifacts/sentiment/per_label_report.csv)
+- [Trained model](artifacts/sentiment/model.joblib)
+
+### Limitations
+
+- The dataset is small and derived from Sindhi sentiment material through machine translation and subsequent human localisation of a subset.
+- Broader review by proficient Dholuo speakers is needed to assess linguistic naturalness and label validity.
+- Structural validation does not establish linguistic quality or semantic correctness.
+- The exact source dataset version and original record-level identifiers were not retained.
+- Redistribution permissions for the derivative dataset remain unresolved.
+- The held-out test set contains only 60 records. The results are preliminary and should not be generalised to all Dholuo text or domains.
+- LuoSense is an experimental demonstration, not a production-ready language model.
+
+## 6. Presentation and demo video
+
+**Demo video (YouTube):** ADD YOUTUBE LINK HERE
+
+The demonstration video will show the application, its sentiment-prediction workflow and the project results.
+
+## 7. Required materials
+
+- Contribution dataset: withheld from this public repository pending rights clarification; access should be requested through the datathon organisers.
+- Annotation guide: [docs/annotation_guide.md](docs/annotation_guide.md)
+- Dataset card: [docs/dataset_card.md](docs/dataset_card.md)
+- Data quality report: [docs/data_quality_report.md](docs/data_quality_report.md)
+- Contributions and AI-use statement: [docs/contributions.md](docs/contributions.md)
+- Provenance and rights: [docs/provenance_and_rights.md](docs/provenance_and_rights.md)
+- Evaluation report: [docs/evaluation_report.md](docs/evaluation_report.md)
+- Source code: `app.py`, `core.py`, `train.py`, `evaluate.py`, `validate.py`
+- Dependencies: [requirements.txt](requirements.txt)
+- Trained model and metrics: `artifacts/sentiment/`
+- Validator evidence: [submission/evidence/validator_output.txt](submission/evidence/validator_output.txt)
+
+## 8. Attribution and permissions
+
+This project builds on the Strathmore NLP Hub Datathon starter kit and the Sindhi Sentiment Analysis Dataset attributed to Ali Nawaz on Mozilla Data Collective. Google Translate was used to produce the initial Dholuo drafts from Sindhi source material.
+
+The source dataset is listed under CC BY-NC 4.0. The exact source version and record-level identifiers were not retained, and redistribution permissions for the derivative Dholuo dataset remain unresolved. The contribution CSV is therefore withheld from this public repository pending organiser guidance. No unrestricted redistribution claim is made.
+
+The project code is accompanied by `LICENSE_CODE.txt`.
+
