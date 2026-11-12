@@ -1,7 +1,7 @@
 # Team 10 "Maneno Mashinani": Kikuyu sentiment analysis (Strathmore NLP Hub Datathon 2026)
 
 **Track:** B, sentiment (positive / negative / neutral), sentence level. **Domain:** campus cafeteria. **Language:** Kikuyu (`ki`).
-**Demo video:** [ADD LINK HERE]
+**Demo video:** https://drive.google.com/file/d/1b7NWf434sJjEGYJkX0dOSmFBo4N_4ex4/view?usp=sharing
 
 ## Idea
 A small Kikuyu sentiment dataset and baseline model. The model labels one sentence about the campus cafeteria as positive, negative or neutral. This is sentence-level opinion only, not emotion detection or sarcasm understanding.
