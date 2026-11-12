@@ -1,0 +1,14 @@
+# Team 19 demo theme: editorial "phrasebook", dark (dark paper, light ink, one vermilion accent)
+[theme]
+base = "dark"
+primaryColor = "#ef6a52"
+backgroundColor = "#121110"
+secondaryBackgroundColor = "#1b1a18"
+textColor = "#ece8df"
+borderColor = "#2e2b27"
+baseRadius = "0px"
+chartCategoricalColors = ["#ece8df", "#ef6a52", "#a39d90", "#7fb38a"]
+[server]
+headless = true
+[browser]
+gatherUsageStats = false
