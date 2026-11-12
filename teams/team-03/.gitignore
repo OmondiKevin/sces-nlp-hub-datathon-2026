@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pyc
+*.joblib
+!artifacts/v2/B_tuned_tfidf.joblib
+!artifacts/intent/model.joblib
+data/raw/
+.env
+secrets.toml
+
+# Team notes, never published
+CLAUDE.md
+HANDOFF.md
+.claude/
+Explanations/
