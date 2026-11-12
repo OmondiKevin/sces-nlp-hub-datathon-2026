@@ -237,7 +237,13 @@ def load_demo_examples():
 
     csv_path = Path("data") / "contribution.csv"
     if not csv_path.exists():
-        return {}
+        # Public demo examples from the submitted dataset.
+        # The full contribution CSV is withheld pending rights clarification.
+        return {
+            "positive": "Ne otimo richo to ne okwayo ng'uono",
+            "negative": "Kuo notimore, gik moko mag ot nodhi",
+            "neutral": "Duoko mar penj biro dwe mabiro",
+        }
 
     frame = pd.read_csv(csv_path)
     columns = {str(column).strip().lower(): column for column in frame.columns}
