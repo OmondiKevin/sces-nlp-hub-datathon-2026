@@ -174,7 +174,7 @@ Saved evaluation artefacts:
 
 ## 6. Presentation and demo video
 
-**Demo video (YouTube):** ADD YOUTUBE LINK HERE
+**Demo video (YouTube):** https://youtu.be/XagL1boDWpU
 
 The demonstration video will show the application, its sentiment-prediction workflow and the project results.
 
