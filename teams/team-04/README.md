@@ -1,59 +1,65 @@
-# Team 04 | Project title
-
-PENDING SUBMISSION. Replace this placeholder with your completed README and project files.
-
-Replace the prompts below with your actual information. Keep the idea and approach concise. Do not invent results, review evidence or permissions.
+# Team 04 | SautiByte - Kiswahili Intent Classification
 
 ## Team and task
-
-- Team number and name:
-- Three members and their contributions (names/GitHub usernames only):
-- Working language/variety:
-- Track: A intent / B sentiment / C limited semantic parsing
-- Original team repository URL:
-- Full source commit SHA for the version submitted:
+- **Team number and name:** Team 04 (SautiByte)
+- **Three members and their contributions:** 
+  - Omwoyo Leo Kinara (T04-L): Authored 84 records, peer review, documentation.
+  - Daniel Brian Kikuvi (T04-B): Authored 83 records, peer review, quality report.
+  - Zakariya Mohamed (T04-Z): Authored 83 records, peer review, model training, recorded demo.
+- **Working language/variety:** Kiswahili (`sw-KE`, Kenyan variety with Sheng and code-switching)
+- **Track:** A intent
+- **Original team repository URL:** [https://github.com/lolkao55/SautiByte-NLP26]
+- **Full source commit SHA for the version submitted:** [e2b38ca54c600a59dc285ca1a9b56538da27798d]
 
 ## Idea and approach
-
-Explain the problem, who would use the solution and why the language matters in 2–4 sentences. Then explain how you obtained/reviewed the data, trained the model and built the demo in 3–5 concise steps. State what is new and what you reused.
+Our goal was to build an intent classification model for smart assistants that understands real-world Kenyan Kiswahili, mapping natural commands to 10 distinct action labels. Users would use this to seamlessly control apps (weather, alarms, lists, calendars, music) using the casual, code-mixed language they speak daily, rather than rigid standard translations.
+**Steps taken:**
+1. Authored 250 original Kiswahili sentences incorporating natural Sheng (e.g., "ngoma", "playlist").
+2. Conducted independent peer-reviews on all test records to ensure natural quality and correct intent mapping.
+3. Formatted data into exact 15/5/5 train/dev/test splits per label.
+4. Trained the baseline character TF-IDF and logistic regression model using the Datathon starter kit.
+5. Deployed the model locally using Streamlit to demonstrate real-time predictions.
 
 ## Data and review
-
-Give accepted contribution counts, per-label/slot coverage, train/dev/test counts, source/version/licence links, your changes, reviewer method and quality checks. Link the contribution data, annotation guide, source log, data card and review/quality report. Follow the handbook's track targets and independent test-review rules.
-
-If data cannot be redistributed or is too large for Git, give a stable accessible location, the version/checksum where possible, retrieval steps and the reason. Keep private permission evidence outside this public repository and use the agreed organiser channel for access.
+- **Accepted contributions:** 250 `original_human` records (`source_dataset = team_authored`).
+- **Coverage:** 25 records exactly per label (weather_query, datetime_query, alarm_set, calendar_set, calendar_query, lists_createoradd, lists_query, play_music, news_query, qa_definition).
+- **Splits:** 150 Train / 50 Dev / 50 Test.
+- **Review method:** All 50 test records (and train/dev sets) were independently reviewed by a team member who did not author them (e.g., T04-L's records were reviewed by T04-B).
+- **Quality checks:** Validated structural requirements via `validate.py` (PASS: 250 records). Corrections to spelling and ambiguous intents were resolved and documented.
 
 ## Code and how to run
-
-List the relevant files, environment/dependency versions and exact installation, validation, training, evaluation and demo commands. Explain how to retrieve any model/data artefacts and where outputs are written. Do not include secrets.
+**Requirements:** Python 3.10+, Streamlit, and standard starter kit dependencies.
+**Commands:**
+1. Activate virtual environment: `.venv\Scripts\activate.bat` (or `.ps1` for PowerShell)
+2. Install dependencies: `python -m pip install -r requirements.txt`
+3. Validate: `python validate.py --track intent --data data/contribution.csv`
+4. Train: `python train.py --track intent --data data/contribution.csv`
+5. Evaluate: `python evaluate.py --track intent --data data/contribution.csv`
+6. Run UI: `python -m streamlit run app.py`
+*(Artefacts including `.joblib` model and JSON/CSV reports are generated and written to `artifacts/intent/`)*
 
 ## Results and limitations
-
-Link actual metric files, per-label results, baseline comparison and test predictions. Include the additional semantic metrics where relevant. Explain up to five actual errors (all if fewer), limitations, and any optional improvements with evidence. Label illustrative outputs separately from observed results.
+- **Final frozen test Accuracy:** 0.860 (86.0%)
+- **Final frozen test Macro-F1:** 0.858
+**Limitations:**
+1. **Unseen Vocabulary:** The model failed on words missing from training (e.g., missed "hali ya hewa", relying instead on time anchors like "wikendi").
+2. **Shared Trigger Words:** The model confused commands starting with "Weka" (used both for scheduling calendars and playing music).
+3. **Character fragment overlap:** Falsely predicted `lists_query` for the word "playlist" due to the shared "list" character fragment.
 
 ## Presentation and demo video
-
-- Presentation/demo video URL (REQUIRED):
-- Optional second presentation/demo video:
-- Optional hosted app URL:
-
-Check that judges can view the video. Present your idea and approach briefly, show the trained model handling new input, discuss results/limitations and explain each member's contribution. A hosted app link alone does not replace the video.
+- **Presentation/demo video URL (REQUIRED):** [[https://drive.google.com/file/d/1VNOoZLsmsSufe2ilpT0O2Ab4tLuNjwco/view?usp=sharing]]
 
 ## Required materials
-
-Link each item using a relative path or an accessible external URL:
-
-- Contribution dataset and splits:
-- Annotation guide:
-- Source log and source terms:
-- Dataset card:
-- Quality/review report:
-- Contribution and AI-use statement:
-- Evaluation outputs and baseline comparison:
-- Runnable code and dependency file:
-- Trained artefacts or reproduction instructions:
-- Video link:
+- **Contribution dataset and splits:** `data/contribution.csv`
+- **Annotation guide:** `documentation/ANNOTATION_GUIDE.md`
+- **Dataset card:** `documentation/DATA_PLAN.md`
+- **Quality/review report:** `documentation/quality_report.md`
+- **Evaluation outputs and baseline comparison:** `artifacts/intent/`
+- **Runnable code and dependency file:** `app.py`, `train.py`, `evaluate.py`, `requirements.txt`
+- **Trained artefacts or reproduction instructions:** `artifacts/intent/`
+- **Video link:** [https://drive.google.com/file/d/1VNOoZLsmsSufe2ilpT0O2Ab4tLuNjwco/view?usp=sharing]
 
 ## Attribution and permissions
+All starter code, baseline models, and evaluation scripts were provided by the Strathmore NLP Hub Datathon starter kit v2.0. Our Kiswahili dataset (`sw-KE`) is 100% original human-authored data created specifically for this competition by Team 04. No upstream datasets or bulk AI translations were utilized.
 
-Credit the starter kit, upstream datasets/models/code and other assistance. State the terms of your original code/data and respect upstream terms. Specify any unresolved access/rights issue; do not publish uncleared material. Do not copy fictional claims from the kit's completed examples.
+
