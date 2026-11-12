@@ -1,0 +1,31 @@
+{
+  "data_records": 330,
+  "counts": {
+    "weather_query": 33,
+    "datetime_query": 33,
+    "alarm_set": 33,
+    "calendar_set": 33,
+    "calendar_query": 33,
+    "lists_createoradd": 33,
+    "lists_query": 33,
+    "play_music": 33,
+    "news_query": 33,
+    "qa_definition": 33
+  },
+  "splits": {
+    "train": 230,
+    "dev": 50,
+    "test": 50
+  },
+  "test_origin": "All 50 test records are from the newly supplied 80-record A2/R3 DOCX extension; none was used to fit or evaluate the original 250 model.",
+  "split_policy": "Deterministic hash/whole lexical-family assignment; five entirely new test records and five original-pool dev records per label; cross-label families kept in train. No model predictions used to choose splits.",
+  "group_count": 295,
+  "related_pairs": 35,
+  "model_settings": "Unchanged Colab official baseline: character TF-IDF ngrams 2\u20135 and LogisticRegression(max_iter=1000,random_state=42). No tuning planned.",
+  "comparison": "After freezing: evaluate original frozen 250 model and newly trained model on the SAME new 50-record holdout, once. Historical 49/50 score remains a separate previous test.",
+  "old_test_reuse": "Some records in the former 250 test may now be train/dev. This is a NEW experiment with a wholly new holdout, not a fresh claim about the old test.",
+  "notebook_sha256": "d19dec864574ff8cf998c7567ae8f7b2ef9d22ea57682329c3bc94005c53acc4",
+  "colab_text_policy": "User-edited Colab copied byte-for-byte and not changed online; training code extracted from its embedded project.",
+  "source_evidence": "Team-user confirmations of human authorship, R1/R2/R3 independent competent review and author permission for datathon use/sharing. Actual review dates unspecified.",
+  "limitation": "Lexical grouping does not guarantee detection of all semantic paraphrases. Small, one-author new holdout is not field validation."
+}
