@@ -1,0 +1,1066 @@
+{
+  "track": "semantic",
+  "practice": false,
+  "test_size": 50,
+  "model": {
+    "accuracy": 0.74,
+    "macro_f1": 0.7323304473304473,
+    "report": {
+      "weather_query": {
+        "precision": 1.0,
+        "recall": 0.6,
+        "f1-score": 0.75,
+        "support": 5.0
+      },
+      "datetime_query": {
+        "precision": 0.4444444444444444,
+        "recall": 0.8,
+        "f1-score": 0.5714285714285714,
+        "support": 5.0
+      },
+      "alarm_set": {
+        "precision": 0.7142857142857143,
+        "recall": 1.0,
+        "f1-score": 0.8333333333333334,
+        "support": 5.0
+      },
+      "calendar_set": {
+        "precision": 0.8,
+        "recall": 0.8,
+        "f1-score": 0.8,
+        "support": 5.0
+      },
+      "calendar_query": {
+        "precision": 0.5,
+        "recall": 0.2,
+        "f1-score": 0.2857142857142857,
+        "support": 5.0
+      },
+      "lists_createoradd": {
+        "precision": 0.75,
+        "recall": 0.6,
+        "f1-score": 0.6666666666666666,
+        "support": 5.0
+      },
+      "lists_query": {
+        "precision": 0.8,
+        "recall": 0.8,
+        "f1-score": 0.8,
+        "support": 5.0
+      },
+      "play_music": {
+        "precision": 0.6666666666666666,
+        "recall": 0.8,
+        "f1-score": 0.7272727272727273,
+        "support": 5.0
+      },
+      "news_query": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 5.0
+      },
+      "qa_definition": {
+        "precision": 1.0,
+        "recall": 0.8,
+        "f1-score": 0.8888888888888888,
+        "support": 5.0
+      },
+      "accuracy": 0.74,
+      "macro avg": {
+        "precision": 0.7675396825396825,
+        "recall": 0.74,
+        "f1-score": 0.7323304473304473,
+        "support": 50.0
+      },
+      "weighted avg": {
+        "precision": 0.7675396825396825,
+        "recall": 0.74,
+        "f1-score": 0.7323304473304474,
+        "support": 50.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        3,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        4,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        3,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        4,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        5,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        4
+      ]
+    ],
+    "label_order": [
+      "weather_query",
+      "datetime_query",
+      "alarm_set",
+      "calendar_set",
+      "calendar_query",
+      "lists_createoradd",
+      "lists_query",
+      "play_music",
+      "news_query",
+      "qa_definition"
+    ]
+  },
+  "majority_baseline": {
+    "accuracy": 0.1,
+    "macro_f1": 0.01818181818181818,
+    "report": {
+      "weather_query": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 5.0
+      },
+      "datetime_query": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 5.0
+      },
+      "alarm_set": {
+        "precision": 0.1,
+        "recall": 1.0,
+        "f1-score": 0.18181818181818182,
+        "support": 5.0
+      },
+      "calendar_set": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 5.0
+      },
+      "calendar_query": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 5.0
+      },
+      "lists_createoradd": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 5.0
+      },
+      "lists_query": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 5.0
+      },
+      "play_music": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 5.0
+      },
+      "news_query": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 5.0
+      },
+      "qa_definition": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 5.0
+      },
+      "accuracy": 0.1,
+      "macro avg": {
+        "precision": 0.01,
+        "recall": 0.1,
+        "f1-score": 0.01818181818181818,
+        "support": 50.0
+      },
+      "weighted avg": {
+        "precision": 0.01,
+        "recall": 0.1,
+        "f1-score": 0.018181818181818184,
+        "support": 50.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        0,
+        0,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "label_order": [
+      "weather_query",
+      "datetime_query",
+      "alarm_set",
+      "calendar_set",
+      "calendar_query",
+      "lists_createoradd",
+      "lists_query",
+      "play_music",
+      "news_query",
+      "qa_definition"
+    ]
+  },
+  "semantic": {
+    "slot_precision": 0.7407407407407407,
+    "slot_recall": 0.3508771929824561,
+    "slot_f1": 0.47619047619047616,
+    "frame_exact_match": 0.32,
+    "predictions": [
+      {
+        "record_id": "sw-003",
+        "intent": "weather_query",
+        "slots": [
+          {
+            "type": "location",
+            "start": 33,
+            "end": 39,
+            "value": "Nakuru"
+          }
+        ]
+      },
+      {
+        "record_id": "sw-005",
+        "intent": "weather_query",
+        "slots": [
+          {
+            "type": "date",
+            "start": 16,
+            "end": 21,
+            "value": "kesho"
+          }
+        ]
+      },
+      {
+        "record_id": "sw-017",
+        "intent": "datetime_query",
+        "slots": [
+          {
+            "type": "time",
+            "start": 26,
+            "end": 36,
+            "value": "mchana huu"
+          }
+        ]
+      },
+      {
+        "record_id": "sw-020",
+        "intent": "weather_query",
+        "slots": []
+      },
+      {
+        "record_id": "sw-021",
+        "intent": "datetime_query",
+        "slots": []
+      },
+      {
+        "record_id": "sw-035",
+        "intent": "datetime_query",
+        "slots": [
+          {
+            "type": "time",
+            "start": 0,
+            "end": 9,
+            "value": "Sasa hivi"
+          }
+        ]
+      },
+      {
+        "record_id": "sw-040",
+        "intent": "alarm_set",
+        "slots": [
+          {
+            "type": "item",
+            "start": 7,
+            "end": 11,
+            "value": "kazi"
+          },
+          {
+            "type": "time",
+            "start": 31,
+            "end": 38,
+            "value": "asubuhi"
+          },
+          {
+            "type": "date",
+            "start": 42,
+            "end": 45,
+            "value": "leo"
+          }
+        ]
+      },
+      {
+        "record_id": "sw-045",
+        "intent": "datetime_query",
+        "slots": [
+          {
+            "type": "date",
+            "start": 26,
+            "end": 35,
+            "value": "mwezi huu"
+          }
+        ]
+      },
+      {
+        "record_id": "sw-049",
+        "intent": "datetime_query",
+        "slots": [
+          {
+            "type": "time",
+            "start": 47,
+            "end": 56,
+            "value": "sasa hivi"
+          }
+        ]
+      },
+      {
+        "record_id": "sw-050",
+        "intent": "datetime_query",
+        "slots": [
+          {
+            "type": "date",
+            "start": 44,
+            "end": 53,
+            "value": "mwaka huu"
+          }
+        ]
+      },
+      {
+        "record_id": "sw-053",
+        "intent": "alarm_set",
+        "slots": [
+          {
+            "type": "date",
+            "start": 37,
+            "end": 42,
+            "value": "kesho"
+          },
+          {
+            "type": "time",
+            "start": 43,
+            "end": 59,
+            "value": "saa tano asubuhi"
+          }
+        ]
+      },
+      {
+        "record_id": "sw-054",
+        "intent": "alarm_set",
+        "slots": [
+          {
+            "type": "time",
+            "start": 37,
+            "end": 42,
+            "value": "jioni"
+          }
+        ]
+      },
+      {
+        "record_id": "sw-066",
+        "intent": "alarm_set",
+        "slots": [
+          {
+            "type": "time",
+            "start": 16,
+            "end": 31,
+            "value": "saa mbili usiku"
+          }
+        ]
+      },
+      {
+        "record_id": "sw-068",
+        "intent": "alarm_set",
+        "slots": [
+          {
+            "type": "time",
+            "start": 35,
+            "end": 40,
+            "value": "jioni"
+          },
+          {
+            "type": "time",
+            "start": 41,
+            "end": 64,
+            "value": "saa kumi na mbili jioni"
+          }
+        ]
+      },
+      {
+        "record_id": "sw-069",
+        "intent": "alarm_set",
+        "slots": [
+          {
+            "type": "time",
+            "start": 35,
+            "end": 50,
+            "value": "saa saba mchana"
+          }
+        ]
+      },
+      {
+        "record_id": "sw-079",
+        "intent": "alarm_set",
+        "slots": [
+          {
+            "type": "date",
+            "start": 46,
+            "end": 51,
+            "value": "kesho"
+          }
+        ]
+      },
+      {
+        "record_id": "sw-081",
+        "intent": "calendar_set",
+        "slots": []
+      },
+      {
+        "record_id": "sw-096",
+        "intent": "calendar_set",
+        "slots": []
+      },
+      {
+        "record_id": "sw-099",
+        "intent": "calendar_set",
+        "slots": [
+          {
+            "type": "item",
+            "start": 26,
+            "end": 30,
+            "value": "kazi"
+          },
+          {
+            "type": "date",
+            "start": 34,
+            "end": 60,
+            "value": "tarehe kumi na mbili Julai"
+          }
+        ]
+      },
+      {
+        "record_id": "sw-100",
+        "intent": "calendar_set",
+        "slots": []
+      },
+      {
+        "record_id": "sw-103",
+        "intent": "datetime_query",
+        "slots": [
+          {
+            "type": "date",
+            "start": 0,
+            "end": 9,
+            "value": "Mwezi huu"
+          }
+        ]
+      },
+      {
+        "record_id": "sw-107",
+        "intent": "calendar_query",
+        "slots": []
+      },
+      {
+        "record_id": "sw-108",
+        "intent": "calendar_set",
+        "slots": []
+      },
+      {
+        "record_id": "sw-112",
+        "intent": "datetime_query",
+        "slots": [
+          {
+            "type": "date",
+            "start": 0,
+            "end": 10,
+            "value": "Mwezi ujao"
+          }
+        ]
+      },
+      {
+        "record_id": "sw-120",
+        "intent": "datetime_query",
+        "slots": []
+      },
+      {
+        "record_id": "sw-127",
+        "intent": "lists_query",
+        "slots": []
+      },
+      {
+        "record_id": "sw-131",
+        "intent": "lists_createoradd",
+        "slots": []
+      },
+      {
+        "record_id": "sw-142",
+        "intent": "lists_createoradd",
+        "slots": [
+          {
+            "type": "item",
+            "start": 61,
+            "end": 65,
+            "value": "simu"
+          }
+        ]
+      },
+      {
+        "record_id": "sw-144",
+        "intent": "lists_createoradd",
+        "slots": []
+      },
+      {
+        "record_id": "sw-147",
+        "intent": "play_music",
+        "slots": []
+      },
+      {
+        "record_id": "sw-152",
+        "intent": "lists_query",
+        "slots": []
+      },
+      {
+        "record_id": "sw-156",
+        "intent": "lists_query",
+        "slots": []
+      },
+      {
+        "record_id": "sw-158",
+        "intent": "lists_query",
+        "slots": []
+      },
+      {
+        "record_id": "sw-160",
+        "intent": "play_music",
+        "slots": []
+      },
+      {
+        "record_id": "sw-168",
+        "intent": "lists_query",
+        "slots": []
+      },
+      {
+        "record_id": "sw-178",
+        "intent": "play_music",
+        "slots": []
+      },
+      {
+        "record_id": "sw-185",
+        "intent": "lists_createoradd",
+        "slots": []
+      },
+      {
+        "record_id": "sw-189",
+        "intent": "play_music",
+        "slots": [
+          {
+            "type": "time",
+            "start": 25,
+            "end": 32,
+            "value": "asubuhi"
+          }
+        ]
+      },
+      {
+        "record_id": "sw-190",
+        "intent": "play_music",
+        "slots": [
+          {
+            "type": "date",
+            "start": 20,
+            "end": 29,
+            "value": "mwaka huu"
+          }
+        ]
+      },
+      {
+        "record_id": "sw-196",
+        "intent": "play_music",
+        "slots": []
+      },
+      {
+        "record_id": "sw-204",
+        "intent": "news_query",
+        "slots": [
+          {
+            "type": "time",
+            "start": 42,
+            "end": 47,
+            "value": "jioni"
+          }
+        ]
+      },
+      {
+        "record_id": "sw-207",
+        "intent": "news_query",
+        "slots": []
+      },
+      {
+        "record_id": "sw-210",
+        "intent": "news_query",
+        "slots": []
+      },
+      {
+        "record_id": "sw-216",
+        "intent": "news_query",
+        "slots": []
+      },
+      {
+        "record_id": "sw-220",
+        "intent": "news_query",
+        "slots": [
+          {
+            "type": "term",
+            "start": 29,
+            "end": 43,
+            "value": "mfumuko wa bei"
+          }
+        ]
+      },
+      {
+        "record_id": "sw-232",
+        "intent": "calendar_query",
+        "slots": []
+      },
+      {
+        "record_id": "sw-238",
+        "intent": "qa_definition",
+        "slots": []
+      },
+      {
+        "record_id": "sw-239",
+        "intent": "qa_definition",
+        "slots": []
+      },
+      {
+        "record_id": "sw-240",
+        "intent": "qa_definition",
+        "slots": []
+      },
+      {
+        "record_id": "sw-242",
+        "intent": "qa_definition",
+        "slots": []
+      }
+    ],
+    "definition": "Exact slot type and character span; frame requires correct intent and complete slot set.",
+    "unseen_value_test_count": 24,
+    "unseen_value_scores": {
+      "slot_precision": 0.5555555555555556,
+      "slot_recall": 0.11904761904761904,
+      "slot_f1": 0.19607843137254902,
+      "frame_exact_match": 0.0,
+      "predictions": [
+        {
+          "record_id": "sw-003",
+          "intent": "weather_query",
+          "slots": [
+            {
+              "type": "location",
+              "start": 33,
+              "end": 39,
+              "value": "Nakuru"
+            }
+          ]
+        },
+        {
+          "record_id": "sw-005",
+          "intent": "weather_query",
+          "slots": [
+            {
+              "type": "date",
+              "start": 16,
+              "end": 21,
+              "value": "kesho"
+            }
+          ]
+        },
+        {
+          "record_id": "sw-020",
+          "intent": "weather_query",
+          "slots": []
+        },
+        {
+          "record_id": "sw-035",
+          "intent": "datetime_query",
+          "slots": [
+            {
+              "type": "time",
+              "start": 0,
+              "end": 9,
+              "value": "Sasa hivi"
+            }
+          ]
+        },
+        {
+          "record_id": "sw-054",
+          "intent": "alarm_set",
+          "slots": [
+            {
+              "type": "time",
+              "start": 37,
+              "end": 42,
+              "value": "jioni"
+            }
+          ]
+        },
+        {
+          "record_id": "sw-079",
+          "intent": "alarm_set",
+          "slots": [
+            {
+              "type": "date",
+              "start": 46,
+              "end": 51,
+              "value": "kesho"
+            }
+          ]
+        },
+        {
+          "record_id": "sw-081",
+          "intent": "calendar_set",
+          "slots": []
+        },
+        {
+          "record_id": "sw-096",
+          "intent": "calendar_set",
+          "slots": []
+        },
+        {
+          "record_id": "sw-099",
+          "intent": "calendar_set",
+          "slots": [
+            {
+              "type": "item",
+              "start": 26,
+              "end": 30,
+              "value": "kazi"
+            },
+            {
+              "type": "date",
+              "start": 34,
+              "end": 60,
+              "value": "tarehe kumi na mbili Julai"
+            }
+          ]
+        },
+        {
+          "record_id": "sw-100",
+          "intent": "calendar_set",
+          "slots": []
+        },
+        {
+          "record_id": "sw-107",
+          "intent": "calendar_query",
+          "slots": []
+        },
+        {
+          "record_id": "sw-108",
+          "intent": "calendar_set",
+          "slots": []
+        },
+        {
+          "record_id": "sw-127",
+          "intent": "lists_query",
+          "slots": []
+        },
+        {
+          "record_id": "sw-168",
+          "intent": "lists_query",
+          "slots": []
+        },
+        {
+          "record_id": "sw-185",
+          "intent": "lists_createoradd",
+          "slots": []
+        },
+        {
+          "record_id": "sw-189",
+          "intent": "play_music",
+          "slots": [
+            {
+              "type": "time",
+              "start": 25,
+              "end": 32,
+              "value": "asubuhi"
+            }
+          ]
+        },
+        {
+          "record_id": "sw-196",
+          "intent": "play_music",
+          "slots": []
+        },
+        {
+          "record_id": "sw-204",
+          "intent": "news_query",
+          "slots": [
+            {
+              "type": "time",
+              "start": 42,
+              "end": 47,
+              "value": "jioni"
+            }
+          ]
+        },
+        {
+          "record_id": "sw-207",
+          "intent": "news_query",
+          "slots": []
+        },
+        {
+          "record_id": "sw-232",
+          "intent": "calendar_query",
+          "slots": []
+        },
+        {
+          "record_id": "sw-238",
+          "intent": "qa_definition",
+          "slots": []
+        },
+        {
+          "record_id": "sw-239",
+          "intent": "qa_definition",
+          "slots": []
+        },
+        {
+          "record_id": "sw-240",
+          "intent": "qa_definition",
+          "slots": []
+        },
+        {
+          "record_id": "sw-242",
+          "intent": "qa_definition",
+          "slots": []
+        }
+      ],
+      "definition": "Exact slot type and character span; frame requires correct intent and complete slot set."
+    }
+  }
+}

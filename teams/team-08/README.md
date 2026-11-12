@@ -1,59 +1,55 @@
-# Team 08 | Project title
+# Team 8 (Verity): Kiswahili limited semantic parsing (Track C)
 
-PENDING SUBMISSION. Replace this placeholder with your completed README and project files.
+Strathmore NLP Hub Datathon 2026. Language: Kiswahili. Task: Track C, limited semantic parsing.
 
-Replace the prompts below with your actual information. Keep the idea and approach concise. Do not invent results, review evidence or permissions.
+Demo and presentation video (2-3 minutes): https://drive.google.com/file/d/1444-QGdfI7e5wTg-AGOl8L7WbHCRFSb9/view?usp=sharing
+Team repository: [TEAM REPOSITORY URL]
+Frozen commit SHA: [FULL 40-CHARACTER SHA FROM git rev-parse HEAD]
 
-## Team and task
+## Idea
 
-- Team number and name:
-- Three members and their contributions (names/GitHub usernames only):
-- Working language/variety:
-- Track: A intent / B sentiment / C limited semantic parsing
-- Original team repository URL:
-- Full source commit SHA for the version submitted:
+An assistant for people who write in Kiswahili has to work out what the person wants and then pick out the details, such as the place, the date and the time. For example, "Niamshe saa kumi na mbili asubuhi kesho" should become an alarm request with a time slot and a date slot. The system only shows the recognised action and slots as JSON. It does not perform real actions.
 
-## Idea and approach
+## Approach
 
-Explain the problem, who would use the solution and why the language matters in 2–4 sentences. Then explain how you obtained/reviewed the data, trained the model and built the demo in 3–5 concise steps. State what is new and what you reused.
+We wrote 250 Kiswahili requests ourselves, 25 for each of the ten actions in the starter taxonomy: weather_query, datetime_query, alarm_set, calendar_set, calendar_query, lists_createoradd, lists_query, play_music, news_query and qa_definition. 193 of the 250 requests carry at least one slot. Slot types are location, date, time, item and term. Offsets are Python Unicode character indices, start inclusive and end exclusive, and a script computes them from the text so that text[start:end] equals the value.
 
-## Data and review
+The data is split 150 train, 50 dev and 50 test (15, 5 and 5 per action). Requests that are paraphrases of one situation share a group_id so they stay in one split. The model is the unmodified starter baseline: character n-gram TF-IDF with logistic regression chooses the action, and a dictionary of surface values memorised from the training split finds slots. We did not change the model and did not tune on the test set.
 
-Give accepted contribution counts, per-label/slot coverage, train/dev/test counts, source/version/licence links, your changes, reviewer method and quality checks. Link the contribution data, annotation guide, source log, data card and review/quality report. Follow the handbook's track targets and independent test-review rules.
+## Results on the frozen test set (50 examples, evaluated once)
 
-If data cannot be redistributed or is too large for Git, give a stable accessible location, the version/checksum where possible, retrieval steps and the reason. Keep private permission evidence outside this public repository and use the agreed organiser channel for access.
+Action accuracy 0.74. Macro-F1 0.732. Majority-class baseline: accuracy 0.10, macro-F1 0.018.
+Slot type and span: precision 0.741, recall 0.351, F1 0.476.
+Full-frame exact match (right action and the complete slot set): 0.32.
+Unseen-value subset (24 test examples containing a slot value never seen in training): slot F1 0.196, full-frame exact match 0.0.
+Weakest action: calendar_query (F1 0.286), usually mistaken for datetime_query. Strongest: news_query (F1 1.0).
+Files: artifacts/semantic/test_metrics.json, per_label_report.csv, test_predictions.csv. Five analysed errors are in QUALITY.md.
 
-## Code and how to run
+## Limitations
 
-List the relevant files, environment/dependency versions and exact installation, validation, training, evaluation and demo commands. Explain how to retrieve any model/data artefacts and where outputs are written. Do not include secrets.
+The dataset is small, and the test set has only 50 examples, so differences of a few examples move the scores a lot. The slot finder can only recognise values it has seen in training, so it fails on new places, event titles, dates and topics. Several label boundaries are close (calendar_query against datetime_query, lists_query against lists_createoradd). Annotation rules for item and term slots are team conventions, not a confirmed standard. See QUALITY.md and DATA_CARD.md.
 
-## Results and limitations
+## How to run
 
-Link actual metric files, per-label results, baseline comparison and test predictions. Include the additional semantic metrics where relevant. Explain up to five actual errors (all if fewer), limitations, and any optional improvements with evidence. Label illustrative outputs separately from observed results.
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
+python validate.py --track semantic --data data/contribution.csv
+python train.py --track semantic --data data/contribution.csv
+python evaluate.py --track semantic --data data/contribution.csv
+python -m streamlit run app.py
 
-## Presentation and demo video
+data/make_contribution.py rebuilds data/contribution.csv from the annotation spreadsheet, with a fixed random seed for the split.
 
-- Presentation/demo video URL (REQUIRED):
-- Optional second presentation/demo video:
-- Optional hosted app URL:
+## Team contributions
 
-Check that judges can view the video. Present your idea and approach briefly, show the trained model handling new input, discuss results/limitations and explain each member's contribution. A hosted app link alone does not replace the video.
+Wayne Kimutai: code and demo (training, evaluation, Streamlit app, conversion script, submission and video).
+Grace Wangari: language review of the Kiswahili text, intents and slots.
+Joy Tele: data and documentation (annotation spreadsheet, guide, data card, quality report).
+Contribution and AI-use details are in CONTRIBUTIONS.md.
 
-## Required materials
+## Documents
 
-Link each item using a relative path or an accessible external URL:
+ANNOTATION_GUIDE.md, DATA_CARD.md, QUALITY.md, CONTRIBUTIONS.md.
 
-- Contribution dataset and splits:
-- Annotation guide:
-- Source log and source terms:
-- Dataset card:
-- Quality/review report:
-- Contribution and AI-use statement:
-- Evaluation outputs and baseline comparison:
-- Runnable code and dependency file:
-- Trained artefacts or reproduction instructions:
-- Video link:
-
-## Attribution and permissions
-
-Credit the starter kit, upstream datasets/models/code and other assistance. State the terms of your original code/data and respect upstream terms. Specify any unresolved access/rights issue; do not publish uncleared material. Do not copy fictional claims from the kit's completed examples.
+Starter code and taxonomy are from the Strathmore NLP Hub Datathon starter kit v2.
