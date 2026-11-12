@@ -1,0 +1,22 @@
+{
+  "experiment_name": "E00",
+  "sources": {
+    "our_data": "data/contribution.csv",
+    "annotated_data": null,
+    "single_label_data": null
+  },
+  "training_sha256": "ce05e45e5c3a52edc30e31f3f7d8a784a21a49597fdb0bdd086f71cb88b0177c",
+  "development_sha256": "47edb2ca83e8b44fa75ca734abcb9efb880b06106a753d7775647c012ac73413",
+  "vectorizer": {
+    "analyzer": "char",
+    "ngram_range": [
+      2,
+      5
+    ]
+  },
+  "classifier": {
+    "name": "LinearSVC",
+    "C": 1.0,
+    "random_state": 42
+  }
+}
