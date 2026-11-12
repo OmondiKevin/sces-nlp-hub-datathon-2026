@@ -1,0 +1,54 @@
+# Cleaning and review report
+
+## Review guide and final export
+
+Our [annotation guide](../ANNOTATION_GUIDE.md) is version 1.2, updated to describe the final export. It keeps the original rules and examples; [version 1.1](history/ANNOTATION_GUIDE_v1.1.md) remains unchanged. Reviewer codes, review status and splits are recorded in the decisions and final CSV. We used 324 records, not all 350 workbook acceptances. A separate documented 30-record pilot is not available.
+
+| Reference in the original guide | File used in this submission |
+| --- | --- |
+| taxonomy.csv | [Original label taxonomy](../taxonomy.csv) |
+| Earlier decision log | The exported decisions linked in step 5 below |
+| Final accepted records and splits | contribution.csv linked in step 6 below |
+
+## From the form to the final dataset
+
+We kept each version below so our work can be followed from collection to the final dataset. Download the Excel files to view them; CSV files also open in Excel.
+
+| Stage | File | What changed |
+| --- | --- | --- |
+| 1. Original responses | [First form export](https://github.com/Annah-2003/sheng-intent/blob/main/assessment/history/01_original_responses.xlsx) | 44 submissions with 386 answers. |
+| 2. Later responses | [Latest form export](https://github.com/Annah-2003/sheng-intent/blob/main/assessment/data/raw/responses.xlsx) | 45 submissions with 395 answers; the nine later answers were not included in this reviewed experiment. |
+| 3. Review in progress | [First review sheet](https://github.com/Annah-2003/sheng-intent/blob/main/assessment/history/03_review_draft.xlsx) | Earlier human accept/reject/pending decisions. |
+| 4. Completed workbook | [Completed review sheet](https://github.com/Annah-2003/sheng-intent/blob/main/assessment/data/review/workspace.xlsx) | 350 accepted, 34 rejected and two pending before the code holds and follow-up decisions. |
+| 5. Code checks and decisions | [Candidates](https://github.com/Annah-2003/sheng-intent/blob/main/assessment/data/review/candidates.csv), [decisions](https://github.com/Annah-2003/sheng-intent/blob/main/assessment/data/review/decisions.csv), [change log](https://github.com/Annah-2003/sheng-intent/blob/main/assessment/data/review/changes.csv) | Record matching, human decisions, edited-answer holds and duplicate checks. |
+| 6. Final model data | [contribution.csv](https://github.com/Annah-2003/sheng-intent/blob/main/assessment/data/contribution.csv) | 324 accepted records with training/development/test already assigned. |
+| 7. What the model predicted | [Final test predictions](https://github.com/Annah-2003/sheng-intent/blob/main/assessment/reports/test_predictions.csv) | The saved 56-record test, including correct and wrong predictions. |
+
+The [conversion script](https://github.com/Annah-2003/sheng-intent/blob/main/assessment/historical-code/prepare_data.py) made candidate rows and provisional scenario labels for human review. The [review-import script](https://github.com/Annah-2003/sheng-intent/blob/main/assessment/historical-code/import_kathy_review.py) matched the workbook to source records. The current [preparation code](../src/prepare.py) applies the recorded decisions and checks the final file. This was **AI-assisted coding, with human language and label decisions**. The earlier scripts are preserved as history, not a replacement for the current run instructions.
+
+Use the original source row and scenario to trace an answer. The form and review workbook have different numbering. The original files and final dataset were not overwritten.
+
+## What was kept
+
+The completed review workbook covered 386 answers: 350 marked accepted, 34 rejected and two pending. Our final file contains 321 retained workbook acceptances, two originals accepted after follow-up review and one new consented human answer: **324 in total**.
+
+| Left out | Count |
+| --- | ---: |
+| Workbook rejections | 34 |
+| Edited answers still held | 24 |
+| Pending decisions | 2 |
+| Non-answers | 2 |
+| Punctuation-only training duplicate | 1 |
+
+The nine later-export answers were not imported as reviewed contributions. Fifteen original rejection reasons are missing; we did not invent them.
+
+## How we checked it
+
+- Matched each answer by original form row and scenario, rather than assuming the two spreadsheets used the same numbering.
+- Preserved original wording and logged edits/holds separately.
+- Recorded reviewer codes and human confirmations of competence and independence. All test records have independent-review status.
+- Checked repeated text, scenario separation, contact patterns and class counts. Every intent has at least 15 training, five development and five test examples.
+- Ran the organiser validator and code checks. Saved file hashes identify the exact data and models.
+- Used only MASSIVE's training partition and checked exact overlap with team data.
+
+Some accepted answers have unclear intent boundaries. Similar meanings across scenarios may still overlap, and there was one main reviewer. The validator checks structure, not language quality. [Results and actual errors](RESULTS.md) explain these limits. No model setting, label or split was changed after the final test.
