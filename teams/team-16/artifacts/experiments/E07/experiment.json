@@ -1,0 +1,22 @@
+{
+  "experiment_name": "E07",
+  "sources": {
+    "our_data": "data/contribution.csv",
+    "annotated_data": "data\\afrisenti_annotated\\afr-kil-m.csv",
+    "single_label_data": "data\\afrisenti\\train.csv"
+  },
+  "training_sha256": "7cf6c881c3fa00ff0bbdd95459deca24fc1facda0d07a8cb7651a7e8922eb248",
+  "development_sha256": "47edb2ca83e8b44fa75ca734abcb9efb880b06106a753d7775647c012ac73413",
+  "vectorizer": {
+    "analyzer": "char",
+    "ngram_range": [
+      2,
+      5
+    ]
+  },
+  "classifier": {
+    "name": "LinearSVC",
+    "C": 1.0,
+    "random_state": 42
+  }
+}

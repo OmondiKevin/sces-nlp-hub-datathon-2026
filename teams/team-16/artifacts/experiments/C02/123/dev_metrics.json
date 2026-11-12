@@ -1,0 +1,136 @@
+{
+  "track": "sentiment",
+  "experiment_name": "C02-123",
+  "practice": false,
+  "training_records": 1398,
+  "development_records": 69,
+  "duplicate_training_records_removed": 0,
+  "training_distribution": {
+    "positive": 466,
+    "negative": 466,
+    "neutral": 466
+  },
+  "development_distribution": {
+    "positive": 20,
+    "negative": 23,
+    "neutral": 26
+  },
+  "model": {
+    "accuracy": 0.7101449275362319,
+    "macro_f1": 0.704409953190441,
+    "report": {
+      "positive": {
+        "precision": 0.6363636363636364,
+        "recall": 0.7,
+        "f1-score": 0.6666666666666666,
+        "support": 20.0
+      },
+      "negative": {
+        "precision": 0.7777777777777778,
+        "recall": 0.6086956521739131,
+        "f1-score": 0.6829268292682927,
+        "support": 23.0
+      },
+      "neutral": {
+        "precision": 0.7241379310344828,
+        "recall": 0.8076923076923077,
+        "f1-score": 0.7636363636363637,
+        "support": 26.0
+      },
+      "accuracy": 0.7101449275362319,
+      "macro avg": {
+        "precision": 0.712759781725299,
+        "recall": 0.7054626532887402,
+        "f1-score": 0.704409953190441,
+        "support": 69.0
+      },
+      "weighted avg": {
+        "precision": 0.7165760554066402,
+        "recall": 0.7101449275362319,
+        "f1-score": 0.7086260269717322,
+        "support": 69.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        14,
+        2,
+        4
+      ],
+      [
+        5,
+        14,
+        4
+      ],
+      [
+        3,
+        2,
+        21
+      ]
+    ],
+    "label_order": [
+      "positive",
+      "negative",
+      "neutral"
+    ]
+  },
+  "majority_baseline": {
+    "accuracy": 0.3333333333333333,
+    "macro_f1": 0.16666666666666666,
+    "report": {
+      "positive": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 20.0
+      },
+      "negative": {
+        "precision": 0.3333333333333333,
+        "recall": 1.0,
+        "f1-score": 0.5,
+        "support": 23.0
+      },
+      "neutral": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 26.0
+      },
+      "accuracy": 0.3333333333333333,
+      "macro avg": {
+        "precision": 0.1111111111111111,
+        "recall": 0.3333333333333333,
+        "f1-score": 0.16666666666666666,
+        "support": 69.0
+      },
+      "weighted avg": {
+        "precision": 0.1111111111111111,
+        "recall": 0.3333333333333333,
+        "f1-score": 0.16666666666666666,
+        "support": 69.0
+      }
+    },
+    "confusion_matrix": [
+      [
+        0,
+        20,
+        0
+      ],
+      [
+        0,
+        23,
+        0
+      ],
+      [
+        0,
+        26,
+        0
+      ]
+    ],
+    "label_order": [
+      "positive",
+      "negative",
+      "neutral"
+    ]
+  }
+}

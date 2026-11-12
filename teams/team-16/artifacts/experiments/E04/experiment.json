@@ -1,0 +1,22 @@
+{
+  "experiment_name": "E04",
+  "sources": {
+    "our_data": "data/contribution.csv",
+    "annotated_data": null,
+    "single_label_data": "data\\afrisenti\\train.csv"
+  },
+  "training_sha256": "8b0ea0dc4e994fc5b8d39b9ad87a6a96536ff43a45ea4886134e8533e17f0bd1",
+  "development_sha256": "47edb2ca83e8b44fa75ca734abcb9efb880b06106a753d7775647c012ac73413",
+  "vectorizer": {
+    "analyzer": "char",
+    "ngram_range": [
+      2,
+      5
+    ]
+  },
+  "classifier": {
+    "name": "LinearSVC",
+    "C": 1.0,
+    "random_state": 42
+  }
+}
